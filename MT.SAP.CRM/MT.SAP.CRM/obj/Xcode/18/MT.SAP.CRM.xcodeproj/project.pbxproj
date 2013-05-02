@@ -1,0 +1,242 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C47493F0000000000000000 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FD855DD0000000000000000 /* UIKit.framework */; };
+		3DDCEC720000000000000000 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DF91000000000000000000 /* MapKit.framework */; };
+		1310550A0000000000000000 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16A161A80000000000000000 /* Foundation.framework */; };
+		67B375300000000000000000 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C43F100000000000000000 /* CoreGraphics.framework */; };
+		174AEE070000000000000000 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ADBFAA50000000000000000 /* MainStoryboard.storyboard */; };
+		1AA917890000000000000000 /* AppDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = 1E3A24270000000000000000 /* AppDelegate.h */; };
+		38ADAE1E0000000000000000 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3EBABC0000000000000000 /* AppDelegate.m */; };
+		3F9CE43E0000000000000000 /* MT_SAP_CRMViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 32DF0DC00000000000000000 /* MT_SAP_CRMViewController.h */; };
+		3F6A01220000000000000000 /* MT_SAP_CRMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB0DC000000000000000000 /* MT_SAP_CRMViewController.m */; };
+		3BA611680000000000000000 /* MainNavigationController.h in Sources */ = {isa = PBXBuildFile; fileRef = 3F371E060000000000000000 /* MainNavigationController.h */; };
+		19AAA7FD0000000000000000 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3BB49B0000000000000000 /* MainNavigationController.m */; };
+		27BBF7590000000000000000 /* LoginTableViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B4D03F70000000000000000 /* LoginTableViewController.h */; };
+		1B26D9A20000000000000000 /* LoginTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EB7E6400000000000000000 /* LoginTableViewController.m */; };
+		25A71C600000000000000000 /* SalesActivityTabBarController.h in Sources */ = {isa = PBXBuildFile; fileRef = 293828FE0000000000000000 /* SalesActivityTabBarController.h */; };
+		257439440000000000000000 /* SalesActivityTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 290545E20000000000000000 /* SalesActivityTabBarController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		18D123DC0000000000000000 /* MT.SAP.CRM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "MT.SAP.CRM.app"; path = "MT.SAP.CRM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FD855DD0000000000000000 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "UIKit.framework"; path = "System/Library/Frameworks/UIKit.framework"; sourceTree = SDKROOT; };
+		16DF91000000000000000000 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "MapKit.framework"; path = "System/Library/Frameworks/MapKit.framework"; sourceTree = SDKROOT; };
+		16A161A80000000000000000 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Foundation.framework"; path = "System/Library/Frameworks/Foundation.framework"; sourceTree = SDKROOT; };
+		A0C43F100000000000000000 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CoreGraphics.framework"; path = "System/Library/Frameworks/CoreGraphics.framework"; sourceTree = SDKROOT; };
+		1ADBFAA50000000000000000 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "MainStoryboard.storyboard"; path = "MainStoryboard.storyboard"; sourceTree = "<group>"; };
+		1E3A24270000000000000000 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppDelegate.h"; path = "AppDelegate.h"; sourceTree = "<group>"; };
+		3C3EBABC0000000000000000 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate.m"; path = "AppDelegate.m"; sourceTree = "<group>"; };
+		32DF0DC00000000000000000 /* MT_SAP_CRMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MT_SAP_CRMViewController.h"; path = "MT_SAP_CRMViewController.h"; sourceTree = "<group>"; };
+		2FB0DC000000000000000000 /* MT_SAP_CRMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "MT_SAP_CRMViewController.m"; path = "MT_SAP_CRMViewController.m"; sourceTree = "<group>"; };
+		3F371E060000000000000000 /* MainNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MainNavigationController.h"; path = "MainNavigationController.h"; sourceTree = "<group>"; };
+		1D3BB49B0000000000000000 /* MainNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "MainNavigationController.m"; path = "MainNavigationController.m"; sourceTree = "<group>"; };
+		2B4D03F70000000000000000 /* LoginTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "LoginTableViewController.h"; path = "LoginTableViewController.h"; sourceTree = "<group>"; };
+		1EB7E6400000000000000000 /* LoginTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "LoginTableViewController.m"; path = "LoginTableViewController.m"; sourceTree = "<group>"; };
+		293828FE0000000000000000 /* SalesActivityTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SalesActivityTabBarController.h"; path = "SalesActivityTabBarController.h"; sourceTree = "<group>"; };
+		290545E20000000000000000 /* SalesActivityTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "SalesActivityTabBarController.m"; path = "SalesActivityTabBarController.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		274839700000000000000000 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C47493F0000000000000000 /* UIKit.framework in Frameworks */,
+				3DDCEC720000000000000000 /* MapKit.framework in Frameworks */,
+				1310550A0000000000000000 /* Foundation.framework in Frameworks */,
+				67B375300000000000000000 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		761AAFE00000000000000000 = {
+			isa = PBXGroup;
+			children = (
+				31FB5F4A0000000000000000 /* MT.SAP.CRM */,
+				1214D0D80000000000000000 /* Frameworks */,
+				3CAE85240000000000000000 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3CAE85240000000000000000 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18D123DC0000000000000000 /* MT.SAP.CRM.app */,
+			);
+			name = "Products";
+			sourceTree = "<group>";
+		};
+		1214D0D80000000000000000 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1FD855DD0000000000000000 /* UIKit.framework */,
+				16DF91000000000000000000 /* MapKit.framework */,
+				16A161A80000000000000000 /* Foundation.framework */,
+				A0C43F100000000000000000 /* CoreGraphics.framework */,
+			);
+			name = "Frameworks";
+			sourceTree = "<group>";
+		};
+		31FB5F4A0000000000000000 /* MT.SAP.CRM */ = {
+			isa = PBXGroup;
+			children = (
+				1E3A24270000000000000000 /* AppDelegate.h */,
+				2B4D03F70000000000000000 /* LoginTableViewController.h */,
+				3F371E060000000000000000 /* MainNavigationController.h */,
+				1ADBFAA50000000000000000 /* MainStoryboard.storyboard */,
+				32DF0DC00000000000000000 /* MT_SAP_CRMViewController.h */,
+				293828FE0000000000000000 /* SalesActivityTabBarController.h */,
+				3A8FA5FB0000000000000000 /* Supporting Files */,
+			);
+			name = "MT.SAP.CRM";
+			sourceTree = "<group>";
+		};
+		3A8FA5FB0000000000000000 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3C3EBABC0000000000000000 /* AppDelegate.m */,
+				1EB7E6400000000000000000 /* LoginTableViewController.m */,
+				1D3BB49B0000000000000000 /* MainNavigationController.m */,
+				2FB0DC000000000000000000 /* MT_SAP_CRMViewController.m */,
+				290545E20000000000000000 /* SalesActivityTabBarController.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1116614C0000000000000000 /* MT.SAP.CRM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1DFE0200000000000000000 /* Build configuration list for PBXNativeTarget "MT.SAP.CRM" */;
+			buildPhases = (
+				1572FA5A0000000000000000 /* Sources */,
+				274839700000000000000000 /* Frameworks */,
+				3E5D99E50000000000000000 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MT.SAP.CRM";
+			productName = "MT.SAP.CRM";
+			productReference = 18D123DC0000000000000000 /* MT.SAP.CRM.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6633B7200000000000000000 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 36AD82800000000000000000 /* Build configuration list for PBXProject "MT.SAP.CRM" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 761AAFE00000000000000000;
+			productRefGroup = 3CAE85240000000000000000 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1116614C0000000000000000 /* MT.SAP.CRM */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3E5D99E50000000000000000 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				174AEE070000000000000000 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1572FA5A0000000000000000 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AA917890000000000000000 /* AppDelegate.h in Sources */,
+				38ADAE1E0000000000000000 /* AppDelegate.m in Sources */,
+				3F9CE43E0000000000000000 /* MT_SAP_CRMViewController.h in Sources */,
+				3F6A01220000000000000000 /* MT_SAP_CRMViewController.m in Sources */,
+				3BA611680000000000000000 /* MainNavigationController.h in Sources */,
+				19AAA7FD0000000000000000 /* MainNavigationController.m in Sources */,
+				27BBF7590000000000000000 /* LoginTableViewController.h in Sources */,
+				1B26D9A20000000000000000 /* LoginTableViewController.m in Sources */,
+				25A71C600000000000000000 /* SalesActivityTabBarController.h in Sources */,
+				257439440000000000000000 /* SalesActivityTabBarController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4E709CD00000000000000000 /* MonoTouch */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				SDKROOT = iphoneos;
+			};
+			name = MonoTouch;
+		};
+		38B7B24E0000000000000000 /* MonoTouch */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				PRODUCT_NAME = "MT.SAP.CRM";
+				WRAPPER_EXTENSION = app;
+			};
+			name = MonoTouch;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		36AD82800000000000000000 /* Build configuration list for PBXProject "MT.SAP.CRM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E709CD00000000000000000 /* MonoTouch */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = MonoTouch;
+		};
+		E1DFE0200000000000000000 /* Build configuration list for PBXNativeTarget "MT.SAP.CRM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38B7B24E0000000000000000 /* MonoTouch */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = MonoTouch;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6633B7200000000000000000 /* Project object */;
+}
