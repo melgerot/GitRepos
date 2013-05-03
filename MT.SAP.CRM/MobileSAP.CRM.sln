@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAP.CRM.MT", "MT.SAP.CRM\SAP.CRM.MT.csproj", "{04CAE728-FF39-4167-BA26-37F761496D75}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Ad-Hoc|iPhone = Ad-Hoc|iPhone
+		Ad-Hoc|iPhoneSimulator = Ad-Hoc|iPhoneSimulator
+		AppStore|iPhone = AppStore|iPhone
+		AppStore|iPhoneSimulator = AppStore|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04CAE728-FF39-4167-BA26-37F761496D75}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{04CAE728-FF39-4167-BA26-37F761496D75}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{04CAE728-FF39-4167-BA26-37F761496D75}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Ad-Hoc|iPhoneSimulator
+		{04CAE728-FF39-4167-BA26-37F761496D75}.Ad-Hoc|iPhoneSimulator.Build.0 = Ad-Hoc|iPhoneSimulator
+		{04CAE728-FF39-4167-BA26-37F761496D75}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{04CAE728-FF39-4167-BA26-37F761496D75}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{04CAE728-FF39-4167-BA26-37F761496D75}.AppStore|iPhoneSimulator.ActiveCfg = AppStore|iPhoneSimulator
+		{04CAE728-FF39-4167-BA26-37F761496D75}.AppStore|iPhoneSimulator.Build.0 = AppStore|iPhoneSimulator
+		{04CAE728-FF39-4167-BA26-37F761496D75}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{04CAE728-FF39-4167-BA26-37F761496D75}.Debug|iPhone.Build.0 = Debug|iPhone
+		{04CAE728-FF39-4167-BA26-37F761496D75}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{04CAE728-FF39-4167-BA26-37F761496D75}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{04CAE728-FF39-4167-BA26-37F761496D75}.Release|iPhone.ActiveCfg = Release|iPhone
+		{04CAE728-FF39-4167-BA26-37F761496D75}.Release|iPhone.Build.0 = Release|iPhone
+		{04CAE728-FF39-4167-BA26-37F761496D75}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{04CAE728-FF39-4167-BA26-37F761496D75}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = MT.SAP.CRM\MT.SAP.CRM.csproj
+	EndGlobalSection
+EndGlobal
