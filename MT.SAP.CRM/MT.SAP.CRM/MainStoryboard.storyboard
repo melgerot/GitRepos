@@ -386,7 +386,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cyk-bb-TJl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2797" y="-332"/>
+            <point key="canvasLocation" x="2805" y="-332"/>
         </scene>
         <!--Table View Controller - Filter-->
         <scene sceneID="jmj-LL-Grb">
@@ -869,6 +869,17 @@
             <point key="canvasLocation" x="2836" y="-1056"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="LoginTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginTableViewController.h"/>
+        </class>
+        <class className="MainNavigationController" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainNavigationController.h"/>
+        </class>
+        <class className="SalesActivityTabBarController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SalesActivityTabBarController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
