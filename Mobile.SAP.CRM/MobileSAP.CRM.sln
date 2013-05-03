@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAP.CRM.MT", "MT.SAP.CRM\SAP.CRM.MT.csproj", "{04CAE728-FF39-4167-BA26-37F761496D75}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAP.CRM.Core", "SAP.CRM.Core\SAP.CRM.Core.csproj", "{5229BB48-B850-4677-874A-F040C2FB7A35}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|iPhone = Ad-Hoc|iPhone
@@ -31,11 +33,27 @@ Global
 		{04CAE728-FF39-4167-BA26-37F761496D75}.Release|iPhone.Build.0 = Release|iPhone
 		{04CAE728-FF39-4167-BA26-37F761496D75}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{04CAE728-FF39-4167-BA26-37F761496D75}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{5229BB48-B850-4677-874A-F040C2FB7A35}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
+		{5229BB48-B850-4677-874A-F040C2FB7A35}.Ad-Hoc|iPhone.Build.0 = Release|Any CPU
+		{5229BB48-B850-4677-874A-F040C2FB7A35}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{5229BB48-B850-4677-874A-F040C2FB7A35}.Ad-Hoc|iPhoneSimulator.Build.0 = Release|Any CPU
+		{5229BB48-B850-4677-874A-F040C2FB7A35}.AppStore|iPhone.ActiveCfg = Release|Any CPU
+		{5229BB48-B850-4677-874A-F040C2FB7A35}.AppStore|iPhone.Build.0 = Release|Any CPU
+		{5229BB48-B850-4677-874A-F040C2FB7A35}.AppStore|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{5229BB48-B850-4677-874A-F040C2FB7A35}.AppStore|iPhoneSimulator.Build.0 = Release|Any CPU
+		{5229BB48-B850-4677-874A-F040C2FB7A35}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{5229BB48-B850-4677-874A-F040C2FB7A35}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{5229BB48-B850-4677-874A-F040C2FB7A35}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{5229BB48-B850-4677-874A-F040C2FB7A35}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{5229BB48-B850-4677-874A-F040C2FB7A35}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{5229BB48-B850-4677-874A-F040C2FB7A35}.Release|iPhone.Build.0 = Release|Any CPU
+		{5229BB48-B850-4677-874A-F040C2FB7A35}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{5229BB48-B850-4677-874A-F040C2FB7A35}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = MT.SAP.CRM\SAP.CRM.MT.csproj
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = MT.SAP.CRM\MT.SAP.CRM.csproj
 	EndGlobalSection
 EndGlobal
