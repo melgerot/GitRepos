@@ -1,1 +1,4 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="SAP.CRM.Gateway.GatewayService" CodeBehind="GatewayService.svc.cs" %>
+﻿<%@ ServiceHost Language="C#" 
+    Debug="true" 
+    Service="SAP.CRM.Gateway.GatewayService" 
+    Factory="System.ServiceModel.Activation.WebServiceHostFactory" %>

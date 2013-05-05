@@ -1,0 +1,5 @@
+C:\Users\melgerot\Documents\GitHub\GitRepos\Mobile.SAP.CRM\SAP.CRM.Core\bin\Debug\SAP.CRM.Core.dll
+C:\Users\melgerot\Documents\GitHub\GitRepos\Mobile.SAP.CRM\SAP.CRM.Core\bin\Debug\SAP.CRM.Core.pdb
+C:\Users\melgerot\Documents\GitHub\GitRepos\Mobile.SAP.CRM\SAP.CRM.Core\obj\Debug\SAP.CRM.Core.csprojResolveAssemblyReference.cache
+C:\Users\melgerot\Documents\GitHub\GitRepos\Mobile.SAP.CRM\SAP.CRM.Core\obj\Debug\SAP.CRM.Core.dll
+C:\Users\melgerot\Documents\GitHub\GitRepos\Mobile.SAP.CRM\SAP.CRM.Core\obj\Debug\SAP.CRM.Core.pdb
