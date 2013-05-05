@@ -37,11 +37,17 @@ namespace SAP.CRM.Gateway
     public class GetSalesActivitiesResponse
     {
         [DataMember]
-        public List<SalesActivity> SalesActivities { get; set; }
+        public List<ActivityGeneralData> ActivityGeneralData { get; set; }
+
+        [DataMember]
+        public List<BusinessPartner> BusinessPartners { get; set; }
+
+        [DataMember]
+        public List<Text> Texts { get; set; }
     }
 
     [DataContract]
-    public class SalesActivity
+    public class ActivityGeneralData
     {
         private string refobjecttypeField;
 
@@ -403,11 +409,11 @@ namespace SAP.CRM.Gateway
             set { languIsoField = value; }
         }
 
-        [DataMember]
-        public List<BusinessPartner> BusinessPartners { get; set; }
+        //[DataMember]
+        //public List<BusinessPartner> BusinessPartners { get; set; }
 
-        [DataMember]
-        public List<Text> Texts{ get; set; }
+        //[DataMember]
+        //public List<Text> Texts{ get; set; }
     }
 
     [DataContract]

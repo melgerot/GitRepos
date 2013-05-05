@@ -45,29 +45,97 @@ namespace SAP.CRM.Gateway
                 };
                 sapResponse = client.ZIgnBpcontactGetlist(sapRequest);
             }
-            // Map SAP response into service response object and return response
+            // Map SAP response into new response object and return response
             var response = new GetSalesActivitiesResponse();
-
+            
+            response.ActivityGeneralData = new List<ActivityGeneralData>();
             foreach (var activity in sapResponse.Generaldata)
             {
-                // Get business partners by for sales activity
-                var businesspartners = from partner in sapResponse.Businesspartner
-                                      where partner.Refobjecttype == activity.Refobjecttype
-                                         && partner.Refobjectkey == activity.Refobjectkey
-                                         && partner.DocNumber == activity.DocNumber                               
-                                      select partner;
-                // Get texts for sales activity
-                var texts = from text in sapResponse.Text
-                                       where text.Refobjecttype == activity.Refobjecttype
-                                          && text.Refobjectkey == activity.Refobjectkey
-                                          && text.DocNumber == activity.DocNumber
-                                       select text;
-                          
-               response.SalesActivities.Add(new SalesActivity
-               {
 
-               };
+                response.ActivityGeneralData.Add(new ActivityGeneralData
+                {
+                    ActivityCommentField = activity.ActivityComment,
+                    ActivityTypeField = activity.ActivityType,
+                    ContactField = activity.Contact,
+                    ContactRoleField = activity.ContactRole,
+                    Descrpt01Field = activity.Descrpt01,
+                    Descrpt02Field = activity.Descrpt02,
+                    Descrpt03Field = activity.Descrpt03,
+                    Descrpt04Field = activity.Descrpt04,
+                    Descrpt05Field = activity.Descrpt05,
+                    Descrpt06Field = activity.Descrpt06,
+                    Descrpt07Field = activity.Descrpt07,
+                    Descrpt08Field = activity.Descrpt08,
+                    Descrpt09Field = activity.Descrpt09,
+                    Descrpt10Field = activity.Descrpt10,
+                    DirectionField = activity.Direction,
+                    DistrChanField = activity.DistrChan,
+                    DivisionField = activity.Division,
+                    DocNumberField = activity.DocNumber,
+                    FollowUpDateField = activity.FollowUpDate,
+                    FollowUpTypeField = activity.FollowUpType,
+                    FromDateField = activity.FromDate,
+                    FromTimeField = activity.FromTime,
+                    LanguField = activity.Langu,
+                    LanguIsoField = activity.LanguIso,
+                    PartnIdField = activity.PartnId,
+                    PartnRoleField = activity.PartnRole,
+                    ReasonField = activity.Reason,
+                    RefdoctypeField = activity.Refdoctype,
+                    RefobjectkeyField = activity.Refobjectkey,
+                    RefobjecttypeField = activity.Refobjecttype,
+                    RefreltypeField = activity.Refobjecttype,
+                    ResultField = activity.Result,
+                    ResultExplanationField = activity.ResultExplanation,
+                    SalesGrpField = activity.SalesGrp,
+                    SalesOffField = activity.SalesOff,
+                    SalesorgField = activity.Salesorg,
+                    StateField = activity.State,
+                    ToDateField = activity.ToDate,
+                    ToTimeField = activity.ToTime,
+                    TxtKonseField = activity.TxtKonse           
+                });
             };
+
+            response.BusinessPartners = new List<BusinessPartner>();
+            foreach (var partner in sapResponse.Businesspartner)
+            {
+                response.BusinessPartners.Add(new BusinessPartner
+                {
+                    AddrLinkField = partner.AddrLink,
+                    AddrNoField = partner.AddrNo,
+                    AddrOriginField = partner.AddrOrigin,
+                    AddrtypeField = partner.Addrtype,
+                    CalendarUpdateField = partner.CalendarUpdate,
+                    CountParvwField = partner.CountParvw,
+                    DocNumberField = partner.DocNumber,
+                    ItmNumberField = partner.ItmNumber,
+                    PartnIdField = partner.PartnId,
+                    PartnIdOldField = partner.PartnIdOld,
+                    PartnRoleField = partner.PartnRole,
+                    PartnRoleOldField = partner.PartnRoleOld,
+                    PersNoField = partner.PersNo,
+                    RefobjectkeyField = partner.Refobjectkey,
+                    RefobjecttypeField = partner.Refobjecttype,
+                    UnloadPtField = partner.UnloadPt
+                });
+            }
+
+            response.Texts = new List<Text>();
+            foreach (var text in sapResponse.Text)
+            {
+                response.Texts.Add(new Text
+                {
+                     DocNumberField = text.DocNumber,
+                     FunctionField = text.Function,
+                     LanguField = text.Langu,
+                     LangupIsoField = text.LangupIso,
+                     RefobjectkeyField = text.Refobjectkey,
+                     RefobjecttypeField = text.Refobjecttype,
+                     TextIdField = text.TextId,
+                     TextLineField = text.TextLine
+                });
+            }
 
             return response;
         }

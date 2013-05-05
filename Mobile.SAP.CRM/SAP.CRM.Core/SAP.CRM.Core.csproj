@@ -37,14 +37,14 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MyClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SAL\CustomWebClient.cs" />
+    <Compile Include="SAL\ServiceHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BL\" />
     <Folder Include="DAL\" />
     <Folder Include="DL\" />
-    <Folder Include="SAL\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>

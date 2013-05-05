@@ -76,12 +76,15 @@
   <ItemGroup>
     <Compile Include="MyClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SAL\CustomWebClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SAL\ServiceHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BL\" />
     <Folder Include="DAL\" />
     <Folder Include="DL\" />
-    <Folder Include="SAL\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -92,7 +95,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties ProjectLinkReference="5229bb48-b850-4677-874a-f040c2fb7a35" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="5229bb48-b850-4677-874a-f040c2fb7a35" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
