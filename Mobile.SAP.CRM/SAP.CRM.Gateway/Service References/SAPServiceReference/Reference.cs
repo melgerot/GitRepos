@@ -34,7 +34,13 @@ namespace SAP.CRM.Gateway.SAPServiceReference {
         
         private string customerField;
         
-        private string fromDateField;
+        private int daysBackwardField;
+        
+        private bool daysBackwardFieldSpecified;
+        
+        private int daysForwardField;
+        
+        private bool daysForwardFieldSpecified;
         
         private string myCustomersField;
         
@@ -56,18 +62,54 @@ namespace SAP.CRM.Gateway.SAPServiceReference {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string FromDate {
+        public int DaysBackward {
             get {
-                return this.fromDateField;
+                return this.daysBackwardField;
             }
             set {
-                this.fromDateField = value;
-                this.RaisePropertyChanged("FromDate");
+                this.daysBackwardField = value;
+                this.RaisePropertyChanged("DaysBackward");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DaysBackwardSpecified {
+            get {
+                return this.daysBackwardFieldSpecified;
+            }
+            set {
+                this.daysBackwardFieldSpecified = value;
+                this.RaisePropertyChanged("DaysBackwardSpecified");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int DaysForward {
+            get {
+                return this.daysForwardField;
+            }
+            set {
+                this.daysForwardField = value;
+                this.RaisePropertyChanged("DaysForward");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DaysForwardSpecified {
+            get {
+                return this.daysForwardFieldSpecified;
+            }
+            set {
+                this.daysForwardFieldSpecified = value;
+                this.RaisePropertyChanged("DaysForwardSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public string MyCustomers {
             get {
                 return this.myCustomersField;
@@ -79,7 +121,7 @@ namespace SAP.CRM.Gateway.SAPServiceReference {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public string MySalesActivity {
             get {
                 return this.mySalesActivityField;
@@ -91,7 +133,7 @@ namespace SAP.CRM.Gateway.SAPServiceReference {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         [System.Xml.Serialization.XmlArrayItemAttribute("item", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
         public Rangesktast[] Status {
             get {

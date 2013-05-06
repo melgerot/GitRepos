@@ -1,7 +1,7 @@
 using System;
 using System.Net;
 
-namespace enfoTimesheet.Core
+namespace SAP.CRM.Core.SAL
 {
 	public class CustomWebClient : WebClient
 	{

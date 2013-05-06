@@ -75,6 +75,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GatewayDataContracts.cs" />
     <Compile Include="GatewayService.svc.cs">
       <DependentUpon>GatewayService.svc</DependentUpon>
     </Compile>

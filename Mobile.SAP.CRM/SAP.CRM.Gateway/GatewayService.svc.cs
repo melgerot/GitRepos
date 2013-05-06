@@ -18,7 +18,7 @@ namespace SAP.CRM.Gateway
         const string SALES_ACTIVITY_STATUS_COMPLETED = "5";
 
 
-        public GetSalesActivitiesResponse GetSalesActivities(string sessionid, string customer, string datefrom, 
+        public GetSalesActivitiesResponse GetSalesActivities(string customer, int daysbackward, int daysforward, 
             string mycustomers, string myactivities, bool statusopen, bool statusinprogress, bool statuscompleted)
         {
             ZIgnBpcontactGetlistResponse sapResponse = null;
@@ -38,7 +38,8 @@ namespace SAP.CRM.Gateway
                 var sapRequest = new ZIgnBpcontactGetlist
                 {
                     Customer = customer,
-                    FromDate = datefrom,
+                    DaysBackward = daysbackward,
+                    DaysForward = daysforward,
                     MyCustomers = mycustomers,
                     MySalesActivity = myactivities,
                     Status = StatusList.ToArray<Rangesktast>()
@@ -140,9 +141,44 @@ namespace SAP.CRM.Gateway
             return response;
         }
 
+        public ZIgnBpcontactGetlistResponse GetSalesActivities2(string customer, int daysbackward, int daysforward, 
+            string mycustomers, string myactivities, bool statusopen, bool statusinprogress, bool statuscompleted)
+        {
+            ZIgnBpcontactGetlistResponse sapResponse = null;
+
+            // Prepare request object and call SAP
+            using (ZIGNMOBILESALESACTIVITYClient client = new ZIGNMOBILESALESACTIVITYClient("binding_SOAP12"))
+            {
+                // TODO - service user should be changed to SAML Token
+                client.ClientCredentials.UserName.UserName = "DEVELOPER";
+                client.ClientCredentials.UserName.Password = "ZignMob2017";
+
+                var StatusList = new List<Rangesktast>();
+                if (statusopen) StatusList.Add(new Rangesktast { Sign = "I", Option = "EQ", Low = SALES_ACTIVITY_STATUS_OPEN });
+                if (statusinprogress) StatusList.Add(new Rangesktast { Sign = "I", Option = "EQ", Low = SALES_ACTIVITY_STATUS_INPROGRESS });
+                if (statuscompleted) StatusList.Add(new Rangesktast { Sign = "I", Option = "EQ", Low = SALES_ACTIVITY_STATUS_COMPLETED });
+
+                var sapRequest = new ZIgnBpcontactGetlist
+                {
+                    Customer = customer,
+                    DaysBackward = daysbackward,
+                    DaysForward = daysforward,
+                    MyCustomers = mycustomers,
+                    MySalesActivity = myactivities,
+                    Status = StatusList.ToArray<Rangesktast>()
+                };
+                sapResponse = client.ZIgnBpcontactGetlist(sapRequest);
+            }
+
+            return sapResponse;
+        }
+
         //public GetClientsInfoResponse GetClientsInfo()
         //{
         //    throw new NotImplementedException();
         //}
+
     }
+
+
 }

@@ -300,7 +300,8 @@
         <xsd:complexType>
           <xsd:sequence>
             <xsd:element minOccurs="0" name="Customer" type="n0:char10" />
-            <xsd:element minOccurs="0" name="FromDate" type="n0:date" />
+            <xsd:element minOccurs="0" name="DaysBackward" type="xsd:int" />
+            <xsd:element minOccurs="0" name="DaysForward" type="xsd:int" />
             <xsd:element minOccurs="0" name="MyCustomers" type="n0:char1" />
             <xsd:element minOccurs="0" name="MySalesActivity" type="n0:char1" />
             <xsd:element minOccurs="0" name="Status" type="tns:TableOfBapiRangesktast" />

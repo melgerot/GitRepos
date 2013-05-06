@@ -1,0 +1,10 @@
+C:\Users\melgerot\Documents\GitHub\GitRepos\Mobile.SAP.CRM\SAP.CRM.UnitTest\bin\Debug\SAP.CRM.UnitTest.dll
+C:\Users\melgerot\Documents\GitHub\GitRepos\Mobile.SAP.CRM\SAP.CRM.UnitTest\bin\Debug\SAP.CRM.UnitTest.pdb
+C:\Users\melgerot\Documents\GitHub\GitRepos\Mobile.SAP.CRM\SAP.CRM.UnitTest\obj\Debug\SAP.CRM.UnitTest.csprojResolveAssemblyReference.cache
+C:\Users\melgerot\Documents\GitHub\GitRepos\Mobile.SAP.CRM\SAP.CRM.UnitTest\obj\Debug\SAP.CRM.UnitTest.dll
+C:\Users\melgerot\Documents\GitHub\GitRepos\Mobile.SAP.CRM\SAP.CRM.UnitTest\obj\Debug\SAP.CRM.UnitTest.pdb
+C:\Users\melgerot\Documents\GitHub\GitRepos\Mobile.SAP.CRM\SAP.CRM.UnitTest\bin\Debug\Newtonsoft.Json.dll
+C:\Users\melgerot\Documents\GitHub\GitRepos\Mobile.SAP.CRM\SAP.CRM.UnitTest\bin\Debug\Community.CsharpSqlite.dll
+C:\Users\melgerot\Documents\GitHub\GitRepos\Mobile.SAP.CRM\SAP.CRM.UnitTest\bin\Debug\Community.CsharpSqlite.pdb
+C:\Users\melgerot\Documents\GitHub\GitRepos\Mobile.SAP.CRM\SAP.CRM.UnitTest\bin\Debug\SAP.CRM.Core.dll
+C:\Users\melgerot\Documents\GitHub\GitRepos\Mobile.SAP.CRM\SAP.CRM.UnitTest\bin\Debug\SAP.CRM.Core.pdb
