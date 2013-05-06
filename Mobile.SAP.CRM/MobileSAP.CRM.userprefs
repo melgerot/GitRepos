@@ -1,15 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Ad-Hoc|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Ad-Hoc|iPhone" />
   <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="SAP.CRM.Core" expanded="True" selected="True">
-            <Node name="References" expanded="True" />
-          </Node>
           <Node name="SAP.CRM.Core.MT" expanded="True">
             <Node name="References" expanded="True" />
           </Node>
+          <Node name="SAP.CRM.UnitTest" selected="True" />
         </State>
       </Pad>
     </Pads>
