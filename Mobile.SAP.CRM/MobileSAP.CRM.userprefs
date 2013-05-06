@@ -3,12 +3,7 @@
   <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="SAP.CRM.Core.MT" expanded="True">
-            <Node name="References" expanded="True" />
-          </Node>
-          <Node name="SAP.CRM.UnitTest" selected="True" />
-        </State>
+        <State expanded="True" selected="True" />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
