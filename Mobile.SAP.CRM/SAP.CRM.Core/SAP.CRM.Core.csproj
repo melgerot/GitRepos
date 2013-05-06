@@ -95,6 +95,7 @@
     <Compile Include="..\SAP.CRM.Gateway\GatewayDataContracts.cs">
       <Link>SAL\GatewayDataContracts.cs</Link>
     </Compile>
+    <Compile Include="ActivityRequestSettings.cs" />
     <Compile Include="BL\Activity.cs" />
     <Compile Include="BL\ActivityPartner.cs" />
     <Compile Include="BL\ActivityRequestSettings.cs" />
