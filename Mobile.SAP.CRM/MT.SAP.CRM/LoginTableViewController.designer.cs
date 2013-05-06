@@ -6,7 +6,7 @@
 //
 using MonoTouch.Foundation;
 
-namespace MT.SAP.CRM
+namespace SAP.CRM.MT
 {
 	[Register ("LoginTableViewController")]
 	partial class LoginTableViewController

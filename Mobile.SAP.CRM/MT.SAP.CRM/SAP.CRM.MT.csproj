@@ -8,7 +8,7 @@
     <ProjectGuid>{04CAE728-FF39-4167-BA26-37F761496D75}</ProjectGuid>
     <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
-    <RootNamespace>MT.SAP.CRM</RootNamespace>
+    <RootNamespace>SAP.CRM.MT</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>MTSAPCRM</AssemblyName>
   </PropertyGroup>
@@ -101,6 +101,18 @@
     <Compile Include="SalesActivityTabBarController.cs" />
     <Compile Include="SalesActivityTabBarController.designer.cs">
       <DependentUpon>SalesActivityTabBarController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActivityTableViewController.cs" />
+    <Compile Include="ActivityTableViewController.designer.cs">
+      <DependentUpon>ActivityTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActivitySeachTableViewController.cs" />
+    <Compile Include="ActivitySeachTableViewController.designer.cs">
+      <DependentUpon>ActivitySeachTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SortGroupTableViewController.cs" />
+    <Compile Include="SortGroupTableViewController.designer.cs">
+      <DependentUpon>SortGroupTableViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

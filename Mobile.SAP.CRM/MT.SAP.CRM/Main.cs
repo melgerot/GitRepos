@@ -5,7 +5,7 @@ using System.Linq;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
-namespace MT.SAP.CRM
+namespace SAP.CRM.MT
 {
 	public class Application
 	{
