@@ -118,5 +118,11 @@
   <ItemGroup>
     <InterfaceDefinition Include="MainStoryboard.storyboard" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SAP.CRM.Core\SAP.CRM.Core.MT.csproj">
+      <Project>{d17d4c7f-c77d-4b2d-bc4b-3c2fd36705fa}</Project>
+      <Name>SAP.CRM.Core.MT</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
 </Project>

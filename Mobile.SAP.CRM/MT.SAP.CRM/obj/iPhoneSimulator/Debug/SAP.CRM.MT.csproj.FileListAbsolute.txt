@@ -3,3 +3,6 @@ C:\Users\melgerot\Documents\GitHub\GitRepos\Mobile.SAP.CRM\MT.SAP.CRM\bin\iPhone
 C:\Users\melgerot\Documents\GitHub\GitRepos\Mobile.SAP.CRM\MT.SAP.CRM\obj\iPhoneSimulator\Debug\SAP.CRM.MT.csprojResolveAssemblyReference.cache
 C:\Users\melgerot\Documents\GitHub\GitRepos\Mobile.SAP.CRM\MT.SAP.CRM\obj\iPhoneSimulator\Debug\MTSAPCRM.exe
 C:\Users\melgerot\Documents\GitHub\GitRepos\Mobile.SAP.CRM\MT.SAP.CRM\obj\iPhoneSimulator\Debug\MTSAPCRM.pdb
+C:\Users\melgerot\Documents\GitHub\GitRepos\Mobile.SAP.CRM\MT.SAP.CRM\bin\iPhoneSimulator\Debug\SAP.CRM.Core.MT.dll
+C:\Users\melgerot\Documents\GitHub\GitRepos\Mobile.SAP.CRM\MT.SAP.CRM\bin\iPhoneSimulator\Debug\Newtonsoft.Json.MonoTouch.dll
+C:\Users\melgerot\Documents\GitHub\GitRepos\Mobile.SAP.CRM\MT.SAP.CRM\bin\iPhoneSimulator\Debug\SAP.CRM.Core.MT.dll.mdb
