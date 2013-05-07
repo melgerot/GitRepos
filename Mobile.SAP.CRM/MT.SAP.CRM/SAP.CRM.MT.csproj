@@ -114,13 +114,17 @@
     <Compile Include="SortGroupTableViewController.designer.cs">
       <DependentUpon>SortGroupTableViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerActivityCell.cs" />
+    <Compile Include="CustomerActivityCell.designer.cs">
+      <DependentUpon>CustomerActivityCell.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="MainStoryboard.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SAP.CRM.Core\SAP.CRM.Core.MT.csproj">
-      <Project>{d17d4c7f-c77d-4b2d-bc4b-3c2fd36705fa}</Project>
+      <Project>{D17D4C7F-C77D-4B2D-BC4B-3C2FD36705FA}</Project>
       <Name>SAP.CRM.Core.MT</Name>
     </ProjectReference>
   </ItemGroup>

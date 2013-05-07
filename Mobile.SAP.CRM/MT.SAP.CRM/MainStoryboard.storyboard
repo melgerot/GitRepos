@@ -264,7 +264,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ActivityCell" rowHeight="74" id="FmJ-7t-KzB">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ActivityCell" rowHeight="74" id="FmJ-7t-KzB" customClass="CustomerActivityCell">
                                 <rect key="frame" x="0.0" y="66" width="320" height="74"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -295,6 +295,9 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
+                                    <outlet property="SubTitle1Label" destination="AEf-CK-z2U" id="uyF-lT-Ke5"/>
+                                    <outlet property="SubTitle2Label" destination="B9B-OV-3kZ" id="UFq-Le-Elc"/>
+                                    <outlet property="TitleLabel" destination="y2P-Rm-M4Q" id="GkU-iM-Tdl"/>
                                     <segue destination="agM-Oy-kdb" kind="push" id="Tok-Q0-zCd"/>
                                 </connections>
                             </tableViewCell>
@@ -983,6 +986,14 @@
         </class>
         <class className="ActivityTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ActivityTableViewController.h"/>
+        </class>
+        <class className="CustomerActivityCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomerActivityCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="SubTitle1Label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="SubTitle2Label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="TitleLabel" candidateClass="UILabel"/>
+            </relationships>
         </class>
         <class className="LoginTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginTableViewController.h"/>
