@@ -4,6 +4,8 @@ using System;
 
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using SAP.CRM.Core.BL;
+using System.Collections.Generic;
 
 namespace SAP.CRM.MT
 {
@@ -13,4 +15,95 @@ namespace SAP.CRM.MT
 		{
 		}
 	}
+
+    public class ActivityTableViewSource : UITableViewSource
+    {
+        // declare vars
+        protected List<Activity> activityItems;
+        string cellIdentifier = "ActivityCell";
+
+        protected ActivityTableViewSource() { }
+
+        public ActivityTableViewSource(List<Activity> items)
+        {
+            activityItems = items;
+        }
+
+        #region -= data binding/display methods =-
+
+        /// <summary>
+        /// Called by the TableView to determine how many sections(groups) there are.
+        /// </summary>
+        public override int NumberOfSections(UITableView tableView)
+        {
+            //return base.NumberOfSections(tableView);
+            return 1;
+        }
+
+        /// <summary>
+        /// Called by the TableView to determine how many cells to create for that particular section.
+        /// </summary>
+        public override int RowsInSection(UITableView tableview, int section)
+        {
+            return activityItems.Count;
+        }
+
+        /// <summary>
+        /// Called by the TableView to retrieve the header text for the particular section(group)
+        /// </summary>
+        //public override string TitleForHeader(UITableView tableView, int section)
+        //{
+        //    return tableItems[section].Name;
+        //}
+
+        /// <summary>
+        /// Called by the TableView to retrieve the footer text for the particular section(group)
+        /// </summary>
+        //public override string TitleForFooter(UITableView tableView, int section)
+        //{
+        //    return tableItems[section].Footer;
+        //}
+
+        #endregion
+
+
+        #region -= user interaction methods =-
+
+        //public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
+        //{
+        //    new UIAlertView("Row Selected", activityItems[indexPath.Section].Items[indexPath.Row].Heading, null, "OK", null).Show();
+        //}
+
+        //public override void RowDeselected(UITableView tableView, NSIndexPath indexPath)
+        //{
+        //    Console.WriteLine("Row " + indexPath.Row.ToString() + " deselected");
+        //}
+
+        //public override void AccessoryButtonTapped(UITableView tableView, NSIndexPath indexPath)
+        //{
+        //    Console.WriteLine("Accessory for Section, " + indexPath.Section.ToString() + " and Row, " + indexPath.Row.ToString() + " tapped");
+        //}
+
+        #endregion
+
+
+        /// <summary>
+        /// Called by the TableView to get the actual UITableViewCell to render for the particular section and row
+        /// </summary>
+
+        public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
+        {
+            // in a Storyboard, Dequeue will ALWAYS return a cell, 
+            UITableViewCell cell = tableView.DequeueReusableCell(cellIdentifier);
+
+            // now set the properties as normal
+            // cell.TextLabel.Text = tableItems[indexPath.Row].Name;
+            
+            
+            throw new NotImplementedException();
+        }
+
+
+
+    }
 }
