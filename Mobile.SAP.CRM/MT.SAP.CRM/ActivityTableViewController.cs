@@ -11,16 +11,40 @@ namespace SAP.CRM.MT
 {
 	public partial class ActivityTableViewController : UITableViewController
 	{
+
+        private List<Activity> activities;
+
 		public ActivityTableViewController (IntPtr handle) : base (handle)
 		{
+            activities = new List<Activity>
+            {
+                new Activity{ ID = 1 },
+                new Activity{ ID = 2 },
+                new Activity{ ID = 3 },
+                new Activity{ ID = 4 }
+            };
 		}
+
+        public override void ViewWillAppear(bool animated)
+        {
+            base.ViewWillAppear(animated);
+
+            TableView.Source = new ActivityTableViewSource(activities);
+        }
 	}
 
     public class ActivityTableViewSource : UITableViewSource
     {
+        #region -= class variables =-
+
         // declare vars
         protected List<Activity> activityItems;
-        string cellIdentifier = "ActivityCell";
+        private string cellIdentifier = "ActivityCell";
+
+        #endregion
+
+
+        #region -= constructors =-
 
         protected ActivityTableViewSource() { }
 
@@ -29,6 +53,9 @@ namespace SAP.CRM.MT
             activityItems = items;
         }
 
+        #endregion
+
+
         #region -= data binding/display methods =-
 
         /// <summary>
@@ -36,8 +63,7 @@ namespace SAP.CRM.MT
         /// </summary>
         public override int NumberOfSections(UITableView tableView)
         {
-            //return base.NumberOfSections(tableView);
-            return 1;
+            return base.NumberOfSections(tableView);
         }
 
         /// <summary>
@@ -97,10 +123,12 @@ namespace SAP.CRM.MT
             UITableViewCell cell = tableView.DequeueReusableCell(cellIdentifier);
 
             // now set the properties as normal
-            // cell.TextLabel.Text = tableItems[indexPath.Row].Name;
-            
-            
-            throw new NotImplementedException();
+            ((CustomActivityCell)cell).Title.Text = activityItems[indexPath.Row].ID.ToString();
+            ((CustomActivityCell)cell).SubTitle1.Text = activityItems[indexPath.Row].ID.ToString();
+            ((CustomActivityCell)cell).SubTitle2.Text = activityItems[indexPath.Row].ID.ToString();
+
+            return cell;
+
         }
 
 
