@@ -11,9 +11,31 @@ namespace SAP.CRM.MT
 	[Register ("CustomActivityCell")]
 	partial class CustomActivityCell
 	{
+		[Outlet]
+		MonoTouch.UIKit.UILabel TitleLabel { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UILabel SubTitle1Label { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UILabel SubTitle2Label { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (TitleLabel != null) {
+				TitleLabel.Dispose ();
+				TitleLabel = null;
+			}
+
+			if (SubTitle1Label != null) {
+				SubTitle1Label.Dispose ();
+				SubTitle1Label = null;
+			}
+
+			if (SubTitle2Label != null) {
+				SubTitle2Label.Dispose ();
+				SubTitle2Label = null;
+			}
 		}
 	}
 }

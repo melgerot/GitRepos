@@ -114,9 +114,9 @@
     <Compile Include="SortGroupTableViewController.designer.cs">
       <DependentUpon>SortGroupTableViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomerActivityCell.cs" />
-    <Compile Include="CustomerActivityCell.designer.cs">
-      <DependentUpon>CustomerActivityCell.cs</DependentUpon>
+    <Compile Include="CustomActivityCell.cs" />
+    <Compile Include="CustomActivityCell.designer.cs">
+      <DependentUpon>CustomActivityCell.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
