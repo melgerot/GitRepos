@@ -7,9 +7,9 @@ using MonoTouch.UIKit;
 
 namespace SAP.CRM.MT
 {
-	public partial class CustomerActivityCell : UITableViewCell
+	public partial class CustomActivityCell : UITableViewCell
 	{
-		public CustomerActivityCell (IntPtr handle) : base (handle)
+		public CustomActivityCell (IntPtr handle) : base (handle)
 		{
 		}
 	}
