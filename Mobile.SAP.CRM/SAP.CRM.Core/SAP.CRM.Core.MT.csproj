@@ -91,6 +91,9 @@
     <Compile Include="SAL\CustomWebClient.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="BL\ActivityDetail.cs" />
+    <Compile Include="SAL\IServiceHelper.cs" />
+    <Compile Include="SAL\ServiceHelperBase.cs" />
     <Compile Include="SAL\ServiceHelper.cs" />
   </ItemGroup>
   <ItemGroup>

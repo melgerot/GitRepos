@@ -8,6 +8,15 @@ namespace SAP.CRM.Core.BL
 {
     public class ActivityPartner : BusinessEntityBase
     {
-        public string PartnerId { get; set; }
+		private string activityId;
+		
+		public string ActivityId {
+			get {
+				return activityId;
+			}
+			set {
+				activityId = value;
+			}
+		}
     }
 }

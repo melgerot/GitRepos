@@ -4,11 +4,14 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="SAP.CRM.MT" expanded="True">
-            <Node name="CustomActivityCell.cs" expanded="True">
-              <Node name="CustomActivityCell.designer.cs" selected="True" />
+          <Node name="SAP.CRM.Core.MT" expanded="True">
+            <Node name="BL" expanded="True">
+              <Node name="Activity.cs" selected="True" />
             </Node>
+            <Node name="DL" expanded="True" />
+            <Node name="SAL" expanded="True" />
           </Node>
+          <Node name="SAP.CRM.MT" expanded="True" />
         </State>
       </Pad>
     </Pads>

@@ -30,6 +30,7 @@ namespace SAP.CRM.MT
             base.ViewWillAppear(animated);
 
             TableView.Source = new ActivityTableViewSource(activities);
+		
         }
 	}
 
@@ -39,7 +40,7 @@ namespace SAP.CRM.MT
 
         // declare vars
         protected List<Activity> activityItems;
-        private string cellIdentifier = "ActivityCell";
+        private string cellIdentifier = "activityCell";
 
         #endregion
 
@@ -63,7 +64,7 @@ namespace SAP.CRM.MT
         /// </summary>
         public override int NumberOfSections(UITableView tableView)
         {
-            return base.NumberOfSections(tableView);
+			return 1;
         }
 
         /// <summary>
@@ -89,6 +90,11 @@ namespace SAP.CRM.MT
         //{
         //    return tableItems[section].Footer;
         //}
+
+		public override float GetHeightForRow (UITableView tableView, NSIndexPath indexPath)
+		{
+			return 74;
+		}
 
         #endregion
 
