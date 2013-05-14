@@ -118,6 +118,11 @@
     <Compile Include="CustomActivityCell.designer.cs">
       <DependentUpon>CustomActivityCell.cs</DependentUpon>
     </Compile>
+    <Compile Include="StatusSelectionTableViewController.cs" />
+    <Compile Include="StatusSelectionTableViewController.designer.cs">
+      <DependentUpon>StatusSelectionTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoadingOverlay.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="MainStoryboard.storyboard" />

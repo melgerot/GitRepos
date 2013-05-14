@@ -4,13 +4,79 @@ using System;
 
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using SAP.CRM.Core.BL;
+using SAP.CRM.Core.BL.Managers;
 
 namespace SAP.CRM.MT
 {
 	public partial class ActivitySeachTableViewController : UITableViewController
 	{
+		private ActivitySearchSettings settings;
+
 		public ActivitySeachTableViewController (IntPtr handle) : base (handle)
 		{
 		}
+				
+		public override void ViewWillAppear(bool animated)
+		{
+			base.ViewWillAppear(animated);
+			
+			settings = ActivityManager.GetActivitySearchSettings();
+			if(settings == null) 
+			{
+				// Create new if 
+				settings = new ActivitySearchSettings();
+				ActivityManager.SaveActivitySearchSettings(settings);
+			}
+
+			DaysBackwardLabel.Text = settings.DaysBackward.ToString();
+
+			this.TableView.Delegate = new ActivitySearchTableViewDelegate();
+		}
 	}
+
+	public class ActivitySearchTableViewDelegate : UITableViewDelegate
+	{
+		UIActionSheet actionSheet;
+
+		public ActivitySearchTableViewDelegate()
+		{
+		}
+
+		public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
+		{
+			//tableView.CellAt (NSIndexPath.FromRowSection (selected, 0)).Accessory = UITableViewCellAccessory.None;
+			//selected = indexPath.Row;
+			if(indexPath.Row == 0 && indexPath.Section == 0)
+			{
+				actionSheet = new UIActionSheet("Simple ActionSheet", null, "Cancel", "Delete", null);
+				actionSheet.Clicked += delegate(object a, UIButtonEventArgs b) {
+					Console.WriteLine ("Button " + b.ButtonIndex.ToString () + " clicked");
+				};
+				actionSheet.ShowInView (tableView);
+
+				tableView.DeselectRow (indexPath, true);
+			}
+
+			if(indexPath.Row == 0 && indexPath.Section == 1)
+			{
+				if(tableView.CellAt (indexPath).Accessory ==  UITableViewCellAccessory.None)
+					tableView.CellAt (indexPath).Accessory = UITableViewCellAccessory.Checkmark;
+				else
+					tableView.CellAt (indexPath).Accessory = UITableViewCellAccessory.None;
+				tableView.DeselectRow (indexPath, true);
+			}
+
+			if(indexPath.Row == 1 && indexPath.Section == 1)
+			{
+				if(tableView.CellAt (indexPath).Accessory ==  UITableViewCellAccessory.None)
+					tableView.CellAt (indexPath).Accessory = UITableViewCellAccessory.Checkmark;
+				else
+					tableView.CellAt (indexPath).Accessory = UITableViewCellAccessory.None;
+				tableView.DeselectRow (indexPath, true);
+			}
+
+		}
+	}
+	
 }

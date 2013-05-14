@@ -15,18 +15,25 @@ namespace SAP.CRM.MT
 
         private List<Activity> activities;
 
+		LoadingOverlay loadingOverlay;
+
 		public ActivityTableViewController (IntPtr handle) : base (handle)
 		{
-            activities = new List<Activity>();
+
 		}
 
         public override void ViewWillAppear(bool animated)
         {
             base.ViewWillAppear(animated);
 
-            TableView.Source = new ActivityTableViewSource(activities);
+			activities = ActivityManager.GetActivityList();
 
-            activities = ActivityManager.GetActivityList();
+			// TODO Implement sync call
+			// loadingOverlay = new LoadingOverlay (UIScreen.MainScreen.Bounds);
+			// this.Add(loadingOverlay);
+			// loadingOverlay.Hide ();
+
+            TableView.Source = new ActivityTableViewSource(activities);
 
             this.TableView.ReloadData();
         }

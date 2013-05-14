@@ -42,7 +42,7 @@ namespace SAP.CRM.Core.SAL
             if (targetService == null) throw new Exception("Target service information is missing");
 
             // Get search parameters from DB
-            ActivitySearchSettings activitySearchSettings  = ApplicationRepository.GetActivitiesRequestSettings().FirstOrDefault<ActivitySearchSettings>();
+            ActivitySearchSettings activitySearchSettings  = ApplicationRepository.GetActivitiesSearchSettings().FirstOrDefault<ActivitySearchSettings>();
             if (activitySearchSettings == null) throw new Exception("Activity search settings is missing");
 
             // Prepare the WebClient

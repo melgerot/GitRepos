@@ -10,7 +10,8 @@ using System.Text;
 namespace SAP.CRM.Core.BL.Managers
 {
     public static class ActivityManager
-    {
+	{
+
         static object locker = new object();
 
         public static event EventHandler UpdateStarted = delegate { };
@@ -89,6 +90,18 @@ namespace SAP.CRM.Core.BL.Managers
             return ApplicationRepository.GetActivities().ToList<Activity>();
         }
 
+		public static ActivitySearchSettings GetActivitySearchSettings ()
+		{
+			return ApplicationRepository.GetFirstActivitySearchSettings();
+		}
+
+		public static int SaveActivitySearchSettings (ActivitySearchSettings item)
+		{
+			lock(locker)
+			{
+				return ApplicationRepository.SaveActivitySearchSettings(item);
+			}
+		}
 
         //public static Activity GetActivity(int id)
         //{
@@ -99,5 +112,7 @@ namespace SAP.CRM.Core.BL.Managers
         //{
         //    return new List<Activity>(ActivityRepository.GetActivities());
         //}
+
+
     }
 }

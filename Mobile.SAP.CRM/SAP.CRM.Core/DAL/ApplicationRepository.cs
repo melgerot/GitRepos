@@ -137,24 +137,29 @@ namespace SAP.CRM.Core.DAL
 
         #endregion
 
-        #region ActivityRequestSettings
+        #region ActivitySearchSettings
 
-        public static ActivitySearchSettings GetActivityRequestSettings(int id)
+		public static ActivitySearchSettings GetFirstActivitySearchSettings()
+		{
+			return me.db.GetItems<ActivitySearchSettings>().FirstOrDefault();
+		}
+
+        public static ActivitySearchSettings GetActivitySearchSettings(int id)
         {
             return me.db.GetItem<ActivitySearchSettings>(id);
         }
 
-        public static IEnumerable<ActivitySearchSettings> GetActivitiesRequestSettings()
+        public static IEnumerable<ActivitySearchSettings> GetActivitiesSearchSettings()
         {
             return me.db.GetItems<ActivitySearchSettings>();
         }
 
-        public static int SaveActivityRequestSettings(ActivitySearchSettings item)
+        public static int SaveActivitySearchSettings(ActivitySearchSettings item)
         {
             return me.db.SaveItem<ActivitySearchSettings>(item);
         }
 
-        public static int DeleteActivityRequestSettings(int id)
+        public static int DeleteActivitySearchSettings(int id)
         {
             return me.db.DeleteItem<ActivitySearchSettings>(id);
         }
