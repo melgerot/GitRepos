@@ -6,6 +6,7 @@ using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using SAP.CRM.Core.BL;
 using System.Collections.Generic;
+using SAP.CRM.Core.BL.Managers;
 
 namespace SAP.CRM.MT
 {
@@ -16,13 +17,7 @@ namespace SAP.CRM.MT
 
 		public ActivityTableViewController (IntPtr handle) : base (handle)
 		{
-            activities = new List<Activity>
-            {
-                new Activity{ ID = 1 },
-                new Activity{ ID = 2 },
-                new Activity{ ID = 3 },
-                new Activity{ ID = 4 }
-            };
+            activities = new List<Activity>();
 		}
 
         public override void ViewWillAppear(bool animated)
@@ -30,7 +25,10 @@ namespace SAP.CRM.MT
             base.ViewWillAppear(animated);
 
             TableView.Source = new ActivityTableViewSource(activities);
-		
+
+            activities = ActivityManager.GetActivityList();
+
+            this.TableView.ReloadData();
         }
 	}
 
@@ -128,13 +126,15 @@ namespace SAP.CRM.MT
             // in a Storyboard, Dequeue will ALWAYS return a cell, 
             UITableViewCell cell = tableView.DequeueReusableCell(cellIdentifier);
 
-            // now set the properties as normal
-            ((CustomActivityCell)cell).Title.Text = activityItems[indexPath.Row].ID.ToString();
-            ((CustomActivityCell)cell).SubTitle1.Text = activityItems[indexPath.Row].ID.ToString();
-            ((CustomActivityCell)cell).SubTitle2.Text = activityItems[indexPath.Row].ID.ToString();
+            // Set the properties as normal
+            ((CustomActivityCell)cell).Title.Text = activityItems[indexPath.Row].Descrpt01Field.ToString();
+            ((CustomActivityCell)cell).SubTitle1.Text = "Customer Name ...";
+            ((CustomActivityCell)cell).SubTitle2.Text = string.Format("{0} {1} Status: {2}",
+                activityItems[indexPath.Row].ActivityTypeField.ToString(),
+                activityItems[indexPath.Row].FromDateField.ToString(),
+                activityItems[indexPath.Row].StateField.ToString());
 
             return cell;
-
         }
 
 

@@ -30,7 +30,7 @@ namespace SAP.CRM.Core.DL
             CreateTable<SAP.CRM.Core.BL.Activity>();
             CreateTable<SAP.CRM.Core.BL.ActivityPartner>();
             CreateTable<SAP.CRM.Core.BL.ActivityText>();
-            CreateTable<SAP.CRM.Core.BL.ActivityRequestSettings>();
+            CreateTable<SAP.CRM.Core.BL.ActivitySearchSettings>();
         }
 
         public IEnumerable<T> GetItems<T>() where T : SAP.CRM.Core.BL.Contracts.IBusinessEntity, new()

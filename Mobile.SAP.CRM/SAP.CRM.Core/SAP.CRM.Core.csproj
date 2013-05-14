@@ -98,18 +98,20 @@
     <Compile Include="..\SAP.CRM.Gateway\GatewayDataContracts.cs">
       <Link>SAL\GatewayDataContracts.cs</Link>
     </Compile>
-    <Compile Include="ActivityRequestSettings.cs" />
     <Compile Include="BL\Activity.cs" />
+    <Compile Include="BL\ActivityDetail.cs" />
     <Compile Include="BL\ActivityPartner.cs" />
-    <Compile Include="BL\ActivityRequestSettings.cs" />
+    <Compile Include="BL\ActivitySearchSettings.cs" />
     <Compile Include="BL\ActivityText.cs" />
     <Compile Include="BL\Contracts\BusinessEntityBase.cs" />
     <Compile Include="BL\Contracts\IBusinessEntity.cs" />
     <Compile Include="BL\Managers\ActivityManager.cs" />
-    <Compile Include="DAL\ActivityRepository.cs" />
+    <Compile Include="BL\TargetService.cs" />
+    <Compile Include="DAL\ApplicationRepository.cs" />
     <Compile Include="DL\ActivityDatabase.cs" />
     <Compile Include="DL\SQLite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SAL\Constants.cs" />
     <Compile Include="SAL\CustomWebClient.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -145,7 +147,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties ProjectLinkReference="d17d4c7f-c77d-4b2d-bc4b-3c2fd36705fa" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="d17d4c7f-c77d-4b2d-bc4b-3c2fd36705fa" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

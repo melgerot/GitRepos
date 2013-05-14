@@ -21,7 +21,7 @@ namespace SAP.CRM.UnitTest
             WebClient client = new WebClient(); // 15 seconds
             Uri uri = new Uri(string.Format("{0}/{1}?customer={2}&daysbackward={3}&daysforward={4}" +
                                             "&mycustomers={5}&myactivities={6}&statusopen={7}&statusinprogress={8}" +
-                                            "&statuscompleted={9}", 
+                                            "&statuscompleted={9}&deep={10}", 
                                             GATEWAY_URL, 
                                             SERVICE_PATH, 
                                             "",
@@ -29,6 +29,7 @@ namespace SAP.CRM.UnitTest
                                             100,
                                             "",
                                             "",
+                                            true,
                                             true,
                                             true,
                                             true));

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="SSF9fwyulW0na86xC9lQ+2jPy50=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="5C4NilnrocUTAqVqaYqoH8z76xg=">
   <bindingConfigurations>
-    <bindingConfiguration bindingType="customBinding" name="binding">
+    <bindingConfiguration bindingType="customBinding" name="binding1">
       <properties>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>binding</serializedValue>
+          <serializedValue>binding1</serializedValue>
         </property>
         <property path="/closeTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -161,10 +161,10 @@
         </property>
       </properties>
     </bindingConfiguration>
-    <bindingConfiguration bindingType="customBinding" name="binding_SOAP12">
+    <bindingConfiguration bindingType="customBinding" name="binding_SOAP121">
       <properties>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>binding_SOAP12</serializedValue>
+          <serializedValue>binding_SOAP121</serializedValue>
         </property>
         <property path="/closeTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -323,7 +323,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="binding" contract="SAPServiceReference.ZIGNMOBILESALESACTIVITY" bindingType="customBinding" address="http://sfsqvyrb.sap-cc.com:8000/sap/bc/srt/rfc/sap/zignmobilesalesactivity/800/zignmobilesalesactivity/binding" bindingConfiguration="binding">
+    <endpoint name="binding1" contract="SAPServiceReference.ZIGNMOBILESALESACTIVITY" bindingType="customBinding" address="http://sfsqvyrb.sap-cc.com:8000/sap/bc/srt/rfc/sap/zignmobilesalesactivity/800/zignmobilesalesactivity/binding" bindingConfiguration="binding1">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://sfsqvyrb.sap-cc.com:8000/sap/bc/srt/rfc/sap/zignmobilesalesactivity/800/zignmobilesalesactivity/binding</serializedValue>
@@ -335,7 +335,7 @@
           <serializedValue>customBinding</serializedValue>
         </property>
         <property path="/bindingConfiguration" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>binding</serializedValue>
+          <serializedValue>binding1</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>SAPServiceReference.ZIGNMOBILESALESACTIVITY</serializedValue>
@@ -398,7 +398,7 @@
           <serializedValue>False</serializedValue>
         </property>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>binding</serializedValue>
+          <serializedValue>binding1</serializedValue>
         </property>
         <property path="/kind" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -408,7 +408,7 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="binding_SOAP12" contract="SAPServiceReference.ZIGNMOBILESALESACTIVITY" bindingType="customBinding" address="http://sfsqvyrb.sap-cc.com:8000/sap/bc/srt/rfc/sap/zignmobilesalesactivity/800/zignmobilesalesactivity/binding" bindingConfiguration="binding_SOAP12">
+    <endpoint name="binding_SOAP121" contract="SAPServiceReference.ZIGNMOBILESALESACTIVITY" bindingType="customBinding" address="http://sfsqvyrb.sap-cc.com:8000/sap/bc/srt/rfc/sap/zignmobilesalesactivity/800/zignmobilesalesactivity/binding" bindingConfiguration="binding_SOAP121">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://sfsqvyrb.sap-cc.com:8000/sap/bc/srt/rfc/sap/zignmobilesalesactivity/800/zignmobilesalesactivity/binding</serializedValue>
@@ -420,7 +420,7 @@
           <serializedValue>customBinding</serializedValue>
         </property>
         <property path="/bindingConfiguration" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>binding_SOAP12</serializedValue>
+          <serializedValue>binding_SOAP121</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>SAPServiceReference.ZIGNMOBILESALESACTIVITY</serializedValue>
@@ -483,7 +483,7 @@
           <serializedValue>False</serializedValue>
         </property>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>binding_SOAP12</serializedValue>
+          <serializedValue>binding_SOAP121</serializedValue>
         </property>
         <property path="/kind" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

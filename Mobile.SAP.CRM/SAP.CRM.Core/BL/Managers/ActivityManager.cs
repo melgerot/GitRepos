@@ -21,52 +21,83 @@ namespace SAP.CRM.Core.BL.Managers
         public static bool IsUpdating
         {
             get { return _isUpdating; }
-            //set { _isUpdating = value; }
+            set { _isUpdating = value; }
         }
 
         static ActivityManager()
         {
         }
 
-        public static void Uppdate()
+        // Full Sync and Delta Sync
+
+        public static void RefreshActivityList()
         {
+            // TODO: Check that ActivityManager is not updating
+
+            // TODO: Check that new and changed data has been synced to backend.
+ 
+            // TODO: Perform check for last refresh date
+
             // make this a critical section to ensure that access is serial
             lock (locker)
-            {
-                Debug.WriteLine("Update started");
+            {               
+                Debug.WriteLine("Update started");                           
                 UpdateStarted(null, EventArgs.Empty);
-
-                Debug.WriteLine("Begin process Servicce Application Layer - Async");
+                IsUpdating = true;
+                
+                Debug.WriteLine("Begin process service application layer");
                 ServiceHelper helper = new ServiceHelper();
-   
-                _isUpdating = true;
-                helper.GetSalesActivities(delegate
+                // Wire events 
+                helper.OnGetActivitiesCompleted += delegate
                 {
-                    Debug.WriteLine("Processing update in delegate");
-                    var list = helper.BusinessEntityList.FirstOrDefault();
-                    if (list != null)
+                    lock (locker)
                     {
-                        Debug.WriteLine("Data exist and is updated in database");
-                        // TODO: Delete cascade all old activity data
+                        // TODO: Delete existing activity data
 
-                        // TODO: Save all new data
+                        // Persist entities to database
+                        foreach (var item in helper.Entities.OfType<Activity>())
+                        {
+                            ApplicationRepository.SaveActivity(item);
+                        }
 
-                    } 
-                      Debug.WriteLine("Update finished");
-                     UpdateFinished(null, EventArgs.Empty);
-                     _isUpdating = false;
-                });           
+                        // Persist entities to database
+                        foreach (var item in helper.Entities.OfType<ActivityPartner>())
+                        {
+                            ApplicationRepository.SaveActivityPartner(item);
+                        } 
+
+                        // TODO: Update missing partner data
+
+                        Debug.WriteLine("Update completed");
+                        IsUpdating = false;
+                    }
+                    UpdateFinished(null, EventArgs.Empty);         
+                };
+                helper.OnGetActivitiesFailed += delegate
+                {
+                    Debug.WriteLine("Update failed");      
+                    IsUpdating = false;
+                    UpdateFinished(null, EventArgs.Empty);                  
+                };
+                // Do service calls
+                helper.GetActivities(false);
             }
         }
 
-        public static Activity GetActivity(int id)
+        public static List<Activity> GetActivityList()
         {
-            return ActivityRepository.GetActivity(id);
+            return ApplicationRepository.GetActivities().ToList<Activity>();
         }
 
-        public static IList<Activity> GetActivities()
-        {
-            return new List<Activity>(ActivityRepository.GetActivities());
-        }
+
+        //public static Activity GetActivity(int id)
+        //{
+        //    return ActivityRepository.GetActivity(id);
+        //}
+
+        //public static IList<Activity> GetActivities()
+        //{
+        //    return new List<Activity>(ActivityRepository.GetActivities());
+        //}
     }
 }

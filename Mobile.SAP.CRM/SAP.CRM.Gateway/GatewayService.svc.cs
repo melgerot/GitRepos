@@ -19,7 +19,7 @@ namespace SAP.CRM.Gateway
 
 
         public GetSalesActivitiesResponse GetSalesActivities(string customer, int daysbackward, int daysforward, 
-            string mycustomers, string myactivities, bool statusopen, bool statusinprogress, bool statuscompleted)
+            string mycustomers, string myactivities, bool statusopen, bool statusinprogress, bool statuscompleted, bool deep)
         {
             ZIgnBpcontactGetlistResponse sapResponse = null;
 
@@ -98,80 +98,83 @@ namespace SAP.CRM.Gateway
                 });
             };
 
-            response.BusinessPartners = new List<BusinessPartner>();
-            foreach (var partner in sapResponse.Businesspartner)
+            if (deep) // Add details if requested
             {
-                response.BusinessPartners.Add(new BusinessPartner
+                response.BusinessPartners = new List<BusinessPartner>();
+                foreach (var partner in sapResponse.Businesspartner)
                 {
-                    AddrLinkField = partner.AddrLink,
-                    AddrNoField = partner.AddrNo,
-                    AddrOriginField = partner.AddrOrigin,
-                    AddrtypeField = partner.Addrtype,
-                    CalendarUpdateField = partner.CalendarUpdate,
-                    CountParvwField = partner.CountParvw,
-                    DocNumberField = partner.DocNumber,
-                    ItmNumberField = partner.ItmNumber,
-                    PartnIdField = partner.PartnId,
-                    PartnIdOldField = partner.PartnIdOld,
-                    PartnRoleField = partner.PartnRole,
-                    PartnRoleOldField = partner.PartnRoleOld,
-                    PersNoField = partner.PersNo,
-                    RefobjectkeyField = partner.Refobjectkey,
-                    RefobjecttypeField = partner.Refobjecttype,
-                    UnloadPtField = partner.UnloadPt
-                });
-            }
+                    response.BusinessPartners.Add(new BusinessPartner
+                    {
+                        AddrLinkField = partner.AddrLink,
+                        AddrNoField = partner.AddrNo,
+                        AddrOriginField = partner.AddrOrigin,
+                        AddrtypeField = partner.Addrtype,
+                        CalendarUpdateField = partner.CalendarUpdate,
+                        CountParvwField = partner.CountParvw,
+                        DocNumberField = partner.DocNumber,
+                        ItmNumberField = partner.ItmNumber,
+                        PartnIdField = partner.PartnId,
+                        PartnIdOldField = partner.PartnIdOld,
+                        PartnRoleField = partner.PartnRole,
+                        PartnRoleOldField = partner.PartnRoleOld,
+                        PersNoField = partner.PersNo,
+                        RefobjectkeyField = partner.Refobjectkey,
+                        RefobjecttypeField = partner.Refobjecttype,
+                        UnloadPtField = partner.UnloadPt
+                    });
+                }
 
-            response.Texts = new List<Text>();
-            foreach (var text in sapResponse.Text)
-            {
-                response.Texts.Add(new Text
+                response.Texts = new List<Text>();
+                foreach (var text in sapResponse.Text)
                 {
-                     DocNumberField = text.DocNumber,
-                     FunctionField = text.Function,
-                     LanguField = text.Langu,
-                     LangupIsoField = text.LangupIso,
-                     RefobjectkeyField = text.Refobjectkey,
-                     RefobjecttypeField = text.Refobjecttype,
-                     TextIdField = text.TextId,
-                     TextLineField = text.TextLine
-                });
+                    response.Texts.Add(new Text
+                    {
+                        DocNumberField = text.DocNumber,
+                        FunctionField = text.Function,
+                        LanguField = text.Langu,
+                        LangupIsoField = text.LangupIso,
+                        RefobjectkeyField = text.Refobjectkey,
+                        RefobjecttypeField = text.Refobjecttype,
+                        TextIdField = text.TextId,
+                        TextLineField = text.TextLine
+                    });
+                }
             }
 
             return response;
         }
 
-        public ZIgnBpcontactGetlistResponse GetSalesActivities2(string customer, int daysbackward, int daysforward, 
-            string mycustomers, string myactivities, bool statusopen, bool statusinprogress, bool statuscompleted)
-        {
-            ZIgnBpcontactGetlistResponse sapResponse = null;
+        //public ZIgnBpcontactGetlistResponse GetSalesActivities2(string customer, int daysbackward, int daysforward, 
+        //    string mycustomers, string myactivities, bool statusopen, bool statusinprogress, bool statuscompleted)
+        //{
+        //    ZIgnBpcontactGetlistResponse sapResponse = null;
 
-            // Prepare request object and call SAP
-            using (ZIGNMOBILESALESACTIVITYClient client = new ZIGNMOBILESALESACTIVITYClient("binding_SOAP12"))
-            {
-                // TODO - service user should be changed to SAML Token
-                client.ClientCredentials.UserName.UserName = "DEVELOPER";
-                client.ClientCredentials.UserName.Password = "ZignMob2017";
+        //    // Prepare request object and call SAP
+        //    using (ZIGNMOBILESALESACTIVITYClient client = new ZIGNMOBILESALESACTIVITYClient("binding_SOAP12"))
+        //    {
+        //        // TODO - service user should be changed to SAML Token
+        //        client.ClientCredentials.UserName.UserName = "DEVELOPER";
+        //        client.ClientCredentials.UserName.Password = "ZignMob2017";
 
-                var StatusList = new List<Rangesktast>();
-                if (statusopen) StatusList.Add(new Rangesktast { Sign = "I", Option = "EQ", Low = SALES_ACTIVITY_STATUS_OPEN });
-                if (statusinprogress) StatusList.Add(new Rangesktast { Sign = "I", Option = "EQ", Low = SALES_ACTIVITY_STATUS_INPROGRESS });
-                if (statuscompleted) StatusList.Add(new Rangesktast { Sign = "I", Option = "EQ", Low = SALES_ACTIVITY_STATUS_COMPLETED });
+        //        var StatusList = new List<Rangesktast>();
+        //        if (statusopen) StatusList.Add(new Rangesktast { Sign = "I", Option = "EQ", Low = SALES_ACTIVITY_STATUS_OPEN });
+        //        if (statusinprogress) StatusList.Add(new Rangesktast { Sign = "I", Option = "EQ", Low = SALES_ACTIVITY_STATUS_INPROGRESS });
+        //        if (statuscompleted) StatusList.Add(new Rangesktast { Sign = "I", Option = "EQ", Low = SALES_ACTIVITY_STATUS_COMPLETED });
 
-                var sapRequest = new ZIgnBpcontactGetlist
-                {
-                    Customer = customer,
-                    DaysBackward = daysbackward,
-                    DaysForward = daysforward,
-                    MyCustomers = mycustomers,
-                    MySalesActivity = myactivities,
-                    Status = StatusList.ToArray<Rangesktast>()
-                };
-                sapResponse = client.ZIgnBpcontactGetlist(sapRequest);
-            }
+        //        var sapRequest = new ZIgnBpcontactGetlist
+        //        {
+        //            Customer = customer,
+        //            DaysBackward = daysbackward,
+        //            DaysForward = daysforward,
+        //            MyCustomers = mycustomers,
+        //            MySalesActivity = myactivities,
+        //            Status = StatusList.ToArray<Rangesktast>()
+        //        };
+        //        sapResponse = client.ZIgnBpcontactGetlist(sapRequest);
+        //    }
 
-            return sapResponse;
-        }
+        //    return sapResponse;
+        //}
 
         //public GetClientsInfoResponse GetClientsInfo()
         //{

@@ -22,18 +22,18 @@ namespace SAP.CRM.Gateway
                    BodyStyle = WebMessageBodyStyle.Bare,
                    UriTemplate = "/SalesActivities?customer={customer}&daysbackward={daysbackward}&daysforward={daysforward}&" +
                               "mycustomers={mycustomers}&myactivities={myactivities}&statusopen={statusopen}&" +
-                              "statusinprogress={statusinprogress}&statuscompleted={statuscompleted}")]   
-        GetSalesActivitiesResponse GetSalesActivities(string customer, int daysbackward, int daysforward, 
-            string mycustomers, string myactivities, bool statusopen, bool statusinprogress, bool statuscompleted);
+                              "statusinprogress={statusinprogress}&statuscompleted={statuscompleted}&deep={deep}")]   
+        GetSalesActivitiesResponse GetSalesActivities(string customer, int daysbackward, int daysforward,
+            string mycustomers, string myactivities, bool statusopen, bool statusinprogress, bool statuscompleted, bool deep);
 
-        [WebInvoke(Method = "GET",
-                   ResponseFormat = WebMessageFormat.Json,
-                   BodyStyle = WebMessageBodyStyle.Bare,
-                   UriTemplate = "/SalesActivities2?customer={customer}&daysbackward={daysbackward}&daysforward={daysforward}&" +
-                              "mycustomers={mycustomers}&myactivities={myactivities}&statusopen={statusopen}&" +
-                              "statusinprogress={statusinprogress}&statuscompleted={statuscompleted}")]
-        ZIgnBpcontactGetlistResponse GetSalesActivities2(string customer, int daysbackward, int daysforward,
-            string mycustomers, string myactivities, bool statusopen, bool statusinprogress, bool statuscompleted);
+        //[WebInvoke(Method = "GET",
+        //           ResponseFormat = WebMessageFormat.Json,
+        //           BodyStyle = WebMessageBodyStyle.Bare,
+        //           UriTemplate = "/SalesActivities2?customer={customer}&daysbackward={daysbackward}&daysforward={daysforward}&" +
+        //                      "mycustomers={mycustomers}&myactivities={myactivities}&statusopen={statusopen}&" +
+        //                      "statusinprogress={statusinprogress}&statuscompleted={statuscompleted}")]
+        //ZIgnBpcontactGetlistResponse GetSalesActivities2(string customer, int daysbackward, int daysforward,
+        //    string mycustomers, string myactivities, bool statusopen, bool statusinprogress, bool statuscompleted);
 
        
         

@@ -538,8 +538,19 @@ namespace SAP.CRM.Gateway
             get { return addrLinkField; }
             set { addrLinkField = value; }
         }
+
+        //private string partnNameField;
+
+        //[DataMember]
+        //public string PartnNameField
+        //{
+        //    get { return partnNameField; }
+        //    set { partnNameField = value; }
+        //}
+
     }
 
+    
     [DataContract]
     public class Text
     {

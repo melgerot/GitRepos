@@ -1,5 +1,7 @@
 ﻿using System;
 using SAP.CRM.Core.SQLite;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace SAP.CRM.Core.BL.Contracts
 {
@@ -17,5 +19,6 @@ namespace SAP.CRM.Core.BL.Contracts
         /// </summary>
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
+       
     }
 }
