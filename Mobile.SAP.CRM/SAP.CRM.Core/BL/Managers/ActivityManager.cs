@@ -82,8 +82,16 @@ namespace SAP.CRM.Core.BL.Managers
                     IsUpdating = false;
                     UpdateFinished(null, EventArgs.Empty);                  
                 };
-                // Do service calls
-                helper.GetActivities(false);
+                
+				try {
+					// Do service calls
+					helper.GetActivities(false);
+				} catch (Exception ex) {
+					// Service call could not be peformed due to unknown reason
+					// Propagate exeception to caller
+					throw ex;
+				}
+                
             }
         }
 

@@ -26,7 +26,7 @@ namespace SAP.CRM.MT
 			if(activitySearchSettings == null) 
 			{
 				// Create new if not exists
-				activitySearchSettings = new ActivitySearchSettings();
+				activitySearchSettings = new ActivitySearchSettings{ DaysBackward = 100, DaysForward = 100 };
 				ActivityManager.SaveActivitySearchSettings(activitySearchSettings);
 			}
 			// Prepare controls for output
@@ -39,8 +39,8 @@ namespace SAP.CRM.MT
 			this.TableView.Delegate = new ActivitySearchTableViewDelegate(activitySearchSettings);
 
 			// Information message to user changing the search criteria
-			string detailMessage = "Modifying the seach criteria will trigger a full refresh of activity data";
-			new UIAlertView("Information", detailMessage, null, "OK", null).Show();
+//			string detailMessage = "Modifying the seach criteria will trigger a full refresh of activity data";
+//			new UIAlertView("Information", detailMessage, null, "OK", null).Show();
 		}
 	}
 	

@@ -18,6 +18,7 @@ namespace SAP.CRM.Core.SAL
 
 		public ServiceHelper ()
 		{
+			Entities = new List<IBusinessEntity> ();
 		}
 
         #region Activity Services
@@ -47,7 +48,7 @@ namespace SAP.CRM.Core.SAL
 
             // Prepare the WebClient
             CustomWebClient client = new CustomWebClient(Constants.WEBCLIENT_TIMEOUT);
-            Uri uri = new Uri(string.Format("{0}/?customer={1}&daysbackward={2}&daysforward={3}" +
+            Uri uri = new Uri(string.Format("{0}?customer={1}&daysbackward={2}&daysforward={3}" +
                                             "&mycustomers={4}&myactivities={5}&statusopen={6}&statusinprogress={7}" +
                                             "&statuscompleted={8}&deep={9}",
                                             targetService.Uri,
@@ -75,8 +76,8 @@ namespace SAP.CRM.Core.SAL
             Console.WriteLine ("GetActivities_Completed");
             if (e.Error != null)
             {
-                if (OnGetActivitiesFailed != null)
-                    OnGetActivitiesFailed();
+				if (OnGetActivitiesFailed != null)
+					OnGetActivitiesFailed ();
             }
             else
             {
@@ -86,75 +87,78 @@ namespace SAP.CRM.Core.SAL
 
                 foreach (var item in response.ActivityGeneralData)
                 {
-                    Entities.Add(new Activity
-                    {
-                         ActivityCommentField = item.ActivityCommentField,
-                         ActivityTypeField = item.ActivityTypeField,
-                         ContactField = item.ContactField,
-                         ContactRoleField = item.ContactRoleField,
-                         Descrpt01Field = item.Descrpt01Field,
-                         Descrpt02Field = item.Descrpt02Field,
-                         Descrpt03Field = item.Descrpt03Field,
-                         Descrpt04Field = item.Descrpt04Field,
-                         Descrpt05Field = item.Descrpt05Field,
-                         Descrpt06Field = item.Descrpt06Field,
-                         Descrpt07Field = item.Descrpt07Field,
-                         Descrpt08Field = item.Descrpt08Field,
-                         Descrpt09Field = item.Descrpt09Field,
-                         Descrpt10Field = item.Descrpt10Field,
-                         DirectionField = item.DirectionField,
-                         DistrChanField = item.DistrChanField,
-                         DivisionField = item.DivisionField,
-                         DocNumberField = item.DocNumberField,
-                         FollowUpDateField = item.FollowUpDateField,
-                         FollowUpTypeField = item.FollowUpTypeField,
-                         FromDateField = item.FromDateField,
-                         FromTimeField = item.FromTimeField,
-                         LanguField = item.LanguField,
-                         LanguIsoField = item.LanguIsoField,
-                         PartnIdField = item.PartnIdField,
-                         PartnRoleField = item.PartnRoleField,
-                         ReasonField = item.ReasonField,
-                         RefdoctypeField = item.RefdoctypeField,
-                         RefobjectkeyField = item.RefobjectkeyField,
-                         RefobjecttypeField = item.RefobjecttypeField,
-                         RefreltypeField = item.RefreltypeField,
-                         ResultExplanationField = item.ResultExplanationField,
-                         ResultField = item.ResultField,
-                         SalesGrpField = item.SalesGrpField,
-                         SalesOffField = item.SalesOffField,
-                         SalesorgField = item.SalesorgField,
-                         StateField = item.StateField,
-                         ToDateField = item.ToDateField,
-                         ToTimeField = item.ToTimeField,
-                         TxtKonseField = item.TxtKonseField
-                    });
+					IBusinessEntity entity = (IBusinessEntity)new Activity {
+						ActivityCommentField = item.ActivityCommentField,
+						ActivityTypeField = item.ActivityTypeField,
+						ContactField = item.ContactField,
+						ContactRoleField = item.ContactRoleField,
+						Descrpt01Field = item.Descrpt01Field,
+						Descrpt02Field = item.Descrpt02Field,
+						Descrpt03Field = item.Descrpt03Field,
+						Descrpt04Field = item.Descrpt04Field,
+						Descrpt05Field = item.Descrpt05Field,
+						Descrpt06Field = item.Descrpt06Field,
+						Descrpt07Field = item.Descrpt07Field,
+						Descrpt08Field = item.Descrpt08Field,
+						Descrpt09Field = item.Descrpt09Field,
+						Descrpt10Field = item.Descrpt10Field,
+						DirectionField = item.DirectionField,
+						DistrChanField = item.DistrChanField,
+						DivisionField = item.DivisionField,
+						DocNumberField = item.DocNumberField,
+						FollowUpDateField = item.FollowUpDateField,
+						FollowUpTypeField = item.FollowUpTypeField,
+						FromDateField = item.FromDateField,
+						FromTimeField = item.FromTimeField,
+						LanguField = item.LanguField,
+						LanguIsoField = item.LanguIsoField,
+						PartnIdField = item.PartnIdField,
+						PartnRoleField = item.PartnRoleField,
+						ReasonField = item.ReasonField,
+						RefdoctypeField = item.RefdoctypeField,
+						RefobjectkeyField = item.RefobjectkeyField,
+						RefobjecttypeField = item.RefobjecttypeField,
+						RefreltypeField = item.RefreltypeField,
+						ResultExplanationField = item.ResultExplanationField,
+						ResultField = item.ResultField,
+						SalesGrpField = item.SalesGrpField,
+						SalesOffField = item.SalesOffField,
+						SalesorgField = item.SalesorgField,
+						StateField = item.StateField,
+						ToDateField = item.ToDateField,
+						ToTimeField = item.ToTimeField,
+						TxtKonseField = item.TxtKonseField
+					};
+                    Entities.Add(entity);
                 }
 
-                foreach (var item in response.BusinessPartners)
-                {
-                    Entities.Add(new ActivityPartner
-                    {
-                         AddrLinkField = item.AddrLinkField,
-                         AddrNoField = item.AddrNoField,
-                         AddrOriginField = item.AddrOriginField,
-                         AddrtypeField = item.AddrtypeField,
-                         CalendarUpdateField = item.CalendarUpdateField,
-                         CountParvwField = item.CountParvwField,
-                         DocNumberField = item.DocNumberField,
-                         ItmNumberField = item.ItmNumberField,
-                         PartnIdField = item.PartnIdField,
-                         PartnIdOldField = item.PartnIdOldField,
-                         //PartnNameField = item.PartnNameField,
-                         PartnRoleField = item.PartnRoleField,
-                         PartnRoleOldField = item.PartnRoleOldField,
-                         PersNoField = item.PersNoField,
-                         RefobjectkeyField = item.RefobjectkeyField,
-                         RefobjecttypeField = item.RefobjecttypeField,
-                         UnloadPtField = item.UnloadPtField,
-                         
-                    });
-                }
+				if (response.BusinessPartners != null)
+				{
+	                foreach (var item in response.BusinessPartners)
+	                {
+	                    Entities.Add(new ActivityPartner
+	                    {
+	                         AddrLinkField = item.AddrLinkField,
+	                         AddrNoField = item.AddrNoField,
+	                         AddrOriginField = item.AddrOriginField,
+	                         AddrtypeField = item.AddrtypeField,
+	                         CalendarUpdateField = item.CalendarUpdateField,
+	                         CountParvwField = item.CountParvwField,
+	                         DocNumberField = item.DocNumberField,
+	                         ItmNumberField = item.ItmNumberField,
+	                         PartnIdField = item.PartnIdField,
+	                         PartnIdOldField = item.PartnIdOldField,
+	                         //PartnNameField = item.PartnNameField,
+	                         PartnRoleField = item.PartnRoleField,
+	                         PartnRoleOldField = item.PartnRoleOldField,
+	                         PersNoField = item.PersNoField,
+	                         RefobjectkeyField = item.RefobjectkeyField,
+	                         RefobjecttypeField = item.RefobjecttypeField,
+	                         UnloadPtField = item.UnloadPtField,
+	                         
+	                    });
+	                }
+				}
 
                 if (OnGetActivitiesCompleted != null)
                     OnGetActivitiesCompleted();

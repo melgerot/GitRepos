@@ -13,7 +13,8 @@ namespace SAP.CRM.MT
 	public partial class ActivityTableViewController : UITableViewController
 	{
 
-        private List<Activity> activities;
+		private List<Activity> activities;
+
 		LoadingOverlay loadingOverlay;
 
 		public ActivityTableViewController (IntPtr handle) : base (handle)
@@ -23,8 +24,8 @@ namespace SAP.CRM.MT
         public override void ViewWillAppear(bool animated)
         {
             base.ViewWillAppear(animated);
-			//  Update data if required 
-			if(false)
+
+			if(true) //  Update data if required 
 			{
 				// Add window loading overlay 
 				loadingOverlay = new LoadingOverlay (UIScreen.MainScreen.Bounds);
@@ -32,14 +33,11 @@ namespace SAP.CRM.MT
 				if(true) // Perform a full refresh
 				{
 					// Wire completion event and start update process
-					ActivityManager.UpdateFinished += HandleUpdateFinished;		
-					ActivityManager.RefreshActivityList();
+					UpdateList ();
 				}
 				else // Perform a delta refresh
 				{
-					// Wire completion event and start update process
-					ActivityManager.UpdateFinished += HandleUpdateFinished;		
-					ActivityManager.RefreshActivityList();
+					UpdateList ();
 				}
 			}
 			else
@@ -50,10 +48,29 @@ namespace SAP.CRM.MT
 			}    
         }
 
+		void UpdateList()
+		{
+			try 
+			{
+				// Wire completion event and start update process
+				ActivityManager.UpdateFinished += HandleUpdateFinished;		
+				ActivityManager.RefreshActivityList();
+			} 
+			catch (Exception ex) {
+				new UIAlertView("Error", ex.Message, null, "OK", null).Show();
+				HandleUpdateFinished (null, EventArgs.Empty);
+			}
+		}
+
         void HandleUpdateFinished (object sender, EventArgs e)
         {
 			activities = ActivityManager.GetActivityList();
-			loadingOverlay.Hide ();
+
+			this.InvokeOnMainThread (() => {
+				this.TableView.Source = new ActivityTableViewSource(activities);
+				this.TableView.ReloadData ();
+				loadingOverlay.Hide ();
+			});
         }
 
 	}
@@ -117,7 +134,7 @@ namespace SAP.CRM.MT
 
 		public override float GetHeightForRow (UITableView tableView, NSIndexPath indexPath)
 		{
-			return 74;
+			return 75;
 		}
 
         #endregion
@@ -153,7 +170,7 @@ namespace SAP.CRM.MT
             UITableViewCell cell = tableView.DequeueReusableCell(cellIdentifier);
 
             // Set the properties as normal
-            ((CustomActivityCell)cell).Title.Text = activityItems[indexPath.Row].Descrpt01Field.ToString();
+            ((CustomActivityCell)cell).Title.Text = activityItems[indexPath.Row].ActivityCommentField.ToString();
             ((CustomActivityCell)cell).SubTitle1.Text = "Customer Name ...";
             ((CustomActivityCell)cell).SubTitle2.Text = string.Format("{0} {1} Status: {2}",
                 activityItems[indexPath.Row].ActivityTypeField.ToString(),
