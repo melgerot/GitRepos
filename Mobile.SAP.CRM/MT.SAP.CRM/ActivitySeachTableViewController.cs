@@ -11,8 +11,6 @@ namespace SAP.CRM.MT
 {
 	public partial class ActivitySeachTableViewController : UITableViewController
 	{
-		private ActivitySearchSettings settings;
-
 		public ActivitySeachTableViewController (IntPtr handle) : base (handle)
 		{
 		}
@@ -20,63 +18,79 @@ namespace SAP.CRM.MT
 		public override void ViewWillAppear(bool animated)
 		{
 			base.ViewWillAppear(animated);
-			
-			settings = ActivityManager.GetActivitySearchSettings();
-			if(settings == null) 
+
+			ActivitySearchSettings activitySearchSettings;
+
+			// Get data for view
+			activitySearchSettings = ActivityManager.GetActivitySearchSettings();
+			if(activitySearchSettings == null) 
 			{
-				// Create new if 
-				settings = new ActivitySearchSettings();
-				ActivityManager.SaveActivitySearchSettings(settings);
+				// Create new if not exists
+				activitySearchSettings = new ActivitySearchSettings();
+				ActivityManager.SaveActivitySearchSettings(activitySearchSettings);
 			}
+			// Prepare controls for output
+			if(activitySearchSettings.MyActivities == "") MyActivityCell.Accessory = UITableViewCellAccessory.None;
+			else MyActivityCell.Accessory = UITableViewCellAccessory.Checkmark;
 
-			DaysBackwardLabel.Text = settings.DaysBackward.ToString();
+			if(activitySearchSettings.MyCustomers == "") MyCustomersCell.Accessory = UITableViewCellAccessory.None;
+			else MyCustomersCell.Accessory = UITableViewCellAccessory.Checkmark;
 
-			this.TableView.Delegate = new ActivitySearchTableViewDelegate();
+			this.TableView.Delegate = new ActivitySearchTableViewDelegate(activitySearchSettings);
+
+			// Information message to user changing the search criteria
+			string detailMessage = "Modifying the seach criteria will trigger a full refresh of activity data";
+			new UIAlertView("Information", detailMessage, null, "OK", null).Show();
 		}
 	}
+	
 
 	public class ActivitySearchTableViewDelegate : UITableViewDelegate
 	{
-		UIActionSheet actionSheet;
+		private ActivitySearchSettings activitySearchSettings;
 
-		public ActivitySearchTableViewDelegate()
+		public ActivitySearchTableViewDelegate(){}
+
+		public ActivitySearchTableViewDelegate(ActivitySearchSettings settings)
 		{
+			activitySearchSettings = settings;
 		}
 
 		public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
 		{
-			//tableView.CellAt (NSIndexPath.FromRowSection (selected, 0)).Accessory = UITableViewCellAccessory.None;
-			//selected = indexPath.Row;
 			if(indexPath.Row == 0 && indexPath.Section == 0)
 			{
-				actionSheet = new UIActionSheet("Simple ActionSheet", null, "Cancel", "Delete", null);
-				actionSheet.Clicked += delegate(object a, UIButtonEventArgs b) {
-					Console.WriteLine ("Button " + b.ButtonIndex.ToString () + " clicked");
-				};
-				actionSheet.ShowInView (tableView);
-
+				if(activitySearchSettings.MyActivities ==  "")
+				{
+					activitySearchSettings.MyActivities = "X";
+					tableView.CellAt (indexPath).Accessory = UITableViewCellAccessory.Checkmark;
+				}
+				else
+				{
+					activitySearchSettings.MyActivities = "";
+					tableView.CellAt (indexPath).Accessory = UITableViewCellAccessory.None;
+				}
+				ActivityManager.SaveActivitySearchSettings(activitySearchSettings);
 				tableView.DeselectRow (indexPath, true);
 			}
 
-			if(indexPath.Row == 0 && indexPath.Section == 1)
+			if(indexPath.Row == 1 && indexPath.Section == 0)
 			{
-				if(tableView.CellAt (indexPath).Accessory ==  UITableViewCellAccessory.None)
+				if(activitySearchSettings.MyCustomers ==  "")
+				{
+					activitySearchSettings.MyCustomers = "X";
 					tableView.CellAt (indexPath).Accessory = UITableViewCellAccessory.Checkmark;
+				}
 				else
+				{
+					activitySearchSettings.MyCustomers = "";
 					tableView.CellAt (indexPath).Accessory = UITableViewCellAccessory.None;
-				tableView.DeselectRow (indexPath, true);
-			}
-
-			if(indexPath.Row == 1 && indexPath.Section == 1)
-			{
-				if(tableView.CellAt (indexPath).Accessory ==  UITableViewCellAccessory.None)
-					tableView.CellAt (indexPath).Accessory = UITableViewCellAccessory.Checkmark;
-				else
-					tableView.CellAt (indexPath).Accessory = UITableViewCellAccessory.None;
+				}
+				ActivityManager.SaveActivitySearchSettings(activitySearchSettings);
 				tableView.DeselectRow (indexPath, true);
 			}
 
 		}
 	}
-	
+
 }

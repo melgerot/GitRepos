@@ -14,29 +14,48 @@ namespace SAP.CRM.MT
 	{
 
         private List<Activity> activities;
-
 		LoadingOverlay loadingOverlay;
 
 		public ActivityTableViewController (IntPtr handle) : base (handle)
 		{
-
 		}
 
         public override void ViewWillAppear(bool animated)
         {
             base.ViewWillAppear(animated);
-
-			activities = ActivityManager.GetActivityList();
-
-			// TODO Implement sync call
-			// loadingOverlay = new LoadingOverlay (UIScreen.MainScreen.Bounds);
-			// this.Add(loadingOverlay);
-			// loadingOverlay.Hide ();
-
-            TableView.Source = new ActivityTableViewSource(activities);
-
-            this.TableView.ReloadData();
+			//  Update data if required 
+			if(false)
+			{
+				// Add window loading overlay 
+				loadingOverlay = new LoadingOverlay (UIScreen.MainScreen.Bounds);
+				this.ParentViewController.Add(loadingOverlay);
+				if(true) // Perform a full refresh
+				{
+					// Wire completion event and start update process
+					ActivityManager.UpdateFinished += HandleUpdateFinished;		
+					ActivityManager.RefreshActivityList();
+				}
+				else // Perform a delta refresh
+				{
+					// Wire completion event and start update process
+					ActivityManager.UpdateFinished += HandleUpdateFinished;		
+					ActivityManager.RefreshActivityList();
+				}
+			}
+			else
+			{
+				activities = ActivityManager.GetActivityList();
+				TableView.Source = new ActivityTableViewSource(activities);
+				this.TableView.ReloadData();
+			}    
         }
+
+        void HandleUpdateFinished (object sender, EventArgs e)
+        {
+			activities = ActivityManager.GetActivityList();
+			loadingOverlay.Hide ();
+        }
+
 	}
 
     public class ActivityTableViewSource : UITableViewSource

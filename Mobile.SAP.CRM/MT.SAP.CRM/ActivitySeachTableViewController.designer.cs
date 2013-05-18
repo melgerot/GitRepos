@@ -12,45 +12,21 @@ namespace SAP.CRM.MT
 	partial class ActivitySeachTableViewController
 	{
 		[Outlet]
-		MonoTouch.UIKit.UITableViewCell DaysBackwardCell { get; set; }
+		MonoTouch.UIKit.UITableViewCell MyActivityCell { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UILabel DaysBackwardLabel { get; set; }
-
-		[Outlet]
-		MonoTouch.UIKit.UITableViewCell DaysForwardCell { get; set; }
-
-		[Outlet]
-		MonoTouch.UIKit.UITableViewCell MyActivities { get; set; }
-
-		[Outlet]
-		MonoTouch.UIKit.UITableViewCell MyCustomers { get; set; }
+		MonoTouch.UIKit.UITableViewCell MyCustomersCell { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (DaysBackwardCell != null) {
-				DaysBackwardCell.Dispose ();
-				DaysBackwardCell = null;
+			if (MyActivityCell != null) {
+				MyActivityCell.Dispose ();
+				MyActivityCell = null;
 			}
 
-			if (DaysBackwardLabel != null) {
-				DaysBackwardLabel.Dispose ();
-				DaysBackwardLabel = null;
-			}
-
-			if (DaysForwardCell != null) {
-				DaysForwardCell.Dispose ();
-				DaysForwardCell = null;
-			}
-
-			if (MyActivities != null) {
-				MyActivities.Dispose ();
-				MyActivities = null;
-			}
-
-			if (MyCustomers != null) {
-				MyCustomers.Dispose ();
-				MyCustomers = null;
+			if (MyCustomersCell != null) {
+				MyCustomersCell.Dispose ();
+				MyCustomersCell = null;
 			}
 		}
 	}

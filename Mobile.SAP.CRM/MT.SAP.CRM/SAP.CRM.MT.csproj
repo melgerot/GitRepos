@@ -90,10 +90,6 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="MainNavigationController.cs" />
-    <Compile Include="MainNavigationController.designer.cs">
-      <DependentUpon>MainNavigationController.cs</DependentUpon>
-    </Compile>
     <Compile Include="LoginTableViewController.cs" />
     <Compile Include="LoginTableViewController.designer.cs">
       <DependentUpon>LoginTableViewController.cs</DependentUpon>

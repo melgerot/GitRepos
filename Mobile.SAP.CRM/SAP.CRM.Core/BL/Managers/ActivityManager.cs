@@ -54,6 +54,11 @@ namespace SAP.CRM.Core.BL.Managers
                     lock (locker)
                     {
                         // TODO: Delete existing activity data
+						// ApplicationRepository.DeleteActivities();
+					    List<Activity> activityList = ApplicationRepository.GetActivities().ToList();
+						foreach (var item in activityList) {
+							ApplicationRepository.DeleteActivity(item.ID);
+						}
 
                         // Persist entities to database
                         foreach (var item in helper.Entities.OfType<Activity>())
@@ -61,13 +66,10 @@ namespace SAP.CRM.Core.BL.Managers
                             ApplicationRepository.SaveActivity(item);
                         }
 
-                        // Persist entities to database
                         foreach (var item in helper.Entities.OfType<ActivityPartner>())
                         {
                             ApplicationRepository.SaveActivityPartner(item);
                         } 
-
-                        // TODO: Update missing partner data
 
                         Debug.WriteLine("Update completed");
                         IsUpdating = false;

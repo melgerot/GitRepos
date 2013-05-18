@@ -126,6 +126,11 @@ namespace SAP.CRM.Core.DAL
             return me.db.DeleteItem<Activity>(id);
         }
 
+		public static void DeleteActivities ()
+		{
+			// TODO Implement efficient delete query
+		}
+
         #endregion
 
         #region ActivityPartner

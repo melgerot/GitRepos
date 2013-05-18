@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>FoundWorkingCopyPaths</key>
+	<array/>
+	<key>LastWorkingCopyScanDate</key>
+	<date>2013-05-17T23:09:28Z</date>
+	<key>MissingFilePaths</key>
+	<array>
+		<string>/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/8/CustomActivityCell.h</string>
+		<string>/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/8/ActivitySeachTableViewController.h</string>
+		<string>/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/8/SalesActivityTabBarController.h</string>
+		<string>/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/8/StatusSelectionTableViewController.m</string>
+		<string>/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/8/ActivityTableViewController.m</string>
+		<string>/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/8/ActivityTableViewController.h</string>
+		<string>/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/8/AppDelegate.m</string>
+		<string>/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/8/MainStoryboard.storyboard</string>
+		<string>/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/8/CustomActivityCell.m</string>
+		<string>/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/8/ActivitySeachTableViewController.m</string>
+	</array>
+	<key>Version</key>
+	<integer>4</integer>
+</dict>
+</plist>

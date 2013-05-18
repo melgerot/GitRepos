@@ -22,49 +22,91 @@ namespace SAP.CRM.MT
 		{
 			base.ViewWillAppear(animated);
 
-		    settings = ActivityManager.GetActivitySearchSettings();
+			ActivitySearchSettings activitySearchSettings;
 			
-			TableView.Source = new StatusSelectionTableViewSource(settings);
+			// Get data for view
+			activitySearchSettings = ActivityManager.GetActivitySearchSettings();
+			if(activitySearchSettings == null) 
+			{
+				// Create new if not exists
+				activitySearchSettings = new ActivitySearchSettings();
+				ActivityManager.SaveActivitySearchSettings(activitySearchSettings);
+			}
 
-			this.TableView.ReloadData();
+			// Prepare controls for output
+			if(!activitySearchSettings.StatusOpen) StatusOpenCell.Accessory = UITableViewCellAccessory.None;
+			else StatusOpenCell.Accessory = UITableViewCellAccessory.Checkmark;
+
+			if(!activitySearchSettings.StatusInProgress) StatusInProgressCell.Accessory = UITableViewCellAccessory.None;
+			else StatusInProgressCell.Accessory = UITableViewCellAccessory.Checkmark;
+
+			if(!activitySearchSettings.StatusCompleted) StatusCompletedCell.Accessory = UITableViewCellAccessory.None;
+			else StatusCompletedCell.Accessory = UITableViewCellAccessory.Checkmark;
+
+			this.TableView.Delegate = new StatusSelectionTableViewDelegate(activitySearchSettings);
 		}
 	}
-	
-	public class StatusSelectionTableViewSource : UITableViewSource
+
+	public class StatusSelectionTableViewDelegate : UITableViewDelegate
 	{
-		// declare vars
-		protected ActivitySearchSettings searchSettings; 
-
-		public StatusSelectionTableViewSource(ActivitySearchSettings settings)
+		private ActivitySearchSettings activitySearchSettings;
+		
+		public StatusSelectionTableViewDelegate(){}
+		
+		public StatusSelectionTableViewDelegate(ActivitySearchSettings settings)
 		{
-			searchSettings = settings;
+			activitySearchSettings = settings;
 		}
-
-
+		
 		public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
 		{
-			//tableView.CellAt(indexPath).Accessory = UITableViewCellAccessory.Checkmark;
-			new UIAlertView("Row Selected", "Test", null, "OK", null).Show();
-			tableView.DeselectRow(indexPath, true);
+			if(indexPath.Row == 0 && indexPath.Section == 0)
+			{
+				if(!activitySearchSettings.StatusOpen)
+				{
+					activitySearchSettings.StatusOpen = true;
+					tableView.CellAt (indexPath).Accessory = UITableViewCellAccessory.Checkmark;
+				}
+				else
+				{
+					activitySearchSettings.StatusOpen = false;
+					tableView.CellAt (indexPath).Accessory = UITableViewCellAccessory.None;
+				}
+				ActivityManager.SaveActivitySearchSettings(activitySearchSettings);
+			}
+			
+			if(indexPath.Row == 1 && indexPath.Section == 0)
+			{
+				if(!activitySearchSettings.StatusInProgress)
+				{
+					activitySearchSettings.StatusInProgress = true;
+					tableView.CellAt (indexPath).Accessory = UITableViewCellAccessory.Checkmark;
+				}
+				else
+				{
+					activitySearchSettings.StatusInProgress = false;
+					tableView.CellAt (indexPath).Accessory = UITableViewCellAccessory.None;
+				}
+				ActivityManager.SaveActivitySearchSettings(activitySearchSettings);
+			}
+
+			if(indexPath.Row == 2 && indexPath.Section == 0)
+			{
+				if(!activitySearchSettings.StatusCompleted)
+				{
+					activitySearchSettings.StatusCompleted = true;
+					tableView.CellAt (indexPath).Accessory = UITableViewCellAccessory.Checkmark;
+				}
+				else
+				{
+					activitySearchSettings.StatusCompleted = false;
+					tableView.CellAt (indexPath).Accessory = UITableViewCellAccessory.None;
+				}
+				ActivityManager.SaveActivitySearchSettings(activitySearchSettings);
+			}
+			tableView.DeselectRow (indexPath, true);		
 		}
-
-		#region implemented abstract members of UITableViewSource
-
-		public override int RowsInSection (UITableView tableview, int section)
-		{
-			return tableview.NumberOfRowsInSection(section);
-		}
-
-		public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
-		{
-			// request a recycled cell to save memory
-			//UITableViewCell cell = tableView.DequeueReusableCell (cellIdentifier);
-			return tableView.CellAt(indexPath);
-		}
-
-		#endregion
-
-
 	}
 }
+
 
