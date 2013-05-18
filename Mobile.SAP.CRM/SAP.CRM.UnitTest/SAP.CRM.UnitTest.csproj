@@ -34,6 +34,15 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug Gateway|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug Gateway\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\ExternalReferences\Newtonsoft.Json.dll</HintPath>
@@ -59,17 +68,8 @@
     <Compile Include="..\SAP.CRM.Gateway\GatewayDataContracts.cs">
       <Link>GatewayDataContracts.cs</Link>
     </Compile>
-    <Compile Include="..\SAP.CRM.Gateway\Service References\SAPServiceReference\Reference.cs">
-      <Link>Reference.cs</Link>
-    </Compile>
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SAP.CRM.Core\SAP.CRM.Core.csproj">
-      <Project>{a471d612-5fdd-45a1-87d6-74ca143fd41c}</Project>
-      <Name>SAP.CRM.Core</Name>
-    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
