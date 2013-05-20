@@ -126,7 +126,6 @@ Global
 		{A471D612-5FDD-45A1-87D6-74CA143FD41C}.AppStore|Mixed Platforms.Build.0 = AppStore|iPhone
 		{A471D612-5FDD-45A1-87D6-74CA143FD41C}.AppStore|Mixed Platforms.Deploy.0 = AppStore|iPhone
 		{A471D612-5FDD-45A1-87D6-74CA143FD41C}.Debug Gateway|Any CPU.ActiveCfg = Debug Gateway|iPhone
-		{A471D612-5FDD-45A1-87D6-74CA143FD41C}.Debug Gateway|Any CPU.Build.0 = Debug Gateway|iPhone
 		{A471D612-5FDD-45A1-87D6-74CA143FD41C}.Debug Gateway|iPhone.ActiveCfg = Debug Gateway|iPhone
 		{A471D612-5FDD-45A1-87D6-74CA143FD41C}.Debug Gateway|iPhoneSimulator.ActiveCfg = Debug Gateway|iPhoneSimulator
 		{A471D612-5FDD-45A1-87D6-74CA143FD41C}.Debug Gateway|Mixed Platforms.ActiveCfg = Debug Gateway|iPhone
