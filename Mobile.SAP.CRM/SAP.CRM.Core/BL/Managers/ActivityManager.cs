@@ -29,9 +29,7 @@ namespace SAP.CRM.Core.BL.Managers
         {
         }
 
-        // Full Sync and Delta Sync
-
-        public static void RefreshActivityList()
+        public static void RefreshActivityList(List<Activity> refreshList)
         {
             // TODO: Check that ActivityManager is not updating
 
@@ -99,6 +97,11 @@ namespace SAP.CRM.Core.BL.Managers
         {
             return ApplicationRepository.GetActivities().ToList<Activity>();
         }
+
+		public static Activity GetActivity (int currentActivity)
+		{
+			return ApplicationRepository.GetActivity (currentActivity);
+		}
 
 		public static ActivitySearchSettings GetActivitySearchSettings ()
 		{
