@@ -12,7 +12,7 @@
             <Node name="SAL" expanded="True" />
           </Node>
           <Node name="SAP.CRM.MT" expanded="True">
-            <Node name="ActivitySeachTableViewController.cs" selected="True" />
+            <Node name="ActivitiesTableViewController.cs" selected="True" />
             <Node name="ActivityTableViewController.cs" expanded="True" />
           </Node>
         </State>
