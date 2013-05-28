@@ -12,9 +12,9 @@ namespace SAP.CRM.Core.BL
 
         public int DaysForward { get; set; }
 
-        public string MyCustomers { get; set; }
+        public bool MyCustomers { get; set; }
 
-        public string MyActivities { get; set; }
+        public bool MyActivities { get; set; }
 
         public bool StatusOpen { get; set; }
 

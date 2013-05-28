@@ -1,4 +1,4 @@
-﻿using SAP.CRM.Gateway.SAPServiceReference;
+﻿using SAP.CRM.Gateway.SAPServiceReference1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,30 +16,65 @@ namespace SAP.CRM.Gateway
     [ServiceContract]
     public interface IGatewayService
     {
-        [OperationContract]
-        [WebInvoke(Method = "GET",
-                   ResponseFormat = WebMessageFormat.Json,
-                   BodyStyle = WebMessageBodyStyle.Bare,
-                   UriTemplate = "/SalesActivities?customer={customer}&daysbackward={daysbackward}&daysforward={daysforward}&" +
-                              "mycustomers={mycustomers}&myactivities={myactivities}&statusopen={statusopen}&" +
-                              "statusinprogress={statusinprogress}&statuscompleted={statuscompleted}&deep={deep}")]   
-        GetSalesActivitiesResponse GetSalesActivities(string customer, int daysbackward, int daysforward,
-            string mycustomers, string myactivities, bool statusopen, bool statusinprogress, bool statuscompleted, bool deep);
-
+        //[OperationContract]
         //[WebInvoke(Method = "GET",
         //           ResponseFormat = WebMessageFormat.Json,
         //           BodyStyle = WebMessageBodyStyle.Bare,
-        //           UriTemplate = "/SalesActivities2?customer={customer}&daysbackward={daysbackward}&daysforward={daysforward}&" +
+        //           UriTemplate = "/SalesActivities?customer={customer}&daysbackward={daysbackward}&daysforward={daysforward}&" +
         //                      "mycustomers={mycustomers}&myactivities={myactivities}&statusopen={statusopen}&" +
-        //                      "statusinprogress={statusinprogress}&statuscompleted={statuscompleted}")]
-        //ZIgnBpcontactGetlistResponse GetSalesActivities2(string customer, int daysbackward, int daysforward,
-        //    string mycustomers, string myactivities, bool statusopen, bool statusinprogress, bool statuscompleted);
+        //                      "statusinprogress={statusinprogress}&statuscompleted={statuscompleted}&deep={deep}")]   
+        //GetSalesActivitiesResponse GetSalesActivities(string customer, int daysbackward, int daysforward,
+        //    string mycustomers, string myactivities, bool statusopen, bool statusinprogress, bool statuscompleted, bool deep);
 
-       
-        
-        
-        //[OperationContract]
-        //GetClientsInfoResponse GetClientsInfo();
+
+        /*
+         * The purpose of this method is to provide caller with complete client informaton. A client record can be either a 
+         * customer or a contact person contected to a customer. In order to provide the correct scope of information the call 
+         * must provide inforamtion about sales areas and optional retriction for customer responsible employee. 
+         */
+        [OperationContract]
+        [WebInvoke(Method = "PUT",
+           RequestFormat = WebMessageFormat.Json,
+           ResponseFormat = WebMessageFormat.Json,
+           BodyStyle = WebMessageBodyStyle.Bare,
+           UriTemplate = "/CustomerInfo")] 
+        GetCustomerInformationResponse GetCustomerInformation(GetCustomerInformationRequest request);
+
+        /*
+         * 
+         */
+
+        [OperationContract]
+        [WebInvoke(Method = "PUT",
+                   RequestFormat = WebMessageFormat.Json,
+                   ResponseFormat = WebMessageFormat.Json,
+                   BodyStyle = WebMessageBodyStyle.Bare,
+                   UriTemplate = "/SalesActivities")] 
+        GetSalesActivitiesResponse GetSalesActivities(GetSalesActivitiesRequest request);
+
+        [OperationContract]
+        [WebInvoke(Method = "POST",
+                   RequestFormat = WebMessageFormat.Json,
+                   ResponseFormat = WebMessageFormat.Json,
+                   BodyStyle = WebMessageBodyStyle.Bare,
+                   UriTemplate = "/SalesActivity")]
+        CreateSalesActivityResponse CreateSalesActivity(CreateSalesActivityRequest request);
+
+        [OperationContract]
+        [WebInvoke(Method = "PUT",
+                   RequestFormat = WebMessageFormat.Json,
+                   ResponseFormat = WebMessageFormat.Json,
+                   BodyStyle = WebMessageBodyStyle.Bare,
+                   UriTemplate = "/SalesActivity")]
+        UpdateSalesActivityResponse UpdateSalesActivity(UpdateSalesActivityRequest request);
+
+        [OperationContract]
+        [WebInvoke(Method = "DELETE",
+                   RequestFormat = WebMessageFormat.Json,
+                   ResponseFormat = WebMessageFormat.Json,
+                   BodyStyle = WebMessageBodyStyle.Bare,
+                   UriTemplate = "/SalesActivity")]
+        void DeleteSalesActivity(DeleteSalesActivityRequest request);
 
     }
 

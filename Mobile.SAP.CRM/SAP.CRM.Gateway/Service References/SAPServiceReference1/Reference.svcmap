@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="af558552-d513-46ab-90e6-661e0b5b0805" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="99f9d196-df0e-47c8-8f21-806190b23b99" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,10 +19,10 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://sfsqvyrb.sap-cc.com:8000/sap/bc/srt/wsdl/srvc_005056B57C0803D19BE69D029AFF8229/wsdl11/allinone/ws_policy/document?sap-client=800" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://sfsqvyrb.sap-cc.com:8000/sap/bc/srt/wsdl/srvc_005056B57C0803D19FAE4CCF330249CC/wsdl11/allinone/ws_policy/document?sap-client=800" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="document.wsdl" MetadataType="Wsdl" ID="d8fc9377-377e-4c98-a197-ba65fe261a80" SourceId="1" SourceUrl="http://sfsqvyrb.sap-cc.com:8000/sap/bc/srt/wsdl/srvc_005056B57C0803D19BE69D029AFF8229/wsdl11/allinone/ws_policy/document?sap-client=800" />
+    <MetadataFile FileName="document.wsdl" MetadataType="Wsdl" ID="f49a9828-fd17-47d4-aef6-519f651c31b8" SourceId="1" SourceUrl="http://sfsqvyrb.sap-cc.com:8000/sap/bc/srt/wsdl/srvc_005056B57C0803D19FAE4CCF330249CC/wsdl11/allinone/ws_policy/document?sap-client=800" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

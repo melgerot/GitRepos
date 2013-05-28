@@ -103,9 +103,13 @@
     <Compile Include="BL\ActivitySearchSettings.cs" />
     <Compile Include="BL\ActivityPartner.cs" />
     <Compile Include="BL\ActivityText.cs" />
+    <Compile Include="BL\Customer.cs" />
     <Compile Include="BL\Contracts\BusinessEntityBase.cs" />
     <Compile Include="BL\Contracts\IBusinessEntity.cs" />
+    <Compile Include="BL\CustomerContact.cs" />
+    <Compile Include="BL\ICustomerInfo.cs" />
     <Compile Include="BL\Managers\ActivityManager.cs" />
+    <Compile Include="BL\Managers\CustomerManager.cs" />
     <Compile Include="BL\TargetService.cs" />
     <Compile Include="DAL\ApplicationRepository.cs" />
     <Compile Include="DL\ActivityDatabase.cs" />

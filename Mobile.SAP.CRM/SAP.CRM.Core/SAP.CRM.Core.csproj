@@ -123,7 +123,12 @@
     <Compile Include="BL\ActivityText.cs" />
     <Compile Include="BL\Contracts\BusinessEntityBase.cs" />
     <Compile Include="BL\Contracts\IBusinessEntity.cs" />
+    <Compile Include="BL\Customer.cs" />
+    <Compile Include="BL\CustomerContact.cs" />
+    <Compile Include="BL\ICustomerInfo.cs" />
     <Compile Include="BL\Managers\ActivityManager.cs" />
+    <Compile Include="BL\Managers\CustomerManager.cs" />
+    <Compile Include="BL\Managers\UpdateEventArgs.cs" />
     <Compile Include="BL\TargetService.cs" />
     <Compile Include="DAL\ApplicationRepository.cs" />
     <Compile Include="DL\ActivityDatabase.cs" />
@@ -133,6 +138,7 @@
     <Compile Include="SAL\CustomWebClient.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="SAL\GetDataEventArgs.cs" />
     <Compile Include="SAL\ServiceHelper.cs" />
   </ItemGroup>
   <ItemGroup />
@@ -165,7 +171,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties ProjectLinkReference="d17d4c7f-c77d-4b2d-bc4b-3c2fd36705fa" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="d17d4c7f-c77d-4b2d-bc4b-3c2fd36705fa" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

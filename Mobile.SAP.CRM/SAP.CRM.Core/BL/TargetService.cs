@@ -13,5 +13,7 @@ namespace SAP.CRM.Core.BL
         public string Uri { get; set; }
 
         public bool Active { get; set; }
+
+        public int MaxRecord { get; set; }
     }
 }

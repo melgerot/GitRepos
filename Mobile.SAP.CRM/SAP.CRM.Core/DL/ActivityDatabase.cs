@@ -32,6 +32,8 @@ namespace SAP.CRM.Core.DL
             CreateTable<SAP.CRM.Core.BL.ActivityPartner>();
             CreateTable<SAP.CRM.Core.BL.ActivityText>();
             CreateTable<SAP.CRM.Core.BL.ActivitySearchSettings>();
+            CreateTable<SAP.CRM.Core.BL.Customer>();
+            CreateTable<SAP.CRM.Core.BL.CustomerContact>();
 			CreateTable<SAP.CRM.Core.BL.TargetService> ();
         }
 

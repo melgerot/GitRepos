@@ -30,10 +30,10 @@ namespace SAP.CRM.MT
 				ActivityManager.SaveActivitySearchSettings(activitySearchSettings);
 			}
 			// Prepare controls for output
-			if(activitySearchSettings.MyActivities == "") MyActivityCell.Accessory = UITableViewCellAccessory.None;
+			if(!activitySearchSettings.MyActivities) MyActivityCell.Accessory = UITableViewCellAccessory.None;
 			else MyActivityCell.Accessory = UITableViewCellAccessory.Checkmark;
 
-			if(activitySearchSettings.MyCustomers == "") MyCustomersCell.Accessory = UITableViewCellAccessory.None;
+			if(!activitySearchSettings.MyCustomers) MyCustomersCell.Accessory = UITableViewCellAccessory.None;
 			else MyCustomersCell.Accessory = UITableViewCellAccessory.Checkmark;
 
 			this.TableView.Delegate = new ActivitySearchTableViewDelegate(activitySearchSettings);
@@ -60,14 +60,14 @@ namespace SAP.CRM.MT
 		{
 			if(indexPath.Row == 0 && indexPath.Section == 0)
 			{
-				if(activitySearchSettings.MyActivities ==  "")
+				if(!activitySearchSettings.MyActivities)
 				{
-					activitySearchSettings.MyActivities = "X";
+					activitySearchSettings.MyActivities = true;
 					tableView.CellAt (indexPath).Accessory = UITableViewCellAccessory.Checkmark;
 				}
 				else
 				{
-					activitySearchSettings.MyActivities = "";
+					activitySearchSettings.MyActivities = false;
 					tableView.CellAt (indexPath).Accessory = UITableViewCellAccessory.None;
 				}
 				ActivityManager.SaveActivitySearchSettings(activitySearchSettings);
@@ -76,14 +76,14 @@ namespace SAP.CRM.MT
 
 			if(indexPath.Row == 1 && indexPath.Section == 0)
 			{
-				if(activitySearchSettings.MyCustomers ==  "")
+				if(!activitySearchSettings.MyCustomers)
 				{
-					activitySearchSettings.MyCustomers = "X";
+					activitySearchSettings.MyCustomers = true;
 					tableView.CellAt (indexPath).Accessory = UITableViewCellAccessory.Checkmark;
 				}
 				else
 				{
-					activitySearchSettings.MyCustomers = "";
+					activitySearchSettings.MyCustomers = false;
 					tableView.CellAt (indexPath).Accessory = UITableViewCellAccessory.None;
 				}
 				ActivityManager.SaveActivitySearchSettings(activitySearchSettings);

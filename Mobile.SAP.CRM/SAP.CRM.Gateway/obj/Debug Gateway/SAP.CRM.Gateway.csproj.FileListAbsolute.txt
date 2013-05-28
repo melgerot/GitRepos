@@ -2,3 +2,4 @@ C:\Users\melgerot\Documents\GitHub\GitRepos\Mobile.SAP.CRM\SAP.CRM.Gateway\bin\S
 C:\Users\melgerot\Documents\GitHub\GitRepos\Mobile.SAP.CRM\SAP.CRM.Gateway\bin\SAP.CRM.Gateway.pdb
 C:\Users\melgerot\Documents\GitHub\GitRepos\Mobile.SAP.CRM\SAP.CRM.Gateway\obj\Debug Gateway\SAP.CRM.Gateway.dll
 C:\Users\melgerot\Documents\GitHub\GitRepos\Mobile.SAP.CRM\SAP.CRM.Gateway\obj\Debug Gateway\SAP.CRM.Gateway.pdb
+C:\Users\melgerot\Documents\GitHub\GitRepos\Mobile.SAP.CRM\SAP.CRM.Gateway\obj\Debug Gateway\SAP.CRM.Gateway.csprojResolveAssemblyReference.cache

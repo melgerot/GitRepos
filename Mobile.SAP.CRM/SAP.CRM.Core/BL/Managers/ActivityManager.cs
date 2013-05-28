@@ -15,7 +15,7 @@ namespace SAP.CRM.Core.BL.Managers
         static object locker = new object();
 
         public static event EventHandler UpdateStarted = delegate { };
-        public static event EventHandler UpdateFinished = delegate { };
+        public static event EventHandler<UpdateEventArgs> UpdateFinished = delegate { };
 
         private static bool _isUpdating = false;
 
@@ -29,7 +29,7 @@ namespace SAP.CRM.Core.BL.Managers
         {
         }
 
-        public static void RefreshActivityList(List<Activity> refreshList)
+        public static void RefreshActivityListData(List<Activity> activityData, bool detail)
         {
             // TODO: Check that ActivityManager is not updating
 
@@ -47,43 +47,46 @@ namespace SAP.CRM.Core.BL.Managers
                 Debug.WriteLine("Begin process service application layer");
                 ServiceHelper helper = new ServiceHelper();
                 // Wire events 
-                helper.OnGetActivitiesCompleted += delegate
+                helper.OnGetActivitiesCompleted += delegate(GetDataEventArgs eventArgs)
                 {
-                    lock (locker)
+                    UpdateEventArgs args = new UpdateEventArgs();
+                    if (eventArgs.Error != null)
                     {
-                        // TODO: Delete existing activity data
-						// ApplicationRepository.DeleteActivities();
-					    List<Activity> activityList = ApplicationRepository.GetActivities().ToList();
-						foreach (var item in activityList) {
-							ApplicationRepository.DeleteActivity(item.ID);
-						}
-
-                        // Persist entities to database
-                        foreach (var item in helper.Entities.OfType<Activity>())
-                        {
-                            ApplicationRepository.SaveActivity(item);
-                        }
-
-                        foreach (var item in helper.Entities.OfType<ActivityPartner>())
-                        {
-                            ApplicationRepository.SaveActivityPartner(item);
-                        } 
-
-                        Debug.WriteLine("Update completed");
-                        IsUpdating = false;
+                        Debug.WriteLine("Update failed");
+                        args.Error = eventArgs.Error;
                     }
-                    UpdateFinished(null, EventArgs.Empty);         
-                };
-                helper.OnGetActivitiesFailed += delegate
-                {
-                    Debug.WriteLine("Update failed");      
+                    else
+                    {
+                        lock (locker)
+                        {
+                            // TODO: Delete existing activity data
+                            // ApplicationRepository.DeleteActivities();
+                            List<Activity> activityList = ApplicationRepository.GetActivities().ToList();
+                            foreach (var item in activityList)
+                            {
+                                ApplicationRepository.DeleteActivity(item.ID);
+                            }
+                            // Persist entities to database
+                            foreach (var item in helper.Entities.OfType<Activity>())
+                            {
+                                ApplicationRepository.SaveActivity(item);
+                            }
+
+                            foreach (var item in helper.Entities.OfType<ActivityPartner>())
+                            {
+                                ApplicationRepository.SaveActivityPartner(item);
+                            }
+
+                            Debug.WriteLine("Update completed");
+                        }
+                    }
                     IsUpdating = false;
-                    UpdateFinished(null, EventArgs.Empty);                  
+                    UpdateFinished(null, args);           
                 };
                 
 				try {
 					// Do service calls
-					helper.GetActivities(false);
+					helper.GetActivities(activityData, detail);
 				} catch (Exception ex) {
 					// Service call could not be peformed due to unknown reason
 					// Propagate exeception to caller

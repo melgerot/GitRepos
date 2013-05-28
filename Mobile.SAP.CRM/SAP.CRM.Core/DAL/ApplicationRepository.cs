@@ -80,7 +80,7 @@ namespace SAP.CRM.Core.DAL
         public static TargetService GetActiveTargetService()
         {
             //return me.db.GetItems<TargetService>().FirstOrDefault<TargetService>(t => t.Active == true);  
-            return new TargetService { Name = "Static TEST", Uri = "http://172.20.10.6:54978/GatewayService.svc/SalesActivities" };
+            return new TargetService { Name = "Static TEST", Uri = "http://172.20.10.6:54978/GatewayService.svc/SalesActivities", MaxRecord = 100 };
         }
 
         public static TargetService GetTargetService(int id)
@@ -172,6 +172,74 @@ namespace SAP.CRM.Core.DAL
 
         #endregion
 
+        #region Customer
+
+        public static Customer GetCustomer(int id)
+        {
+            return me.db.GetItem<Customer>(id);
+        }
+
+        public static Customer GetCustomerWithExternalId(Customer item)
+        {
+            return me.db.GetItems<Customer>().FirstOrDefault<Customer>(c => c.CustomerField == item.CustomerField);
+        }
+
+        public static IEnumerable<Customer> GetCustomers()
+        {
+            return me.db.GetItems<Customer>();
+        }
+
+        public static int SaveCustomer(Customer item)
+        {
+            return me.db.SaveItem<Customer>(item);
+        }
+
+        public static int DeleteCustomer(int id)
+        {
+            return me.db.DeleteItem<Customer>(id);
+        }
+
+        public static void DeleteCustomers()
+        {
+            // TODO Implement efficient delete query
+        }
+
+        #endregion
+
+        #region Customer Contact
+
+        public static CustomerContact GetCustomerContact(int id)
+        {
+            return me.db.GetItem<CustomerContact>(id);
+        }
+
+        public static IEnumerable<CustomerContact> GetCustomerContactsWithExternalCustomerId(string customerId)
+        {
+            return me.db.GetItems<CustomerContact>().Where<CustomerContact>(c => c.CustomerField == customerId
+                );
+        }
+
+        public static IEnumerable<CustomerContact> GetCustomerContacts()
+        {
+            return me.db.GetItems<CustomerContact>();
+        }
+
+        public static int SaveCustomerContact(CustomerContact item)
+        {
+            return me.db.SaveItem<CustomerContact>(item);
+        }
+
+        public static int DeleteCustomerContact(int id)
+        {
+            return me.db.DeleteItem<CustomerContact>(id);
+        }
+
+        public static void DeleteCustomerContacts()
+        {
+            // TODO Implement efficient delete query
+        }
+
+        #endregion
 
     }
 }

@@ -21,22 +21,145 @@ namespace SAP.CRM.Core.SAL
 			Entities = new List<IBusinessEntity> ();
 		}
 
-        #region Activity Services
+        public delegate void GetDataCompleted(GetDataEventArgs args);
+
+        #region Meta Data Service
 
         public delegate void GetActivityMetaDataCompleted();
         public event GetActivityMetaDataCompleted OnGetActivityMetaDataCompleted;
         public event GetActivityMetaDataCompleted OnGetActivityMetaDataFailed;
 
-        public void GetActivityMetaData()
+        public void GetMetaData()
         {
             throw new NotImplementedException();
         }
 
-        public delegate void GetActivitiesCompleted();
-        public event GetActivitiesCompleted OnGetActivitiesCompleted;
-        public event GetActivitiesCompleted OnGetActivitiesFailed;
+        public void GetMetaData_Completed()
+        {
 
-        public void GetActivities(bool deep)
+        }
+
+        #endregion
+
+        #region Customer Service
+     
+        public event GetDataCompleted OnGetCustomersCompleted;
+
+        public void GetCustomers(List<string> customerIdList, bool myCustomers, string searchCriteria )
+        {
+            // Get target system settings
+            TargetService targetService = ApplicationRepository.GetActiveTargetService();
+            if (targetService == null) throw new Exception("Target service information is missing");
+
+            // Prepare request
+            GetCustomerInformationRequest request = new GetCustomerInformationRequest
+            {
+                CustomerIds = customerIdList,
+                MaxCustomerRecords = targetService.MaxRecord,
+                MyCustomers = myCustomers,
+                SearchCriteria = searchCriteria
+            };
+            string payload = JsonConvert.SerializeObject(request);
+
+            // Prepare the WebClient
+            CustomWebClient client = new CustomWebClient(Constants.WEBCLIENT_TIMEOUT);
+            Uri uri = new Uri(string.Format("{0}", targetService.Uri));
+
+            client.Headers[HttpRequestHeader.ContentType] = "application/json";
+            client.Headers[HttpRequestHeader.Accept] = "application/json";
+
+            client.Encoding = System.Text.Encoding.UTF8;
+            client.DownloadStringCompleted += GetCustomers_Completed;
+
+            //  Call the service    
+            client.UploadStringAsync(uri, "PUT", payload); 
+        }
+
+        private void GetCustomers_Completed(object sender, DownloadStringCompletedEventArgs e)
+        {
+            Console.WriteLine("GetCustomers_Completed");
+            if (e.Error != null)
+            {
+                if (OnGetCustomersCompleted != null)
+                {
+                    var args = new GetDataEventArgs();
+                    args.Error = e.Error;
+                    OnGetCustomersCompleted(args);
+                }
+            }
+            else
+            {
+                // Serialize result and  map into entities 
+                string json = e.Result;
+                var response = JsonConvert.DeserializeObject<GetCustomerInformationResponse>(json);
+
+                if (response.Customers != null)
+                {
+                    foreach (var item in response.Customers)
+                    {
+                        IBusinessEntity entity = (IBusinessEntity)new SAP.CRM.Core.BL.Customer
+                        {
+                            AddressField = item.AddressField,
+                            CityField = item.CityField,
+                            CountryField = item.CountryField,
+                            CountryisoField = item.CountryisoField,
+                            CustomerField = item.CustomerField,
+                            FaxNumberField = item.FaxNumberField,
+                            NameField = item.NameField,
+                            PostlCod1Field = item.PostlCod1Field,
+                            RegionField = item.RegionField,
+                            Sort1Field = item.Sort1Field,
+                            StreetField = item.StreetField,
+                            Tel1NumbrField = item.Tel1NumbrField
+                        };
+
+                        Entities.Add(entity);
+                    }
+                }
+
+                if (response.CustomerContacts != null)
+                {
+                    foreach (var item in response.CustomerContacts)
+                    {
+                        Entities.Add(new SAP.CRM.Core.BL.CustomerContact
+                        {
+                            AddressField = item.AddressField,
+                            CityField = item.CityField,
+                            CountryField = item.CountryField,
+                            CountryisoField = item.CountryisoField,
+                            CustomerField = item.CustomerField,
+                            EMailField = item.EMailField,
+                            FaxNumberField = item.FaxNumberField,
+                            FirstnameField = item.FirstnameField,
+                            FunctionField = item.FunctionField,
+                            LanguPField = item.LanguPField,
+                            LangupIsoField = item.LangupIsoField,
+                            LastnameField = item.LastnameField,
+                            PartneremployeeidField = item.PartneremployeeidField,
+                            PersNoField = item.PersNoField,
+                            PostlCod1Field = item.PostlCod1Field,
+                            RegionField = item.RegionField,
+                            SexField = item.SexField,
+                            Sort1PField = item.Sort1PField,
+                            StreetField = item.StreetField,
+                            Tel1NumbrField = item.Tel1NumbrField,
+                            TitlePField = item.TitlePField
+                        });
+                    }
+                }
+
+                if (OnGetCustomersCompleted != null)
+                    OnGetCustomersCompleted(new GetDataEventArgs());
+            }     
+        }
+
+        #endregion
+
+        #region Activity Services
+
+        public event GetDataCompleted OnGetActivitiesCompleted;
+
+        public void GetActivities(bool detail)
         {
             // Get target system settings
             TargetService targetService = ApplicationRepository.GetActiveTargetService();
@@ -46,29 +169,35 @@ namespace SAP.CRM.Core.SAL
             ActivitySearchSettings activitySearchSettings  = ApplicationRepository.GetActivitiesSearchSettings().FirstOrDefault<ActivitySearchSettings>();
             if (activitySearchSettings == null) throw new Exception("Activity search settings is missing");
 
+            // Prepare request
+           GetSalesActivitiesRequest request = new GetSalesActivitiesRequest
+            {
+                DaysBackward = activitySearchSettings.DaysBackward,
+                DaysForward = activitySearchSettings.DaysForward,
+                Customers = null,
+                MyActivities = activitySearchSettings.MyActivities,
+                Detail = detail,
+                StatusSelection = new StatusMap
+                {
+                    Open = activitySearchSettings.StatusOpen,
+                    InProgress = activitySearchSettings.StatusInProgress,
+                    Completed = activitySearchSettings.StatusCompleted
+                }
+            };
+            string payload = JsonConvert.SerializeObject(request);
+
             // Prepare the WebClient
             CustomWebClient client = new CustomWebClient(Constants.WEBCLIENT_TIMEOUT);
-            Uri uri = new Uri(string.Format("{0}?customer={1}&daysbackward={2}&daysforward={3}" +
-                                            "&mycustomers={4}&myactivities={5}&statusopen={6}&statusinprogress={7}" +
-                                            "&statuscompleted={8}&deep={9}",
-                                            targetService.Uri,
-                                            "",
-                                            activitySearchSettings.DaysBackward,
-                                            activitySearchSettings.DaysForward,
-                                            activitySearchSettings.MyCustomers,
-                                            activitySearchSettings.MyActivities,
-                                            activitySearchSettings.StatusOpen,
-                                            activitySearchSettings.StatusInProgress,
-                                            activitySearchSettings.StatusCompleted,
-                                            deep));
+            Uri uri = new Uri(string.Format("{0}", targetService.Uri));
 
+            client.Headers[HttpRequestHeader.ContentType] = "application/json";
             client.Headers[HttpRequestHeader.Accept] = "application/json";
-
+         
             client.Encoding = System.Text.Encoding.UTF8;
             client.DownloadStringCompleted += GetActivities_Completed;
 
             //  Call the service    
-            client.DownloadStringAsync(uri);      
+            client.UploadStringAsync(uri, "PUT", payload);    
         }
 
         private void GetActivities_Completed(object sender, DownloadStringCompletedEventArgs e)
@@ -76,8 +205,12 @@ namespace SAP.CRM.Core.SAL
             Console.WriteLine ("GetActivities_Completed");
             if (e.Error != null)
             {
-				if (OnGetActivitiesFailed != null)
-					OnGetActivitiesFailed ();
+                if (OnGetActivitiesCompleted != null)
+                {
+                    var args = new GetDataEventArgs();
+                    args.Error = e.Error;
+                    OnGetActivitiesCompleted(args);
+                }
             }
             else
             {
@@ -161,7 +294,7 @@ namespace SAP.CRM.Core.SAL
 				}
 
                 if (OnGetActivitiesCompleted != null)
-                    OnGetActivitiesCompleted();
+                    OnGetActivitiesCompleted(new GetDataEventArgs());
             }     
         }
 
@@ -177,48 +310,6 @@ namespace SAP.CRM.Core.SAL
 
         #endregion
 
-        #region Customer Services
-
-        public void GetCustomerMetaData(Action action)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void GetCustomers(Action action)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void GetCustomersDetailed(Action action)
-        {
-            throw new NotImplementedException();
-        }
-
-        #endregion
-
-        #region Contact Services
-
-        public void GetContactsMetaData(Action action)
-        {
-            throw new NotImplementedException();
-        }
-        
-        public void GetContacts(Action action)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void GetContactsDetailed(Action action)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SyncContacts(Action action)
-        {
-            throw new NotImplementedException();
-        }
-
-        #endregion
     }
 }
 

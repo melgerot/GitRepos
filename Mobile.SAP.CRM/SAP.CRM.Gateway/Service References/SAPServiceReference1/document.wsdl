@@ -1,0 +1,1537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="urn:sap-com:document:sap:soap:functions:mc-style" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:n1="urn:sap-com:document:sap:rfc:functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" targetNamespace="urn:sap-com:document:sap:soap:functions:mc-style" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>
+    <sidl:sidl xmlns:sidl="http://www.sap.com/2007/03/sidl" />
+  </wsdl:documentation>
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="BN_BN_binding">
+    <saptrnbnd:OptimizedXMLTransfer uri="http://xml.sap.com/2006/11/esi/esp/binxml" xmlns:saptrnbnd="http://www.sap.com/webas/710/soap/features/transportbinding/" wsp:Optional="true" />
+    <saptrnbnd:OptimizedMimeSerialization xmlns:saptrnbnd="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" wsp:Optional="true" />
+    <wsp:ExactlyOne xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sapsp="http://www.sap.com/webas/630/soap/features/security/policy" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wst="http://docs.oasis-open.org/ws-sx/ws-trust/200512" xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken>
+                  <wsp:Policy>
+                    <sp:HttpBasicAuthentication />
+                  </wsp:Policy>
+                </sp:HttpsToken>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic128Rsa15 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+    <wsaw:UsingAddressing xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsp:Optional="true" />
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="BN_BN_binding_SOAP12">
+    <saptrnbnd:OptimizedXMLTransfer uri="http://xml.sap.com/2006/11/esi/esp/binxml" xmlns:saptrnbnd="http://www.sap.com/webas/710/soap/features/transportbinding/" wsp:Optional="true" />
+    <saptrnbnd:OptimizedMimeSerialization xmlns:saptrnbnd="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" wsp:Optional="true" />
+    <wsp:ExactlyOne xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sapsp="http://www.sap.com/webas/630/soap/features/security/policy" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wst="http://docs.oasis-open.org/ws-sx/ws-trust/200512" xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken>
+                  <wsp:Policy>
+                    <sp:HttpBasicAuthentication />
+                  </wsp:Policy>
+                </sp:HttpsToken>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic128Rsa15 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+    <wsaw:UsingAddressing xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsp:Optional="true" />
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="IF_IF_ZIGNMOBILESALESACTIVIY">
+    <sapsession:Session xmlns:sapsession="http://www.sap.com/webas/630/soap/features/session/">
+      <sapsession:enableSession>false</sapsession:enableSession>
+    </sapsession:Session>
+    <sapcentraladmin:CentralAdministration xmlns:sapcentraladmin="http://www.sap.com/webas/700/soap/features/CentralAdministration/" wsp:Optional="true">
+      <sapcentraladmin:BusinessApplicationID>0018FE7972821DEFB0CD97950B095362</sapcentraladmin:BusinessApplicationID>
+    </sapcentraladmin:CentralAdministration>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="OP_IF_OP_ZIgnBpcontactChange">
+    <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+    <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+    <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+    <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="OP_IF_OP_ZIgnBpcontactDelete">
+    <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+    <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+    <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+    <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="OP_IF_OP_ZIgnBpcontactCreate">
+    <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+    <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+    <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+    <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="OP_IF_OP_ZIgnCustomerGetlist">
+    <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+    <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+    <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+    <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="OP_IF_OP_ZIgnBpcontactGetlist">
+    <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+    <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+    <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+    <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="OP_IF_OP_ZIgnBpcontactGetlist1">
+    <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+    <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+    <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+    <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="OP_IF_OP_ZIgnGetEmployeenumber">
+    <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+    <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+    <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+    <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="OP_IF_OP_ZIgnBpcontactGetdetail">
+    <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+    <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+    <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+    <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="OP_IF_OP_ZIgnCustomerGetsalesarea">
+    <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+    <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+    <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+    <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="OP_IF_OP_ZIgnCustomerGetcontactlist">
+    <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+    <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+    <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+    <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="qualified" targetNamespace="urn:sap-com:document:sap:rfc:functions">
+      <xsd:simpleType name="char1">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="1" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char10">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="10" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char12">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="12" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char132">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="132" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char134">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="134" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char15">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="15" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char2">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="2" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char20">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="20" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char220">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="220" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char241">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="241" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char25">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="25" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char3">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="3" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char30">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="30" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char32">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="32" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char4">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="4" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char40">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="40" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char5">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="5" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char50">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="50" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char6">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="6" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char60">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="60" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char70">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="70" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char8">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="8" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="date">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="10" />
+          <xsd:pattern value="\d\d\d\d-\d\d-\d\d" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="lang">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="1" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric10">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="10" />
+          <xsd:pattern value="\d*" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric3">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="3" />
+          <xsd:pattern value="\d*" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric6">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="6" />
+          <xsd:pattern value="\d*" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric8">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="8" />
+          <xsd:pattern value="\d*" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="time">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="8" />
+          <xsd:pattern value="\d\d:\d\d:\d\d" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="BAPI_VBKA_VBPA2KOM">
+        <xsd:sequence>
+          <xsd:element name="REFOBJECTTYPE" type="n1:char10" />
+          <xsd:element name="REFOBJECTKEY" type="n1:char70" />
+          <xsd:element name="DOC_NUMBER" type="n1:char10" />
+          <xsd:element name="ITM_NUMBER" type="n1:numeric6" />
+          <xsd:element name="COUNT_PARVW" type="n1:numeric6" />
+          <xsd:element name="PARTN_ROLE" type="n1:char2" />
+          <xsd:element name="PARTN_ROLE_OLD" type="n1:char2" />
+          <xsd:element name="PARTN_ID" type="n1:char10" />
+          <xsd:element name="PARTN_ID_OLD" type="n1:char10" />
+          <xsd:element name="ADDR_NO" type="n1:char10" />
+          <xsd:element name="PERS_NO" type="n1:char10" />
+          <xsd:element name="ADDRTYPE" type="n1:char1" />
+          <xsd:element name="ADDR_ORIGIN" type="n1:char1" />
+          <xsd:element name="UNLOAD_PT" type="n1:char25" />
+          <xsd:element name="CALENDAR_UPDATE" type="n1:char1" />
+          <xsd:element name="ADDR_LINK" type="n1:char10" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="BAPI_VBKA_VBPA2KOMX">
+        <xsd:sequence>
+          <xsd:element name="REFOBJECTTYPE" type="n1:char10" />
+          <xsd:element name="REFOBJECTKEY" type="n1:char70" />
+          <xsd:element name="DOC_NUMBER" type="n1:char10" />
+          <xsd:element name="ITM_NUMBER" type="n1:numeric6" />
+          <xsd:element name="COUNT_PARVW" type="n1:numeric6" />
+          <xsd:element name="PARTN_ROLE" type="n1:char1" />
+          <xsd:element name="PARTN_ROLE_OLD" type="n1:char1" />
+          <xsd:element name="PARTN_ID" type="n1:char1" />
+          <xsd:element name="PARTN_ID_OLD" type="n1:char1" />
+          <xsd:element name="ADDR_NO" type="n1:char1" />
+          <xsd:element name="PERS_NO" type="n1:char1" />
+          <xsd:element name="ADDRTYPE" type="n1:char1" />
+          <xsd:element name="ADDR_ORIGIN" type="n1:char1" />
+          <xsd:element name="UNLOAD_PT" type="n1:char1" />
+          <xsd:element name="CALENDAR_UPDATE" type="n1:char1" />
+          <xsd:element name="ADDR_LINK" type="n1:char1" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TABLE_OF_BAPI_VBKA_VBPA2KOM">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="n1:BAPI_VBKA_VBPA2KOM" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TABLE_OF_BAPI_VBKA_VBPA2KOMX">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="n1:BAPI_VBKA_VBPA2KOMX" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns:n0="urn:sap-com:document:sap:rfc:functions" attributeFormDefault="qualified" targetNamespace="urn:sap-com:document:sap:soap:functions:mc-style">
+      <xsd:import namespace="urn:sap-com:document:sap:rfc:functions" />
+      <xsd:complexType name="VbkaTlinekom">
+        <xsd:sequence>
+          <xsd:element name="Refobjecttype" type="n0:char10" />
+          <xsd:element name="Refobjectkey" type="n0:char70" />
+          <xsd:element name="DocNumber" type="n0:char10" />
+          <xsd:element name="TextId" type="n0:char4" />
+          <xsd:element name="Langu" type="n0:lang" />
+          <xsd:element name="LangupIso" type="n0:char2" />
+          <xsd:element name="TextLine" type="n0:char134" />
+          <xsd:element name="Function" type="n0:char3" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="VbkaTlinekomx">
+        <xsd:sequence>
+          <xsd:element name="Refobjecttype" type="n0:char10" />
+          <xsd:element name="Refobjectkey" type="n0:char70" />
+          <xsd:element name="DocNumber" type="n0:char10" />
+          <xsd:element name="TextId" type="n0:char4" />
+          <xsd:element name="Langu" type="n0:lang" />
+          <xsd:element name="LangupIso" type="n0:char1" />
+          <xsd:element name="TextLine" type="n0:char1" />
+          <xsd:element name="Function" type="n0:char1" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Sender">
+        <xsd:sequence>
+          <xsd:element name="LogSystem" type="n0:char10" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Bus1037VbkakomUpd">
+        <xsd:sequence>
+          <xsd:element name="Refobjecttype" type="n0:char10" />
+          <xsd:element name="Refobjectkey" type="n0:char70" />
+          <xsd:element name="DocNumber" type="n0:char10" />
+          <xsd:element name="SalesOff" type="n0:char4" />
+          <xsd:element name="SalesGrp" type="n0:char3" />
+          <xsd:element name="FromDate" type="n0:date" />
+          <xsd:element name="ToDate" type="n0:date" />
+          <xsd:element name="FromTime" type="n0:time" />
+          <xsd:element name="ToTime" type="n0:time" />
+          <xsd:element name="Reason" type="n0:char3" />
+          <xsd:element name="Result" type="n0:char3" />
+          <xsd:element name="ResultExplanation" type="n0:char3" />
+          <xsd:element name="State" type="n0:char1" />
+          <xsd:element name="FollowUpType" type="n0:char4" />
+          <xsd:element name="FollowUpDate" type="n0:date" />
+          <xsd:element name="ActivityComment" type="n0:char40" />
+          <xsd:element name="Descrpt01" type="n0:char2" />
+          <xsd:element name="Descrpt02" type="n0:char2" />
+          <xsd:element name="Descrpt03" type="n0:char2" />
+          <xsd:element name="Descrpt04" type="n0:char2" />
+          <xsd:element name="Descrpt05" type="n0:char2" />
+          <xsd:element name="Descrpt06" type="n0:char3" />
+          <xsd:element name="Descrpt07" type="n0:char3" />
+          <xsd:element name="Descrpt08" type="n0:char3" />
+          <xsd:element name="Descrpt09" type="n0:char3" />
+          <xsd:element name="Descrpt10" type="n0:char3" />
+          <xsd:element name="TxtKonse" type="n0:char1" />
+          <xsd:element name="Direction" type="n0:char1" />
+          <xsd:element name="ContactRole" type="n0:char2" />
+          <xsd:element name="Contact" type="n0:numeric10" />
+          <xsd:element name="Langu" type="n0:lang" />
+          <xsd:element name="LanguIso" type="n0:char2" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Bus1037VbkakomUpdx">
+        <xsd:sequence>
+          <xsd:element name="Refobjecttype" type="n0:char10" />
+          <xsd:element name="Refobjectkey" type="n0:char70" />
+          <xsd:element name="DocNumber" type="n0:char10" />
+          <xsd:element name="SalesOff" type="n0:char1" />
+          <xsd:element name="SalesGrp" type="n0:char1" />
+          <xsd:element name="FromDate" type="n0:char1" />
+          <xsd:element name="ToDate" type="n0:char1" />
+          <xsd:element name="FromTime" type="n0:char1" />
+          <xsd:element name="ToTime" type="n0:char1" />
+          <xsd:element name="Reason" type="n0:char1" />
+          <xsd:element name="Result" type="n0:char1" />
+          <xsd:element name="ResultExplanation" type="n0:char1" />
+          <xsd:element name="State" type="n0:char1" />
+          <xsd:element name="FollowUpType" type="n0:char1" />
+          <xsd:element name="FollowUpDate" type="n0:char1" />
+          <xsd:element name="ActivityComment" type="n0:char1" />
+          <xsd:element name="Descrpt01" type="n0:char1" />
+          <xsd:element name="Descrpt02" type="n0:char1" />
+          <xsd:element name="Descrpt03" type="n0:char1" />
+          <xsd:element name="Descrpt04" type="n0:char1" />
+          <xsd:element name="Descrpt05" type="n0:char1" />
+          <xsd:element name="Descrpt06" type="n0:char1" />
+          <xsd:element name="Descrpt07" type="n0:char1" />
+          <xsd:element name="Descrpt08" type="n0:char1" />
+          <xsd:element name="Descrpt09" type="n0:char1" />
+          <xsd:element name="Descrpt10" type="n0:char1" />
+          <xsd:element name="TxtKonse" type="n0:char1" />
+          <xsd:element name="Direction" type="n0:char1" />
+          <xsd:element name="ContactRole" type="n0:char1" />
+          <xsd:element name="Contact" type="n0:char1" />
+          <xsd:element name="Langu" type="n0:char1" />
+          <xsd:element name="LanguIso" type="n0:char1" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Bapiaddr1">
+        <xsd:sequence>
+          <xsd:element name="AddrNo" type="n0:char10" />
+          <xsd:element name="Formofaddr" type="n0:char20" />
+          <xsd:element name="Name" type="n0:char40" />
+          <xsd:element name="Name2" type="n0:char40" />
+          <xsd:element name="Name3" type="n0:char40" />
+          <xsd:element name="Name4" type="n0:char40" />
+          <xsd:element name="COName" type="n0:char40" />
+          <xsd:element name="City" type="n0:char40" />
+          <xsd:element name="District" type="n0:char40" />
+          <xsd:element name="CityNo" type="n0:char12" />
+          <xsd:element name="PostlCod1" type="n0:char10" />
+          <xsd:element name="PostlCod2" type="n0:char10" />
+          <xsd:element name="PostlCod3" type="n0:char10" />
+          <xsd:element name="PoBox" type="n0:char10" />
+          <xsd:element name="PoBoxCit" type="n0:char40" />
+          <xsd:element name="DelivDis" type="n0:char15" />
+          <xsd:element name="Street" type="n0:char40" />
+          <xsd:element name="StreetNo" type="n0:char12" />
+          <xsd:element name="StrAbbr" type="n0:char2" />
+          <xsd:element name="HouseNo" type="n0:char10" />
+          <xsd:element name="StrSuppl1" type="n0:char40" />
+          <xsd:element name="StrSuppl2" type="n0:char40" />
+          <xsd:element name="Location" type="n0:char40" />
+          <xsd:element name="Building" type="n0:char10" />
+          <xsd:element name="Floor" type="n0:char10" />
+          <xsd:element name="RoomNo" type="n0:char10" />
+          <xsd:element name="Country" type="n0:char3" />
+          <xsd:element name="Langu" type="n0:lang" />
+          <xsd:element name="Region" type="n0:char3" />
+          <xsd:element name="Sort1" type="n0:char20" />
+          <xsd:element name="Sort2" type="n0:char20" />
+          <xsd:element name="TimeZone" type="n0:char6" />
+          <xsd:element name="Taxjurcode" type="n0:char15" />
+          <xsd:element name="AdrNotes" type="n0:char50" />
+          <xsd:element name="CommType" type="n0:char3" />
+          <xsd:element name="Tel1Numbr" type="n0:char30" />
+          <xsd:element name="Tel1Ext" type="n0:char10" />
+          <xsd:element name="FaxNumber" type="n0:char30" />
+          <xsd:element name="FaxExtens" type="n0:char10" />
+          <xsd:element name="StreetLng" type="n0:char60" />
+          <xsd:element name="DistrctNo" type="n0:char8" />
+          <xsd:element name="Chckstatus" type="n0:char1" />
+          <xsd:element name="PboxcitNo" type="n0:char12" />
+          <xsd:element name="Transpzone" type="n0:char10" />
+          <xsd:element name="HouseNo2" type="n0:char10" />
+          <xsd:element name="EMail" type="n0:char241" />
+          <xsd:element name="StrSuppl3" type="n0:char40" />
+          <xsd:element name="Title" type="n0:char30" />
+          <xsd:element name="Countryiso" type="n0:char2" />
+          <xsd:element name="LanguIso" type="n0:char2" />
+          <xsd:element name="BuildLong" type="n0:char20" />
+          <xsd:element name="Regiogroup" type="n0:char8" />
+          <xsd:element name="HomeCity" type="n0:char40" />
+          <xsd:element name="Homecityno" type="n0:char12" />
+          <xsd:element name="Pcode1Ext" type="n0:char10" />
+          <xsd:element name="Pcode2Ext" type="n0:char10" />
+          <xsd:element name="Pcode3Ext" type="n0:char10" />
+          <xsd:element name="PoWONo" type="n0:char1" />
+          <xsd:element name="PoBoxReg" type="n0:char3" />
+          <xsd:element name="PoboxCtry" type="n0:char3" />
+          <xsd:element name="PoCtryiso" type="n0:char2" />
+          <xsd:element name="Homepage" type="n0:char132" />
+          <xsd:element name="DontUseS" type="n0:char4" />
+          <xsd:element name="DontUseP" type="n0:char4" />
+          <xsd:element name="HouseNo3" type="n0:char10" />
+          <xsd:element name="LanguCr" type="n0:lang" />
+          <xsd:element name="Langucriso" type="n0:char2" />
+          <xsd:element name="PoBoxLobby" type="n0:char40" />
+          <xsd:element name="DeliServType" type="n0:char4" />
+          <xsd:element name="DeliServNumber" type="n0:char10" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="VbkaVbpa2kom">
+        <xsd:sequence>
+          <xsd:element name="Refobjecttype" type="n0:char10" />
+          <xsd:element name="Refobjectkey" type="n0:char70" />
+          <xsd:element name="DocNumber" type="n0:char10" />
+          <xsd:element name="ItmNumber" type="n0:numeric6" />
+          <xsd:element name="CountParvw" type="n0:numeric6" />
+          <xsd:element name="PartnRole" type="n0:char2" />
+          <xsd:element name="PartnRoleOld" type="n0:char2" />
+          <xsd:element name="PartnId" type="n0:char10" />
+          <xsd:element name="PartnIdOld" type="n0:char10" />
+          <xsd:element name="AddrNo" type="n0:char10" />
+          <xsd:element name="PersNo" type="n0:char10" />
+          <xsd:element name="Addrtype" type="n0:char1" />
+          <xsd:element name="AddrOrigin" type="n0:char1" />
+          <xsd:element name="UnloadPt" type="n0:char25" />
+          <xsd:element name="CalendarUpdate" type="n0:char1" />
+          <xsd:element name="AddrLink" type="n0:char10" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="VbkaVbpa2komx">
+        <xsd:sequence>
+          <xsd:element name="Refobjecttype" type="n0:char10" />
+          <xsd:element name="Refobjectkey" type="n0:char70" />
+          <xsd:element name="DocNumber" type="n0:char10" />
+          <xsd:element name="ItmNumber" type="n0:numeric6" />
+          <xsd:element name="CountParvw" type="n0:numeric6" />
+          <xsd:element name="PartnRole" type="n0:char1" />
+          <xsd:element name="PartnRoleOld" type="n0:char1" />
+          <xsd:element name="PartnId" type="n0:char1" />
+          <xsd:element name="PartnIdOld" type="n0:char1" />
+          <xsd:element name="AddrNo" type="n0:char1" />
+          <xsd:element name="PersNo" type="n0:char1" />
+          <xsd:element name="Addrtype" type="n0:char1" />
+          <xsd:element name="AddrOrigin" type="n0:char1" />
+          <xsd:element name="UnloadPt" type="n0:char1" />
+          <xsd:element name="CalendarUpdate" type="n0:char1" />
+          <xsd:element name="AddrLink" type="n0:char1" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="VbkaObjrefCr">
+        <xsd:sequence>
+          <xsd:element name="Refobjecttype" type="n0:char10" />
+          <xsd:element name="Refobjectkey" type="n0:char70" />
+          <xsd:element name="DocNumber" type="n0:char10" />
+          <xsd:element name="RoletypeAb" type="n0:char1" />
+          <xsd:element name="System" type="n0:char10" />
+          <xsd:element name="Objecttype" type="n0:char10" />
+          <xsd:element name="Objectkey" type="n0:char70" />
+          <xsd:element name="Binreltyp" type="n0:char4" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="VbkaBoid">
+        <xsd:sequence>
+          <xsd:element name="System" type="n0:char10" />
+          <xsd:element name="Objecttype" type="n0:char10" />
+          <xsd:element name="DocNumber" type="n0:char10" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Bus1037VbkakomCr">
+        <xsd:sequence>
+          <xsd:element name="Refobjecttype" type="n0:char10" />
+          <xsd:element name="Refobjectkey" type="n0:char70" />
+          <xsd:element name="DocNumber" type="n0:char10" />
+          <xsd:element name="Refdoctype" type="n0:char10" />
+          <xsd:element name="Refreltype" type="n0:char4" />
+          <xsd:element name="ActivityType" type="n0:char4" />
+          <xsd:element name="Salesorg" type="n0:char4" />
+          <xsd:element name="DistrChan" type="n0:char2" />
+          <xsd:element name="Division" type="n0:char2" />
+          <xsd:element name="SalesOff" type="n0:char4" />
+          <xsd:element name="SalesGrp" type="n0:char3" />
+          <xsd:element name="FromDate" type="n0:date" />
+          <xsd:element name="ToDate" type="n0:date" />
+          <xsd:element name="FromTime" type="n0:time" />
+          <xsd:element name="ToTime" type="n0:time" />
+          <xsd:element name="Reason" type="n0:char3" />
+          <xsd:element name="Result" type="n0:char3" />
+          <xsd:element name="ResultExplanation" type="n0:char3" />
+          <xsd:element name="State" type="n0:char1" />
+          <xsd:element name="FollowUpType" type="n0:char4" />
+          <xsd:element name="FollowUpDate" type="n0:date" />
+          <xsd:element name="ActivityComment" type="n0:char40" />
+          <xsd:element name="Descrpt01" type="n0:char2" />
+          <xsd:element name="Descrpt02" type="n0:char2" />
+          <xsd:element name="Descrpt03" type="n0:char2" />
+          <xsd:element name="Descrpt04" type="n0:char2" />
+          <xsd:element name="Descrpt05" type="n0:char2" />
+          <xsd:element name="Descrpt06" type="n0:char3" />
+          <xsd:element name="Descrpt07" type="n0:char3" />
+          <xsd:element name="Descrpt08" type="n0:char3" />
+          <xsd:element name="Descrpt09" type="n0:char3" />
+          <xsd:element name="Descrpt10" type="n0:char3" />
+          <xsd:element name="TxtKonse" type="n0:char1" />
+          <xsd:element name="Direction" type="n0:char1" />
+          <xsd:element name="PartnRole" type="n0:char2" />
+          <xsd:element name="PartnId" type="n0:char10" />
+          <xsd:element name="ContactRole" type="n0:char2" />
+          <xsd:element name="Contact" type="n0:numeric10" />
+          <xsd:element name="Langu" type="n0:lang" />
+          <xsd:element name="LanguIso" type="n0:char2" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Bus1037VbkakomCrx">
+        <xsd:sequence>
+          <xsd:element name="Refobjecttype" type="n0:char10" />
+          <xsd:element name="Refobjectkey" type="n0:char70" />
+          <xsd:element name="DocNumber" type="n0:char10" />
+          <xsd:element name="Refdoctype" type="n0:char1" />
+          <xsd:element name="Refreltype" type="n0:char1" />
+          <xsd:element name="ActivityType" type="n0:char1" />
+          <xsd:element name="Salesorg" type="n0:char1" />
+          <xsd:element name="DistrChan" type="n0:char1" />
+          <xsd:element name="Division" type="n0:char1" />
+          <xsd:element name="SalesOff" type="n0:char1" />
+          <xsd:element name="SalesGrp" type="n0:char1" />
+          <xsd:element name="FromDate" type="n0:char1" />
+          <xsd:element name="ToDate" type="n0:char1" />
+          <xsd:element name="FromTime" type="n0:char1" />
+          <xsd:element name="ToTime" type="n0:char1" />
+          <xsd:element name="Reason" type="n0:char1" />
+          <xsd:element name="Result" type="n0:char1" />
+          <xsd:element name="ResultExplanation" type="n0:char1" />
+          <xsd:element name="State" type="n0:char1" />
+          <xsd:element name="FollowUpType" type="n0:char1" />
+          <xsd:element name="FollowUpDate" type="n0:char1" />
+          <xsd:element name="ActivityComment" type="n0:char1" />
+          <xsd:element name="Descrpt01" type="n0:char1" />
+          <xsd:element name="Descrpt02" type="n0:char1" />
+          <xsd:element name="Descrpt03" type="n0:char1" />
+          <xsd:element name="Descrpt04" type="n0:char1" />
+          <xsd:element name="Descrpt05" type="n0:char1" />
+          <xsd:element name="Descrpt06" type="n0:char1" />
+          <xsd:element name="Descrpt07" type="n0:char1" />
+          <xsd:element name="Descrpt08" type="n0:char1" />
+          <xsd:element name="Descrpt09" type="n0:char1" />
+          <xsd:element name="Descrpt10" type="n0:char1" />
+          <xsd:element name="TxtKonse" type="n0:char1" />
+          <xsd:element name="Direction" type="n0:char1" />
+          <xsd:element name="PartnRole" type="n0:char1" />
+          <xsd:element name="PartnId" type="n0:char1" />
+          <xsd:element name="ContactRole" type="n0:char1" />
+          <xsd:element name="Contact" type="n0:char1" />
+          <xsd:element name="Langu" type="n0:char1" />
+          <xsd:element name="LanguIso" type="n0:char1" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="BapicustomerIdrange">
+        <xsd:sequence>
+          <xsd:element name="Sign" type="n0:char1" />
+          <xsd:element name="Option" type="n0:char2" />
+          <xsd:element name="Low" type="n0:char10" />
+          <xsd:element name="High" type="n0:char10" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="BapicustomerSpecialdata">
+        <xsd:sequence>
+          <xsd:element name="Customer" type="n0:char10" />
+          <xsd:element name="Acc1Time" type="n0:char1" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="BapicustomerAddressdata">
+        <xsd:sequence>
+          <xsd:element name="Customer" type="n0:char10" />
+          <xsd:element name="Sort1" type="n0:char20" />
+          <xsd:element name="Name" type="n0:char40" />
+          <xsd:element name="Country" type="n0:char3" />
+          <xsd:element name="Countryiso" type="n0:char2" />
+          <xsd:element name="City" type="n0:char40" />
+          <xsd:element name="PostlCod1" type="n0:char10" />
+          <xsd:element name="Region" type="n0:char3" />
+          <xsd:element name="Street" type="n0:char60" />
+          <xsd:element name="Tel1Numbr" type="n0:char30" />
+          <xsd:element name="FaxNumber" type="n0:char30" />
+          <xsd:element name="Address" type="n0:char10" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Rangesktast">
+        <xsd:sequence>
+          <xsd:element name="Sign" type="n0:char1" />
+          <xsd:element name="Option" type="n0:char2" />
+          <xsd:element name="Low" type="n0:char1" />
+          <xsd:element name="High" type="n0:char1" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="VbkaBinrelship">
+        <xsd:sequence>
+          <xsd:element name="Refsystem" type="n0:char10" />
+          <xsd:element name="Refobjecttype" type="n0:char10" />
+          <xsd:element name="Refobjectkey" type="n0:char70" />
+          <xsd:element name="Refrole" type="n0:char10" />
+          <xsd:element name="System" type="n0:char10" />
+          <xsd:element name="Objecttype" type="n0:char10" />
+          <xsd:element name="Objectkey" type="n0:char70" />
+          <xsd:element name="Role" type="n0:char10" />
+          <xsd:element name="Binreltyp" type="n0:char4" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Sdorgunits">
+        <xsd:sequence>
+          <xsd:element name="SalesOrg" type="n0:char4" />
+          <xsd:element name="DistrChan" type="n0:char2" />
+          <xsd:element name="Division" type="n0:char2" />
+          <xsd:element name="SalesOff" type="n0:char4" />
+          <xsd:element name="SalesGrp" type="n0:char3" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Rangesparnr">
+        <xsd:sequence>
+          <xsd:element name="Sign" type="n0:char1" />
+          <xsd:element name="Option" type="n0:char2" />
+          <xsd:element name="Low" type="n0:numeric10" />
+          <xsd:element name="High" type="n0:numeric10" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Rangesspart">
+        <xsd:sequence>
+          <xsd:element name="Sign" type="n0:char1" />
+          <xsd:element name="Option" type="n0:char2" />
+          <xsd:element name="Low" type="n0:char2" />
+          <xsd:element name="High" type="n0:char2" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Rangeskunnr">
+        <xsd:sequence>
+          <xsd:element name="Sign" type="n0:char1" />
+          <xsd:element name="Option" type="n0:char2" />
+          <xsd:element name="Low" type="n0:char10" />
+          <xsd:element name="High" type="n0:char10" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Rangesvkgrp">
+        <xsd:sequence>
+          <xsd:element name="Sign" type="n0:char1" />
+          <xsd:element name="Option" type="n0:char2" />
+          <xsd:element name="Low" type="n0:char3" />
+          <xsd:element name="High" type="n0:char3" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Rangesvkbur">
+        <xsd:sequence>
+          <xsd:element name="Sign" type="n0:char1" />
+          <xsd:element name="Option" type="n0:char2" />
+          <xsd:element name="Low" type="n0:char4" />
+          <xsd:element name="High" type="n0:char4" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Rangesktaar">
+        <xsd:sequence>
+          <xsd:element name="Sign" type="n0:char1" />
+          <xsd:element name="Option" type="n0:char2" />
+          <xsd:element name="Low" type="n0:char4" />
+          <xsd:element name="High" type="n0:char4" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Rangesvtweg">
+        <xsd:sequence>
+          <xsd:element name="Sign" type="n0:char1" />
+          <xsd:element name="Option" type="n0:char2" />
+          <xsd:element name="Low" type="n0:char2" />
+          <xsd:element name="High" type="n0:char2" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Rangesvkorg">
+        <xsd:sequence>
+          <xsd:element name="Sign" type="n0:char1" />
+          <xsd:element name="Option" type="n0:char2" />
+          <xsd:element name="Low" type="n0:char4" />
+          <xsd:element name="High" type="n0:char4" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Bapiknvvky">
+        <xsd:sequence>
+          <xsd:element name="Customer" type="n0:char10" />
+          <xsd:element name="Salesorg" type="n0:char4" />
+          <xsd:element name="Distrchn" type="n0:char2" />
+          <xsd:element name="Division" type="n0:char2" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="BapicontactAddressdata">
+        <xsd:sequence>
+          <xsd:element name="Partneremployeeid" type="n0:numeric10" />
+          <xsd:element name="Customer" type="n0:char10" />
+          <xsd:element name="Lastname" type="n0:char40" />
+          <xsd:element name="Firstname" type="n0:char40" />
+          <xsd:element name="Sex" type="n0:char1" />
+          <xsd:element name="TitleP" type="n0:char30" />
+          <xsd:element name="LanguP" type="n0:lang" />
+          <xsd:element name="LangupIso" type="n0:char2" />
+          <xsd:element name="Country" type="n0:char3" />
+          <xsd:element name="Countryiso" type="n0:char2" />
+          <xsd:element name="City" type="n0:char40" />
+          <xsd:element name="PostlCod1" type="n0:char10" />
+          <xsd:element name="Region" type="n0:char3" />
+          <xsd:element name="Street" type="n0:char60" />
+          <xsd:element name="Tel1Numbr" type="n0:char30" />
+          <xsd:element name="FaxNumber" type="n0:char30" />
+          <xsd:element name="Function" type="n0:char40" />
+          <xsd:element name="Sort1P" type="n0:char20" />
+          <xsd:element name="Address" type="n0:char10" />
+          <xsd:element name="PersNo" type="n0:char10" />
+          <xsd:element name="EMail" type="n0:char241" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfBapiVbkaTlinekom">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:VbkaTlinekom" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfBapiVbkaTlinekomx">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:VbkaTlinekomx" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfBapiBus1037VbkakomUpd">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Bus1037VbkakomUpd" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfBapiBus1037VbkakomUpdx">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Bus1037VbkakomUpdx" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfBapiaddr1">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Bapiaddr1" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfBapiVbkaVbpa2kom">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:VbkaVbpa2kom" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfBapiVbkaVbpa2komx">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:VbkaVbpa2komx" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfBapiVbkaObjrefCr">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:VbkaObjrefCr" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfBapiVbkaBoid">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:VbkaBoid" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfBapiBus1037VbkakomCr">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Bus1037VbkakomCr" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfBapiBus1037VbkakomCrx">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Bus1037VbkakomCrx" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfBapicustomerIdrange">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:BapicustomerIdrange" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfBapicustomerSpecialdata">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:BapicustomerSpecialdata" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfBapicustomerAddressdata">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:BapicustomerAddressdata" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfBapiRangesktast">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Rangesktast" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfBapiVbkaBinrelship">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:VbkaBinrelship" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfBapiSdorgunits">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Sdorgunits" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfBapiRangesparnr">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Rangesparnr" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfBapiRangesspart">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Rangesspart" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfBapiRangeskunnr">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Rangeskunnr" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfBapiRangesvkgrp">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Rangesvkgrp" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfBapiRangesvkbur">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Rangesvkbur" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfBapiRangesktaar">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Rangesktaar" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfBapiRangesvtweg">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Rangesvtweg" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfBapiRangesvkorg">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Rangesvkorg" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfBapiknvvky">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Bapiknvvky" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfBapicontactAddressdata">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:BapicontactAddressdata" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ZIgnBpcontactChange">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="Businesspartner" type="tns:TableOfBapiVbkaVbpa2kom" />
+            <xsd:element minOccurs="0" name="Businesspartnerx" type="tns:TableOfBapiVbkaVbpa2komx" />
+            <xsd:element name="Generaldata" type="tns:TableOfBapiBus1037VbkakomUpd" />
+            <xsd:element name="Generaldatax" type="tns:TableOfBapiBus1037VbkakomUpdx" />
+            <xsd:element minOccurs="0" name="ObjectReferenceList" type="tns:TableOfBapiVbkaObjrefCr" />
+            <xsd:element minOccurs="0" name="Partneraddress" type="tns:TableOfBapiaddr1" />
+            <xsd:element minOccurs="0" name="RtfItf" type="n0:char1" />
+            <xsd:element name="Sender" type="tns:Sender" />
+            <xsd:element minOccurs="0" name="Testrun" type="n0:char1" />
+            <xsd:element minOccurs="0" name="Text" type="tns:TableOfBapiVbkaTlinekom" />
+            <xsd:element minOccurs="0" name="Textx" type="tns:TableOfBapiVbkaTlinekomx" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZIgnBpcontactChangeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Businesspartner" type="n0:TABLE_OF_BAPI_VBKA_VBPA2KOM" />
+            <xsd:element name="Businesspartnerx" type="n0:TABLE_OF_BAPI_VBKA_VBPA2KOMX" />
+            <xsd:element name="Generaldata" type="tns:TableOfBapiBus1037VbkakomUpd" />
+            <xsd:element name="Generaldatax" type="tns:TableOfBapiBus1037VbkakomUpdx" />
+            <xsd:element name="ObjectReferenceList" type="tns:TableOfBapiVbkaObjrefCr" />
+            <xsd:element name="Partneraddress" type="tns:TableOfBapiaddr1" />
+            <xsd:element name="Text" type="tns:TableOfBapiVbkaTlinekom" />
+            <xsd:element name="Textx" type="tns:TableOfBapiVbkaTlinekomx" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZIgnBpcontactDelete">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Salesactivityid" type="tns:TableOfBapiVbkaBoid" />
+            <xsd:element name="Sender" type="tns:Sender" />
+            <xsd:element minOccurs="0" name="Testrun" type="n0:char1" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZIgnBpcontactDeleteResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Salesactivityid" type="tns:TableOfBapiVbkaBoid" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZIgnBpcontactCreate">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Businesspartner" type="tns:TableOfBapiVbkaVbpa2kom" />
+            <xsd:element minOccurs="0" name="Businesspartnerx" type="tns:TableOfBapiVbkaVbpa2komx" />
+            <xsd:element name="Generaldata" type="tns:TableOfBapiBus1037VbkakomCr" />
+            <xsd:element minOccurs="0" name="Generaldatax" type="tns:TableOfBapiBus1037VbkakomCrx" />
+            <xsd:element minOccurs="0" name="ObjectReferenceList" type="tns:TableOfBapiVbkaObjrefCr" />
+            <xsd:element minOccurs="0" name="Partneraddress" type="tns:TableOfBapiaddr1" />
+            <xsd:element minOccurs="0" name="RtfItf" type="n0:char1" />
+            <xsd:element name="Sender" type="tns:Sender" />
+            <xsd:element minOccurs="0" name="Testrun" type="n0:char1" />
+            <xsd:element minOccurs="0" name="Text" type="tns:TableOfBapiVbkaTlinekom" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZIgnBpcontactCreateResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Businesspartner" type="tns:TableOfBapiVbkaVbpa2kom" />
+            <xsd:element name="Businesspartnerx" type="tns:TableOfBapiVbkaVbpa2komx" />
+            <xsd:element name="Generaldata" type="tns:TableOfBapiBus1037VbkakomCr" />
+            <xsd:element name="Generaldatax" type="tns:TableOfBapiBus1037VbkakomCrx" />
+            <xsd:element name="ObjectReferenceList" type="tns:TableOfBapiVbkaObjrefCr" />
+            <xsd:element name="Partneraddress" type="tns:TableOfBapiaddr1" />
+            <xsd:element name="Text" type="tns:TableOfBapiVbkaTlinekom" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZIgnCustomerGetlist">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="Addressdata" type="tns:TableOfBapicustomerAddressdata" />
+            <xsd:element minOccurs="0" name="Cpdonly" type="n0:char1" />
+            <xsd:element minOccurs="0" name="Employeenumber" type="n0:numeric8" />
+            <xsd:element name="Idrange" type="tns:TableOfBapicustomerIdrange" />
+            <xsd:element minOccurs="0" name="Maxrows" type="xsd:int" />
+            <xsd:element minOccurs="0" name="Specialdata" type="tns:TableOfBapicustomerSpecialdata" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZIgnCustomerGetlistResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Addressdata" type="tns:TableOfBapicustomerAddressdata" />
+            <xsd:element name="Idrange" type="tns:TableOfBapicustomerIdrange" />
+            <xsd:element name="Specialdata" type="tns:TableOfBapicustomerSpecialdata" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZIgnBpcontactGetlist">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="Binaryrelationship" type="tns:TableOfBapiVbkaBinrelship" />
+            <xsd:element minOccurs="0" name="Businesspartner" type="tns:TableOfBapiVbkaVbpa2kom" />
+            <xsd:element minOccurs="0" name="Generaldata" type="tns:TableOfBapiBus1037VbkakomCr" />
+            <xsd:element minOccurs="0" name="IdBackwardView" type="xsd:int" />
+            <xsd:element minOccurs="0" name="IdCustomer" type="n0:char10" />
+            <xsd:element minOccurs="0" name="IdForwardView" type="xsd:int" />
+            <xsd:element minOccurs="0" name="IdMyActivity" type="n0:char1" />
+            <xsd:element minOccurs="0" name="IdMyCustomers" type="n0:char1" />
+            <xsd:element name="Salesactivityid" type="tns:TableOfBapiVbkaBoid" />
+            <xsd:element name="Sdorganizationalunits" type="tns:TableOfBapiSdorgunits" />
+            <xsd:element name="Status" type="tns:TableOfBapiRangesktast" />
+            <xsd:element minOccurs="0" name="Text" type="tns:TableOfBapiVbkaTlinekom" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZIgnBpcontactGetlistResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Binaryrelationship" type="tns:TableOfBapiVbkaBinrelship" />
+            <xsd:element name="Businesspartner" type="tns:TableOfBapiVbkaVbpa2kom" />
+            <xsd:element name="Generaldata" type="tns:TableOfBapiBus1037VbkakomCr" />
+            <xsd:element name="Salesactivityid" type="tns:TableOfBapiVbkaBoid" />
+            <xsd:element name="Sdorganizationalunits" type="tns:TableOfBapiSdorgunits" />
+            <xsd:element name="Status" type="tns:TableOfBapiRangesktast" />
+            <xsd:element name="Text" type="tns:TableOfBapiVbkaTlinekom" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZIgnBpcontactGetlist1">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="ActivityEndDate" type="n0:date" />
+            <xsd:element minOccurs="0" name="ActivityStartDate" type="n0:date" />
+            <xsd:element minOccurs="0" name="ActivityTypesel" type="tns:TableOfBapiRangesktaar" />
+            <xsd:element minOccurs="0" name="Customersel" type="tns:TableOfBapiRangeskunnr" />
+            <xsd:element minOccurs="0" name="Distributionchannels" type="tns:TableOfBapiRangesvtweg" />
+            <xsd:element minOccurs="0" name="Divisionsel" type="tns:TableOfBapiRangesspart" />
+            <xsd:element minOccurs="0" name="Employeesel" type="tns:TableOfBapiRangesparnr" />
+            <xsd:element minOccurs="0" name="Salesactivityid" type="tns:TableOfBapiVbkaBoid" />
+            <xsd:element minOccurs="0" name="Salesgroupsel" type="tns:TableOfBapiRangesvkgrp" />
+            <xsd:element minOccurs="0" name="Salesofficesel" type="tns:TableOfBapiRangesvkbur" />
+            <xsd:element minOccurs="0" name="Salesorganisazionsel" type="tns:TableOfBapiRangesvkorg" />
+            <xsd:element minOccurs="0" name="Sdorganizationalunits" type="tns:TableOfBapiSdorgunits" />
+            <xsd:element minOccurs="0" name="Statesel" type="tns:TableOfBapiRangesktast" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZIgnBpcontactGetlist1Response">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ActivityTypesel" type="tns:TableOfBapiRangesktaar" />
+            <xsd:element name="Customersel" type="tns:TableOfBapiRangeskunnr" />
+            <xsd:element name="Distributionchannels" type="tns:TableOfBapiRangesvtweg" />
+            <xsd:element name="Divisionsel" type="tns:TableOfBapiRangesspart" />
+            <xsd:element name="Employeesel" type="tns:TableOfBapiRangesparnr" />
+            <xsd:element name="Salesactivityid" type="tns:TableOfBapiVbkaBoid" />
+            <xsd:element name="Salesgroupsel" type="tns:TableOfBapiRangesvkgrp" />
+            <xsd:element name="Salesofficesel" type="tns:TableOfBapiRangesvkbur" />
+            <xsd:element name="Salesorganisazionsel" type="tns:TableOfBapiRangesvkorg" />
+            <xsd:element name="Sdorganizationalunits" type="tns:TableOfBapiSdorgunits" />
+            <xsd:element name="Statesel" type="tns:TableOfBapiRangesktast" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZIgnGetEmployeenumber">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Id" type="n0:char12" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZIgnGetEmployeenumberResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Employeenumber" type="n0:numeric8" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZIgnBpcontactGetdetail">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="Binaryrelationship" type="tns:TableOfBapiVbkaBinrelship" />
+            <xsd:element minOccurs="0" name="Businesspartner" type="tns:TableOfBapiVbkaVbpa2kom" />
+            <xsd:element minOccurs="0" name="Generaldata" type="tns:TableOfBapiBus1037VbkakomCr" />
+            <xsd:element minOccurs="0" name="RtfItf" type="n0:char1" />
+            <xsd:element name="Salesactivityid" type="tns:TableOfBapiVbkaBoid" />
+            <xsd:element minOccurs="0" name="Text" type="tns:TableOfBapiVbkaTlinekom" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZIgnBpcontactGetdetailResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Binaryrelationship" type="tns:TableOfBapiVbkaBinrelship" />
+            <xsd:element name="Businesspartner" type="tns:TableOfBapiVbkaVbpa2kom" />
+            <xsd:element name="Generaldata" type="tns:TableOfBapiBus1037VbkakomCr" />
+            <xsd:element name="Salesactivityid" type="tns:TableOfBapiVbkaBoid" />
+            <xsd:element name="Text" type="tns:TableOfBapiVbkaTlinekom" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZIgnCustomerGetsalesarea">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Customerno" type="n0:char10" />
+            <xsd:element minOccurs="0" name="Salesareas" type="tns:TableOfBapiknvvky" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZIgnCustomerGetsalesareaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Salesareas" type="tns:TableOfBapiknvvky" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZIgnCustomerGetcontactlist">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="CommForDisplay" type="n0:char1" />
+            <xsd:element minOccurs="0" name="Contactaddressdata" type="tns:TableOfBapicontactAddressdata" />
+            <xsd:element minOccurs="0" name="Contactpersononly" type="n0:char1" />
+            <xsd:element name="Customerrange" type="tns:TableOfBapicustomerIdrange" />
+            <xsd:element minOccurs="0" name="Employeenumber" type="n0:numeric8" />
+            <xsd:element minOccurs="0" name="Maxrows" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZIgnCustomerGetcontactlistResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Contactaddressdata" type="tns:TableOfBapicontactAddressdata" />
+            <xsd:element name="Customerrange" type="tns:TableOfBapicustomerIdrange" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ZIgnBpcontactChange">
+    <wsdl:part name="parameters" element="tns:ZIgnBpcontactChange" />
+  </wsdl:message>
+  <wsdl:message name="ZIgnBpcontactChangeResponse">
+    <wsdl:part name="parameter" element="tns:ZIgnBpcontactChangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZIgnBpcontactDelete">
+    <wsdl:part name="parameters" element="tns:ZIgnBpcontactDelete" />
+  </wsdl:message>
+  <wsdl:message name="ZIgnBpcontactDeleteResponse">
+    <wsdl:part name="parameter" element="tns:ZIgnBpcontactDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZIgnBpcontactCreate">
+    <wsdl:part name="parameters" element="tns:ZIgnBpcontactCreate" />
+  </wsdl:message>
+  <wsdl:message name="ZIgnBpcontactCreateResponse">
+    <wsdl:part name="parameter" element="tns:ZIgnBpcontactCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZIgnCustomerGetlist">
+    <wsdl:part name="parameters" element="tns:ZIgnCustomerGetlist" />
+  </wsdl:message>
+  <wsdl:message name="ZIgnCustomerGetlistResponse">
+    <wsdl:part name="parameter" element="tns:ZIgnCustomerGetlistResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZIgnBpcontactGetlist">
+    <wsdl:part name="parameters" element="tns:ZIgnBpcontactGetlist" />
+  </wsdl:message>
+  <wsdl:message name="ZIgnBpcontactGetlistResponse">
+    <wsdl:part name="parameter" element="tns:ZIgnBpcontactGetlistResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZIgnBpcontactGetlist1">
+    <wsdl:part name="parameters" element="tns:ZIgnBpcontactGetlist1" />
+  </wsdl:message>
+  <wsdl:message name="ZIgnBpcontactGetlist1Response">
+    <wsdl:part name="parameter" element="tns:ZIgnBpcontactGetlist1Response" />
+  </wsdl:message>
+  <wsdl:message name="ZIgnGetEmployeenumber">
+    <wsdl:part name="parameters" element="tns:ZIgnGetEmployeenumber" />
+  </wsdl:message>
+  <wsdl:message name="ZIgnGetEmployeenumberResponse">
+    <wsdl:part name="parameter" element="tns:ZIgnGetEmployeenumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZIgnBpcontactGetdetail">
+    <wsdl:part name="parameters" element="tns:ZIgnBpcontactGetdetail" />
+  </wsdl:message>
+  <wsdl:message name="ZIgnBpcontactGetdetailResponse">
+    <wsdl:part name="parameter" element="tns:ZIgnBpcontactGetdetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZIgnCustomerGetsalesarea">
+    <wsdl:part name="parameters" element="tns:ZIgnCustomerGetsalesarea" />
+  </wsdl:message>
+  <wsdl:message name="ZIgnCustomerGetsalesareaResponse">
+    <wsdl:part name="parameter" element="tns:ZIgnCustomerGetsalesareaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZIgnCustomerGetcontactlist">
+    <wsdl:part name="parameters" element="tns:ZIgnCustomerGetcontactlist" />
+  </wsdl:message>
+  <wsdl:message name="ZIgnCustomerGetcontactlistResponse">
+    <wsdl:part name="parameter" element="tns:ZIgnCustomerGetcontactlistResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ZIGNMOBILESALESACTIVIY">
+    <wsdl:documentation>
+      <sapdoc:sapdoc xmlns:sapdoc="urn:sap:esi:documentation">
+        <sapdoc:docitem docURL="http://sfsqvyrb.sap-cc.com:8000/sap/bc/esdt/docu/sd_text?sap-client=800&amp;sd_name=ZIGNMOBILESALESACTIVIY" />
+      </sapdoc:sapdoc>
+    </wsdl:documentation>
+    <wsp:Policy>
+      <wsp:PolicyReference URI="#IF_IF_ZIGNMOBILESALESACTIVIY" />
+    </wsp:Policy>
+    <wsdl:operation name="ZIgnBpcontactChange">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_IF_OP_ZIgnBpcontactChange" />
+      </wsp:Policy>
+      <wsdl:input message="tns:ZIgnBpcontactChange" />
+      <wsdl:output message="tns:ZIgnBpcontactChangeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ZIgnBpcontactDelete">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_IF_OP_ZIgnBpcontactDelete" />
+      </wsp:Policy>
+      <wsdl:input message="tns:ZIgnBpcontactDelete" />
+      <wsdl:output message="tns:ZIgnBpcontactDeleteResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ZIgnBpcontactCreate">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_IF_OP_ZIgnBpcontactCreate" />
+      </wsp:Policy>
+      <wsdl:input message="tns:ZIgnBpcontactCreate" />
+      <wsdl:output message="tns:ZIgnBpcontactCreateResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ZIgnCustomerGetlist">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_IF_OP_ZIgnCustomerGetlist" />
+      </wsp:Policy>
+      <wsdl:input message="tns:ZIgnCustomerGetlist" />
+      <wsdl:output message="tns:ZIgnCustomerGetlistResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ZIgnBpcontactGetlist">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_IF_OP_ZIgnBpcontactGetlist" />
+      </wsp:Policy>
+      <wsdl:input message="tns:ZIgnBpcontactGetlist" />
+      <wsdl:output message="tns:ZIgnBpcontactGetlistResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ZIgnBpcontactGetlist1">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_IF_OP_ZIgnBpcontactGetlist1" />
+      </wsp:Policy>
+      <wsdl:input message="tns:ZIgnBpcontactGetlist1" />
+      <wsdl:output message="tns:ZIgnBpcontactGetlist1Response" />
+    </wsdl:operation>
+    <wsdl:operation name="ZIgnGetEmployeenumber">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_IF_OP_ZIgnGetEmployeenumber" />
+      </wsp:Policy>
+      <wsdl:input message="tns:ZIgnGetEmployeenumber" />
+      <wsdl:output message="tns:ZIgnGetEmployeenumberResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ZIgnBpcontactGetdetail">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_IF_OP_ZIgnBpcontactGetdetail" />
+      </wsp:Policy>
+      <wsdl:input message="tns:ZIgnBpcontactGetdetail" />
+      <wsdl:output message="tns:ZIgnBpcontactGetdetailResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ZIgnCustomerGetsalesarea">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_IF_OP_ZIgnCustomerGetsalesarea" />
+      </wsp:Policy>
+      <wsdl:input message="tns:ZIgnCustomerGetsalesarea" />
+      <wsdl:output message="tns:ZIgnCustomerGetsalesareaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ZIgnCustomerGetcontactlist">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_IF_OP_ZIgnCustomerGetcontactlist" />
+      </wsp:Policy>
+      <wsdl:input message="tns:ZIgnCustomerGetcontactlist" />
+      <wsdl:output message="tns:ZIgnCustomerGetcontactlistResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="binding" type="tns:ZIGNMOBILESALESACTIVIY">
+    <wsp:Policy>
+      <wsp:PolicyReference URI="#BN_BN_binding" />
+    </wsp:Policy>
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ZIgnBpcontactChange">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZIgnBpcontactDelete">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZIgnBpcontactCreate">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZIgnCustomerGetlist">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZIgnBpcontactGetlist">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZIgnBpcontactGetlist1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZIgnGetEmployeenumber">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZIgnBpcontactGetdetail">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZIgnCustomerGetsalesarea">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZIgnCustomerGetcontactlist">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="binding_SOAP12" type="tns:ZIGNMOBILESALESACTIVIY">
+    <wsp:Policy>
+      <wsp:PolicyReference URI="#BN_BN_binding_SOAP12" />
+    </wsp:Policy>
+    <wsoap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ZIgnBpcontactChange">
+      <wsoap12:operation soapAction="" style="document" />
+      <wsdl:input>
+        <wsoap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsoap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZIgnBpcontactDelete">
+      <wsoap12:operation soapAction="" style="document" />
+      <wsdl:input>
+        <wsoap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsoap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZIgnBpcontactCreate">
+      <wsoap12:operation soapAction="" style="document" />
+      <wsdl:input>
+        <wsoap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsoap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZIgnCustomerGetlist">
+      <wsoap12:operation soapAction="" style="document" />
+      <wsdl:input>
+        <wsoap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsoap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZIgnBpcontactGetlist">
+      <wsoap12:operation soapAction="" style="document" />
+      <wsdl:input>
+        <wsoap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsoap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZIgnBpcontactGetlist1">
+      <wsoap12:operation soapAction="" style="document" />
+      <wsdl:input>
+        <wsoap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsoap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZIgnGetEmployeenumber">
+      <wsoap12:operation soapAction="" style="document" />
+      <wsdl:input>
+        <wsoap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsoap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZIgnBpcontactGetdetail">
+      <wsoap12:operation soapAction="" style="document" />
+      <wsdl:input>
+        <wsoap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsoap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZIgnCustomerGetsalesarea">
+      <wsoap12:operation soapAction="" style="document" />
+      <wsdl:input>
+        <wsoap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsoap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZIgnCustomerGetcontactlist">
+      <wsoap12:operation soapAction="" style="document" />
+      <wsdl:input>
+        <wsoap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsoap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ZIGNMOBILESALESACTIVIY">
+    <wsdl:port name="binding" binding="tns:binding">
+      <soap:address location="https://sfsqvyrb.sap-cc.com:8443/sap/bc/srt/rfc/sap/zignmobilesalesactiviy/800/zignmobilesalesactiviy/binding" />
+    </wsdl:port>
+    <wsdl:port name="binding_SOAP12" binding="tns:binding_SOAP12">
+      <wsoap12:address location="https://sfsqvyrb.sap-cc.com:8443/sap/bc/srt/rfc/sap/zignmobilesalesactiviy/800/zignmobilesalesactiviy/binding" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
