@@ -50,10 +50,11 @@ namespace SAP.CRM.Gateway
                          });
                         employeeNumber = sapResponse.Employeenumber;
                     }
-
+                    
+                    customerSelection = new List<BapicustomerIdrange>();
                     if (request.CustomerIds != null && request.CustomerIds.Count() > 0)
                     {
-                        customerSelection = new List<BapicustomerIdrange>();
+                        
                         foreach (var item in request.CustomerIds)
                         {
                             customerSelection.Add(new BapicustomerIdrange { Sign = "I", Option = "EQ", Low = item });

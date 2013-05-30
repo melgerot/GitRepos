@@ -1,6 +1,0 @@
-C:\Users\melgerot\Documents\GitHub\GitRepos\Mobile.SAP.CRM\SAP.CRM.UnitTest\bin\Debug Gateway\SAP.CRM.UnitTest.dll
-C:\Users\melgerot\Documents\GitHub\GitRepos\Mobile.SAP.CRM\SAP.CRM.UnitTest\bin\Debug Gateway\SAP.CRM.UnitTest.pdb
-C:\Users\melgerot\Documents\GitHub\GitRepos\Mobile.SAP.CRM\SAP.CRM.UnitTest\bin\Debug Gateway\Newtonsoft.Json.dll
-C:\Users\melgerot\Documents\GitHub\GitRepos\Mobile.SAP.CRM\SAP.CRM.UnitTest\obj\Debug Gateway\SAP.CRM.UnitTest.csprojResolveAssemblyReference.cache
-C:\Users\melgerot\Documents\GitHub\GitRepos\Mobile.SAP.CRM\SAP.CRM.UnitTest\obj\Debug Gateway\SAP.CRM.UnitTest.dll
-C:\Users\melgerot\Documents\GitHub\GitRepos\Mobile.SAP.CRM\SAP.CRM.UnitTest\obj\Debug Gateway\SAP.CRM.UnitTest.pdb
