@@ -12,12 +12,13 @@ namespace SAP.CRM.Gateway
     [DataContract]
     public class GetCustomerInformationRequest
     {
+		[DataMember]
         public bool MyCustomers { get; set; }
-
+		[DataMember]
         public string SearchCriteria { get; set; }
-
+		[DataMember]
         public int MaxCustomerRecords { get; set; }
-
+		[DataMember]
         public List<string> CustomerIds { get; set; }
     }
 
@@ -1080,8 +1081,8 @@ namespace SAP.CRM.Gateway
 
     public class ActivityKeyData
     {
-        private string refobjecttypeField;
-
+        //private string refobjecttypeField;
+		//
         //[DataMember]
         //public string RefobjecttypeField
         //{
