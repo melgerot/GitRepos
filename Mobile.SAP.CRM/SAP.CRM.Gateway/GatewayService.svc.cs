@@ -32,7 +32,7 @@ namespace SAP.CRM.Gateway
                 // Prepare request object and call backend system
                 using (ZIGNMOBILESALESACTIVIYClient client = new ZIGNMOBILESALESACTIVIYClient("binding_SOAP122"))
                 {
-                    string employeeNumber = null;
+                    string employeeNumber = "";
                     List<BapicustomerIdrange> customerSelection = null;
                     bool maxRecordRestriction = false;
 
@@ -51,7 +51,7 @@ namespace SAP.CRM.Gateway
                         employeeNumber = sapResponse.Employeenumber;
                     }
 
-                    if (request.CustomerIds.Count() > 0)
+                    if (request.CustomerIds != null && request.CustomerIds.Count() > 0)
                     {
                         customerSelection = new List<BapicustomerIdrange>();
                         foreach (var item in request.CustomerIds)

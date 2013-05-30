@@ -21,7 +21,7 @@ namespace SAP.CRM.UnitTest
 
             GetSalesActivitiesRequest request = new GetSalesActivitiesRequest
             {
-                Customer = "",
+                //Customer = "",
                 StatusSelection = new StatusMap()
             };
             string payload = JsonConvert.SerializeObject(request);
