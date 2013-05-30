@@ -1,6 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone.5.1" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="SAP.CRM.Core/SAL/ServiceHelper.cs">
+    <Files>
+      <File FileName="SAP.CRM.Core/SAL/ServiceHelper.cs" Line="319" Column="2" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
@@ -9,11 +12,9 @@
               <Node name="Managers" expanded="True" />
             </Node>
             <Node name="DL" expanded="True" />
-            <Node name="SAL" expanded="True" />
-          </Node>
-          <Node name="SAP.CRM.MT" expanded="True">
-            <Node name="ActivitiesTableViewController.cs" selected="True" />
-            <Node name="ActivityTableViewController.cs" expanded="True" />
+            <Node name="SAL" expanded="True">
+              <Node name="ServiceHelper.cs" selected="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
