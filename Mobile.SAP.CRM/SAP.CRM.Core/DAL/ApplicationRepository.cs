@@ -80,7 +80,7 @@ namespace SAP.CRM.Core.DAL
         public static TargetService GetActiveTargetService()
         {
             //return me.db.GetItems<TargetService>().FirstOrDefault<TargetService>(t => t.Active == true);  
-            return new TargetService { Name = "Static TEST", Uri = "http://172.20.10.6:54978/GatewayService.svc/SalesActivities", MaxRecord = 100 };
+            return new TargetService { Name = "Static TEST", Uri = "http://172.20.10.6:54978/GatewayService.svc/", MaxRecord = 100 };
         }
 
         public static TargetService GetTargetService(int id)
