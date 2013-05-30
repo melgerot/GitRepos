@@ -64,7 +64,7 @@ namespace SAP.CRM.Core.SAL
 
             // Prepare the WebClient
             CustomWebClient client = new CustomWebClient(Constants.WEBCLIENT_TIMEOUT);
-            Uri uri = new Uri(string.Format("{0}", targetService.Uri));
+			Uri uri = new Uri(string.Format("{0}{1}", targetService.Uri, "CustomerInfo"));
 
             client.Headers[HttpRequestHeader.ContentType] = "application/json";
             client.Headers[HttpRequestHeader.Accept] = "application/json";
@@ -194,7 +194,7 @@ namespace SAP.CRM.Core.SAL
 
             // Prepare the WebClient
             CustomWebClient client = new CustomWebClient(Constants.WEBCLIENT_TIMEOUT);
-            Uri uri = new Uri(string.Format("{0}", targetService.Uri));
+			Uri uri = new Uri(string.Format("{0}{1}", targetService.Uri, "SalesActivities"));
 
             client.Headers[HttpRequestHeader.ContentType] = "application/json";
             client.Headers[HttpRequestHeader.Accept] = "application/json";
