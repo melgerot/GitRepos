@@ -121,6 +121,8 @@
     </Compile>
     <Compile Include="BL\Activity.cs" />
     <Compile Include="SAL\ServiceHelper.cs" />
+    <Compile Include="BL\Managers\UpdateEventArgs.cs" />
+    <Compile Include="SAL\GetDataEventArgs.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -1,0 +1,426 @@
+TSAP.CRM.MT
+v5
+r1
+cCheck dependencies
+cCompileC DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/LoginTableViewController-14C859212BAB29BE.o /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/LoginTableViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/AppDelegate-B7AFEA1D7089CEE7.o /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/SalesActivityTabBarController-38DC25E812731CCD.o /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/SalesActivityTabBarController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/ActivityTableViewController-6F85672BBE6D67E4.o /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/ActivityTableViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/ActivitySeachTableViewController-12BD498FBB28B4C7.o /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/ActivitySeachTableViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/SortGroupTableViewController-5E50B19E787843F3.o /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/SortGroupTableViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/CustomActivityCell-EF2346B0E6280304.o /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/CustomActivityCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/StatusSelectionTableViewController-E903AA38255653F6.o /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/StatusSelectionTableViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/ActivitiesTableViewController-8CE326DFEBA3B6D4.o /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/ActivitiesTableViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/AddCustomersTableViewController-3C34F9B762A8B1D6.o /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/AddCustomersTableViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/CustomersTableViewController-15A70F77FF5324EB.o /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/CustomersTableViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator/SAP.CRM.MT.app/SAP.CRM.MT normal i386
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk
+c0000000050EDEAFB0000000000000110
+t1357769467
+s272
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000005154BB7F0000000000228FE0
+t1364507519
+s2265056
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000005154BB8200000000003DDFA0
+t1364507522
+s4054944
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/MapKit.framework/MapKit
+c000000005154BB8600000000000F9CF0
+t1364507526
+s1023216
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000005154BB8C0000000000AB6230
+t1364507532
+s11231792
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/ActivitiesTableViewController.h
+c0000000051A4C76D00000000000001D0
+t1369753453
+s464
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/ActivitiesTableViewController.m
+c0000000051A4C76D0000000000000168
+t1369753453
+s360
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/ActivitySeachTableViewController.h
+c0000000051A4C76D00000000000002AD
+t1369753453
+s685
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/ActivitySeachTableViewController.m
+c0000000051A4C76D00000000000001CD
+t1369753453
+s461
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/ActivityTableViewController.h
+c0000000051A4C76D000000000000065A
+t1369753453
+s1626
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/ActivityTableViewController.m
+c0000000051A4C76D0000000000000393
+t1369753453
+s915
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/AddCustomersTableViewController.h
+c0000000051A72C740000000000000211
+t1369910388
+s529
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/AddCustomersTableViewController.m
+c0000000051A72C7400000000000001AF
+t1369910388
+s431
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/AppDelegate.h
+c0000000051A4C76D00000000000001B1
+t1369753453
+s433
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/AppDelegate.m
+c0000000051A4C76D0000000000000144
+t1369753453
+s324
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/CustomActivityCell.h
+c0000000051A4C76D00000000000002CB
+t1369753453
+s715
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/CustomActivityCell.m
+c0000000051A4C76D00000000000001D5
+t1369753453
+s469
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/CustomersTableViewController.h
+c0000000051A4D87700000000000001CF
+t1369757815
+s463
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/CustomersTableViewController.m
+c0000000051A4D8770000000000000166
+t1369757815
+s358
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/ActivitiesTableViewController-8CE326DFEBA3B6D4.o
+t1369910392
+s66400
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/ActivitySeachTableViewController-12BD498FBB28B4C7.o
+t1369910391
+s70176
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/ActivityTableViewController-6F85672BBE6D67E4.o
+t1369910390
+s84172
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/AddCustomersTableViewController-3C34F9B762A8B1D6.o
+t1369910392
+s69544
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/AppDelegate-B7AFEA1D7089CEE7.o
+t1369910390
+s3288
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/CustomActivityCell-EF2346B0E6280304.o
+t1369910391
+s70480
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/CustomersTableViewController-15A70F77FF5324EB.o
+t1369910392
+s66392
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/LoginTableViewController-14C859212BAB29BE.o
+t1369910390
+s66356
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/SAP.CRM.MT.LinkFileList
+c0000000051A72C750000000000000A3F
+t1369910389
+s2623
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/SalesActivityTabBarController-38DC25E812731CCD.o
+t1369910390
+s69816
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/SortGroupTableViewController-5E50B19E787843F3.o
+t1369910392
+s66392
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/StatusSelectionTableViewController-E903AA38255653F6.o
+t1369910392
+s71756
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator/SAP.CRM.MT.app
+t1369910392
+s68
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator/SAP.CRM.MT.app.dSYM
+t2
+s0
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator/SAP.CRM.MT.app/MainStoryboard.storyboardc
+t2
+s0
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator/SAP.CRM.MT.app/SAP.CRM.MT
+t2
+s0
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/LoginTableViewController.h
+c0000000051A4C76D00000000000001CB
+t1369753453
+s459
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/LoginTableViewController.m
+c0000000051A4C76D000000000000015E
+t1369753453
+s350
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/MainStoryboard.storyboard
+c0000000051A72C740000000000021DE9
+t1369910388
+s138729
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/SalesActivityTabBarController.h
+c0000000051A4C76D00000000000001CD
+t1369753453
+s461
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/SalesActivityTabBarController.m
+c0000000051A4C76D0000000000000168
+t1369753453
+s360
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/SortGroupTableViewController.h
+c0000000051A4C76D00000000000001CF
+t1369753453
+s463
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/SortGroupTableViewController.m
+c0000000051A4C76D0000000000000166
+t1369753453
+s358
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/StatusSelectionTableViewController.h
+c0000000051A4C76D000000000000032F
+t1369753453
+s815
+
+N/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/StatusSelectionTableViewController.m
+c0000000051A4C76D0000000000000213
+t1369753453
+s531
+
+CBuild AST from /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/ActivitiesTableViewController.m
+r0
+
+CBuild AST from /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/ActivitySeachTableViewController.m
+r0
+
+CBuild AST from /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/ActivityTableViewController.m
+r0
+
+CBuild AST from /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/AddCustomersTableViewController.m
+r0
+
+CBuild AST from /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/AppDelegate.m
+r0
+
+CBuild AST from /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/CustomActivityCell.m
+r0
+
+CBuild AST from /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/CustomersTableViewController.m
+r0
+
+CBuild AST from /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/LoginTableViewController.m
+r0
+
+CBuild AST from /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/SalesActivityTabBarController.m
+r0
+
+CBuild AST from /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/SortGroupTableViewController.m
+r0
+
+CBuild AST from /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/StatusSelectionTableViewController.m
+r0
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies645dbc0a6457b741^5bcdc20a6457b741^-1369"warning: no rule to process file '$(PROJECT_DIR)/AppDelegate.h' of type sourcecode.c.h for architecture i386warning: no rule to process file '$(PROJECT_DIR)/LoginTableViewController.h' of type sourcecode.c.h for architecture i386warning: no rule to process file '$(PROJECT_DIR)/SalesActivityTabBarController.h' of type sourcecode.c.h for architecture i386warning: no rule to process file '$(PROJECT_DIR)/ActivityTableViewController.h' of type sourcecode.c.h for architecture i386warning: no rule to process file '$(PROJECT_DIR)/ActivitySeachTableViewController.h' of type sourcecode.c.h for architecture i386warning: no rule to process file '$(PROJECT_DIR)/SortGroupTableViewController.h' of type sourcecode.c.h for architecture i386warning: no rule to process file '$(PROJECT_DIR)/CustomActivityCell.h' of type sourcecode.c.h for architecture i386warning: no rule to process file '$(PROJECT_DIR)/StatusSelectionTableViewController.h' of type sourcecode.c.h for architecture i386warning: no rule to process file '$(PROJECT_DIR)/ActivitiesTableViewController.h' of type sourcecode.c.h for architecture i386warning: no rule to process file '$(PROJECT_DIR)/AddCustomersTableViewController.h' of type sourcecode.c.h for architecture i386warning: no rule to process file '$(PROJECT_DIR)/CustomersTableViewController.h' of type sourcecode.c.h for architecture i38611(21%IDEActivityLogMessage2@108"Warning: no rule to process file '$(PROJECT_DIR)/AppDelegate.h' of type sourcecode.c.h for architecture i386-391603210#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@121"Warning: no rule to process file '$(PROJECT_DIR)/LoginTableViewController.h' of type sourcecode.c.h for architecture i386-391603210#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@126"Warning: no rule to process file '$(PROJECT_DIR)/SalesActivityTabBarController.h' of type sourcecode.c.h for architecture i386-391603210#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@124"Warning: no rule to process file '$(PROJECT_DIR)/ActivityTableViewController.h' of type sourcecode.c.h for architecture i386-391603210#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@129"Warning: no rule to process file '$(PROJECT_DIR)/ActivitySeachTableViewController.h' of type sourcecode.c.h for architecture i386-391603210#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@125"Warning: no rule to process file '$(PROJECT_DIR)/SortGroupTableViewController.h' of type sourcecode.c.h for architecture i386-391603210#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@115"Warning: no rule to process file '$(PROJECT_DIR)/CustomActivityCell.h' of type sourcecode.c.h for architecture i386-391603210#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@131"Warning: no rule to process file '$(PROJECT_DIR)/StatusSelectionTableViewController.h' of type sourcecode.c.h for architecture i386-391603210#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@126"Warning: no rule to process file '$(PROJECT_DIR)/ActivitiesTableViewController.h' of type sourcecode.c.h for architecture i386-391603210#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@128"Warning: no rule to process file '$(PROJECT_DIR)/AddCustomersTableViewController.h' of type sourcecode.c.h for architecture i386-391603210#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@125"Warning: no rule to process file '$(PROJECT_DIR)/CustomersTableViewController.h' of type sourcecode.c.h for architecture i386-391603210#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--0#1#0#--18"Check dependencies36"5C64EEA6-8FFD-4F93-AD6D-7743586DC1CA-
+
+CCompileC DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/ActivitiesTableViewController-8CE326DFEBA3B6D4.o /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/ActivitiesTableViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s391603192.116853
+e391603192.552362
+r1
+xCompileC
+xDerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/ActivitiesTableViewController-8CE326DFEBA3B6D4.o
+x/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/ActivitiesTableViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"Compile /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/ActivitiesTableViewController.m2a1b1ef86357b741^6b668df86357b741^---0#0#0#-19%DVTDocumentLocation2@116"file://localhost/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/ActivitiesTableViewController.m0000000000000000^4385"CompileC DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/ActivitiesTableViewController-8CE326DFEBA3B6D4.o ActivitiesTableViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xamarin Studio.app/Contents/MacOS:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wmissing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.1 -iquote /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-generated-files.hmap -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-own-target-headers.hmap -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-all-target-headers.hmap -iquote /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-project-headers.hmap -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/DerivedSources/i386 -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/DerivedSources -F/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator -MMD -MT dependencies -MF /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/ActivitiesTableViewController-8CE326DFEBA3B6D4.d --serialize-diagnostics /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/ActivitiesTableViewController-8CE326DFEBA3B6D4.dia -c /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/ActivitiesTableViewController.m -o /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/ActivitiesTableViewController-8CE326DFEBA3B6D4.o36"E7A90B80-3F40-4481-B197-52DEF01AA408-
+
+CCompileC DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/ActivitySeachTableViewController-12BD498FBB28B4C7.o /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/ActivitySeachTableViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s391603190.785604
+e391603191.135887
+r1
+xCompileC
+xDerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/ActivitySeachTableViewController-12BD498FBB28B4C7.o
+x/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/ActivitySeachTableViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection111"Compile /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/ActivitySeachTableViewController.mad4bc9f66357b741^f54bb4f76357b741^---0#0#0#-19%DVTDocumentLocation2@119"file://localhost/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/ActivitySeachTableViewController.m0000000000000000^4403"CompileC DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/ActivitySeachTableViewController-12BD498FBB28B4C7.o ActivitySeachTableViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xamarin Studio.app/Contents/MacOS:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wmissing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.1 -iquote /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-generated-files.hmap -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-own-target-headers.hmap -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-all-target-headers.hmap -iquote /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-project-headers.hmap -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/DerivedSources/i386 -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/DerivedSources -F/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator -MMD -MT dependencies -MF /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/ActivitySeachTableViewController-12BD498FBB28B4C7.d --serialize-diagnostics /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/ActivitySeachTableViewController-12BD498FBB28B4C7.dia -c /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/ActivitySeachTableViewController.m -o /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/ActivitySeachTableViewController-12BD498FBB28B4C7.o36"1A207CB6-7127-4F64-9674-F9D908C03965-
+
+CCompileC DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/ActivityTableViewController-6F85672BBE6D67E4.o /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/ActivityTableViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s391603190.302453
+e391603190.975954
+r1
+xCompileC
+xDerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/ActivityTableViewController-6F85672BBE6D67E4.o
+x/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/ActivityTableViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection106"Compile /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/ActivityTableViewController.m5aa04df66357b741^d63bb4f76357b741^---0#0#0#-19%DVTDocumentLocation2@114"file://localhost/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/ActivityTableViewController.m0000000000000000^4373"CompileC DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/ActivityTableViewController-6F85672BBE6D67E4.o ActivityTableViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xamarin Studio.app/Contents/MacOS:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wmissing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.1 -iquote /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-generated-files.hmap -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-own-target-headers.hmap -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-all-target-headers.hmap -iquote /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-project-headers.hmap -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/DerivedSources/i386 -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/DerivedSources -F/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator -MMD -MT dependencies -MF /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/ActivityTableViewController-6F85672BBE6D67E4.d --serialize-diagnostics /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/ActivityTableViewController-6F85672BBE6D67E4.dia -c /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/ActivityTableViewController.m -o /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/ActivityTableViewController-6F85672BBE6D67E4.o36"4CFE4743-A849-4E62-965C-4C897763C590-
+
+CCompileC DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/AddCustomersTableViewController-3C34F9B762A8B1D6.o /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/AddCustomersTableViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s391603192.142781
+e391603192.510776
+r1
+xCompileC
+xDerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/AddCustomersTableViewController-3C34F9B762A8B1D6.o
+x/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/AddCustomersTableViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection110"Compile /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/AddCustomersTableViewController.m5ebb24f86357b741^20cf82f86357b741^---0#0#0#-19%DVTDocumentLocation2@118"file://localhost/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/AddCustomersTableViewController.m0000000000000000^4397"CompileC DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/AddCustomersTableViewController-3C34F9B762A8B1D6.o AddCustomersTableViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xamarin Studio.app/Contents/MacOS:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wmissing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.1 -iquote /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-generated-files.hmap -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-own-target-headers.hmap -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-all-target-headers.hmap -iquote /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-project-headers.hmap -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/DerivedSources/i386 -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/DerivedSources -F/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator -MMD -MT dependencies -MF /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/AddCustomersTableViewController-3C34F9B762A8B1D6.d --serialize-diagnostics /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/AddCustomersTableViewController-3C34F9B762A8B1D6.dia -c /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/AddCustomersTableViewController.m -o /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/AddCustomersTableViewController-3C34F9B762A8B1D6.o36"E184CA86-C23E-49C4-8F71-6E0ADE0D6F38-
+
+CCompileC DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/AppDelegate-B7AFEA1D7089CEE7.o /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s391603189.368952
+e391603190.297553
+r1
+xCompileC
+xDerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/AppDelegate-B7AFEA1D7089CEE7.o
+x/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/AppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Compile /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/AppDelegate.m12f95ef56357b741^5b404cf66357b741^---0#0#0#-19%DVTDocumentLocation2@98"file://localhost/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/AppDelegate.m0000000000000000^4277"CompileC DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/AppDelegate-B7AFEA1D7089CEE7.o AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xamarin Studio.app/Contents/MacOS:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wmissing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.1 -iquote /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-generated-files.hmap -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-own-target-headers.hmap -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-all-target-headers.hmap -iquote /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-project-headers.hmap -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/DerivedSources/i386 -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/DerivedSources -F/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator -MMD -MT dependencies -MF /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/AppDelegate-B7AFEA1D7089CEE7.d --serialize-diagnostics /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/AppDelegate-B7AFEA1D7089CEE7.dia -c /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/AppDelegate.m -o /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/AppDelegate-B7AFEA1D7089CEE7.o36"94C268AA-71C5-4414-AF7F-51B1A029262F-
+
+CCompileC DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/CustomActivityCell-EF2346B0E6280304.o /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/CustomActivityCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s391603191.146604
+e391603191.485763
+r1
+xCompileC
+xDerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/CustomActivityCell-EF2346B0E6280304.o
+x/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/CustomActivityCell.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection97"Compile /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/CustomActivityCell.m8db325f76357b741^535db4f76357b741^---0#0#0#-19%DVTDocumentLocation2@105"file://localhost/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/CustomActivityCell.m0000000000000000^4319"CompileC DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/CustomActivityCell-EF2346B0E6280304.o CustomActivityCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xamarin Studio.app/Contents/MacOS:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wmissing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.1 -iquote /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-generated-files.hmap -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-own-target-headers.hmap -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-all-target-headers.hmap -iquote /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-project-headers.hmap -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/DerivedSources/i386 -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/DerivedSources -F/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator -MMD -MT dependencies -MF /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/CustomActivityCell-EF2346B0E6280304.d --serialize-diagnostics /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/CustomActivityCell-EF2346B0E6280304.dia -c /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/CustomActivityCell.m -o /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/CustomActivityCell-EF2346B0E6280304.o36"3EA76049-B57D-4D03-A599-16CE91F73061-
+
+CCompileC DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/CustomersTableViewController-15A70F77FF5324EB.o /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/CustomersTableViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s391603192.512104
+e391603192.823042
+r1
+xCompileC
+xDerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/CustomersTableViewController-15A70F77FF5324EB.o
+x/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/CustomersTableViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection107"Compile /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/CustomersTableViewController.me54483f86357b741^47c6d2f86357b741^---0#0#0#-19%DVTDocumentLocation2@115"file://localhost/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/CustomersTableViewController.m0000000000000000^4379"CompileC DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/CustomersTableViewController-15A70F77FF5324EB.o CustomersTableViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xamarin Studio.app/Contents/MacOS:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wmissing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.1 -iquote /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-generated-files.hmap -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-own-target-headers.hmap -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-all-target-headers.hmap -iquote /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-project-headers.hmap -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/DerivedSources/i386 -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/DerivedSources -F/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator -MMD -MT dependencies -MF /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/CustomersTableViewController-15A70F77FF5324EB.d --serialize-diagnostics /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/CustomersTableViewController-15A70F77FF5324EB.dia -c /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/CustomersTableViewController.m -o /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/CustomersTableViewController-15A70F77FF5324EB.o36"A97231AC-AB5A-4C4A-9236-464947064509-
+
+CCompileC DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/LoginTableViewController-14C859212BAB29BE.o /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/LoginTableViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s391603189.368956
+e391603190.301246
+r1
+xCompileC
+xDerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/LoginTableViewController-14C859212BAB29BE.o
+x/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/LoginTableViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Compile /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/LoginTableViewController.m904c5ff56357b741^ed2d4df66357b741^---0#0#0#-19%DVTDocumentLocation2@111"file://localhost/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/LoginTableViewController.m0000000000000000^4355"CompileC DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/LoginTableViewController-14C859212BAB29BE.o LoginTableViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xamarin Studio.app/Contents/MacOS:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wmissing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.1 -iquote /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-generated-files.hmap -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-own-target-headers.hmap -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-all-target-headers.hmap -iquote /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-project-headers.hmap -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/DerivedSources/i386 -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/DerivedSources -F/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator -MMD -MT dependencies -MF /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/LoginTableViewController-14C859212BAB29BE.d --serialize-diagnostics /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/LoginTableViewController-14C859212BAB29BE.dia -c /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/LoginTableViewController.m -o /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/LoginTableViewController-14C859212BAB29BE.o36"292DD73D-29B4-45BE-BDB8-FB62E3EF538E-
+
+CCompileC DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/SalesActivityTabBarController-38DC25E812731CCD.o /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/SalesActivityTabBarController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s391603190.298851
+e391603190.784089
+r1
+xCompileC
+xDerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/SalesActivityTabBarController-38DC25E812731CCD.o
+x/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/SalesActivityTabBarController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"Compile /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/SalesActivityTabBarController.m46b14cf66357b741^bb2ab4f76357b741^---0#0#0#-19%DVTDocumentLocation2@116"file://localhost/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/SalesActivityTabBarController.m0000000000000000^4385"CompileC DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/SalesActivityTabBarController-38DC25E812731CCD.o SalesActivityTabBarController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xamarin Studio.app/Contents/MacOS:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wmissing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.1 -iquote /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-generated-files.hmap -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-own-target-headers.hmap -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-all-target-headers.hmap -iquote /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-project-headers.hmap -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/DerivedSources/i386 -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/DerivedSources -F/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator -MMD -MT dependencies -MF /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/SalesActivityTabBarController-38DC25E812731CCD.d --serialize-diagnostics /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/SalesActivityTabBarController-38DC25E812731CCD.dia -c /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/SalesActivityTabBarController.m -o /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/SalesActivityTabBarController-38DC25E812731CCD.o36"F7CDD827-AC82-4FB6-85A0-70760A5E2270-
+
+CCompileC DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/SortGroupTableViewController-5E50B19E787843F3.o /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/SortGroupTableViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s391603190.977504
+e391603192.141437
+r1
+xCompileC
+xDerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/SortGroupTableViewController-5E50B19E787843F3.o
+x/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/SortGroupTableViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection107"Compile /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/SortGroupTableViewController.m616bfaf66357b741^3f5224f86357b741^---0#0#0#-19%DVTDocumentLocation2@115"file://localhost/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/SortGroupTableViewController.m0000000000000000^4379"CompileC DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/SortGroupTableViewController-5E50B19E787843F3.o SortGroupTableViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xamarin Studio.app/Contents/MacOS:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wmissing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.1 -iquote /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-generated-files.hmap -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-own-target-headers.hmap -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-all-target-headers.hmap -iquote /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-project-headers.hmap -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/DerivedSources/i386 -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/DerivedSources -F/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator -MMD -MT dependencies -MF /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/SortGroupTableViewController-5E50B19E787843F3.d --serialize-diagnostics /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/SortGroupTableViewController-5E50B19E787843F3.dia -c /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/SortGroupTableViewController.m -o /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/SortGroupTableViewController-5E50B19E787843F3.o36"0D1957CB-9FAD-4FF2-816A-7620EF8EDFAD-
+
+CCompileC DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/StatusSelectionTableViewController-E903AA38255653F6.o /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/StatusSelectionTableViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s391603191.496467
+e391603192.115490
+r1
+xCompileC
+xDerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/StatusSelectionTableViewController-E903AA38255653F6.o
+x/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/StatusSelectionTableViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection113"Compile /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/StatusSelectionTableViewController.mf6447ff76357b741^349d1df86357b741^---0#0#0#-19%DVTDocumentLocation2@121"file://localhost/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/StatusSelectionTableViewController.m0000000000000000^4415"CompileC DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/StatusSelectionTableViewController-E903AA38255653F6.o StatusSelectionTableViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xamarin Studio.app/Contents/MacOS:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wmissing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.1 -iquote /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-generated-files.hmap -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-own-target-headers.hmap -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-all-target-headers.hmap -iquote /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/SAP.CRM.MT-project-headers.hmap -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/DerivedSources/i386 -I/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/DerivedSources -F/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator -MMD -MT dependencies -MF /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/StatusSelectionTableViewController-E903AA38255653F6.d --serialize-diagnostics /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/StatusSelectionTableViewController-E903AA38255653F6.dia -c /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/StatusSelectionTableViewController.m -o /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/StatusSelectionTableViewController-E903AA38255653F6.o36"89A8400B-93F2-48C6-A36E-0E95F831E670-
+
+CCompileStoryboard /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/MainStoryboard.storyboard
+r0
+
+CGenerateDSYMFile /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator/SAP.CRM.MT.app.dSYM /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator/SAP.CRM.MT.app/SAP.CRM.MT
+r0
+
+CLd /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator/SAP.CRM.MT.app/SAP.CRM.MT normal i386
+s391603210.782298
+e391603210.836271
+r0
+xLd
+x/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator/SAP.CRM.MT.app/SAP.CRM.MT
+xnormal
+xi386
+oUndefined symbols for architecture i386:
+o  "_main", referenced from:
+o      start in crt1.o
+old: symbol(s) not found for architecture i386
+oclang: error: linker command failed with exit code 1 (use -v to see invocation)
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection163"Link /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator/SAP.CRM.MT.app/SAP.CRM.MT2c62c80a6457b741^0211d60a6457b741^-217"Undefined symbols for architecture i386:  "_main", referenced from:      start in crt1.old: symbol(s) not found for architecture i386clang: error: linker command failed with exit code 1 (use -v to see invocation)4(21%IDEActivityLogMessage2@25""_main", referenced from:-391603210#41#28#-2#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#25"Apple Mach-O Linker Error--2@15"Start in crt1.o-391603210#69#22#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#26"Apple Mach-O Linker Notice--2@41"Symbol(s) not found for architecture i386-391603210#91#46#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#26"Apple Mach-O Linker Notice--2@65"Linker command failed with exit code 1 (use -v to see invocation)-391603210#137#80#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#25"Apple Mach-O Linker Error--0#0#0#--1558"Ld DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator/SAP.CRM.MT.app/SAP.CRM.MT normal i386    cd /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17    setenv IPHONEOS_DEPLOYMENT_TARGET 6.1    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xamarin Studio.app/Contents/MacOS:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -L/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator -F/Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator -filelist /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Intermediates/SAP.CRM.MT.build/MonoTouch-iphonesimulator/SAP.CRM.MT.build/Objects-normal/i386/SAP.CRM.MT.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=6.1 -framework UIKit -framework MapKit -framework Foundation -framework CoreGraphics -o /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator/SAP.CRM.MT.app/SAP.CRM.MT36"4531333B-1A7E-4883-A056-3ACAB88C9D86-
+
+CTouch /Users/martinelgerot/GitRepos/Mobile.SAP.CRM/MT.SAP.CRM/obj/Xcode/17/DerivedData/SAP.CRM.MT/Build/Products/MonoTouch-iphonesimulator/SAP.CRM.MT.app
+r0
+

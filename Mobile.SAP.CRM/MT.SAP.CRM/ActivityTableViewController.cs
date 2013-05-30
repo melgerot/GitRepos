@@ -13,7 +13,6 @@ namespace SAP.CRM.MT
 {
 	public partial class ActivityTableViewController : UITableViewController
 	{
-		private ApplicationState appState;
 		private Activity activity;
 		LoadingOverlay loadingOverlay;
 

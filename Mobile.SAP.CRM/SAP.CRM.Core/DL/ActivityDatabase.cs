@@ -28,7 +28,7 @@ namespace SAP.CRM.Core.DL
         {
             // create the tables
             CreateTable<SAP.CRM.Core.BL.Activity>();
-			CreateTable<SAP.CRM.Core.BL.ActivityDetail> ();
+			//CreateTable<SAP.CRM.Core.BL.ActivityDetail> ();
             CreateTable<SAP.CRM.Core.BL.ActivityPartner>();
             CreateTable<SAP.CRM.Core.BL.ActivityText>();
             CreateTable<SAP.CRM.Core.BL.ActivitySearchSettings>();

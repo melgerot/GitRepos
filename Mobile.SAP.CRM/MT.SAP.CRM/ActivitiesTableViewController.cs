@@ -54,7 +54,7 @@ namespace SAP.CRM.MT
 			{
 				// Wire completion event and start update process
 				ActivityManager.UpdateFinished += HandleUpdateFinished;		
-				ActivityManager.RefreshActivityList(null);
+				ActivityManager.RefreshActivityData(false, null);
 			} 
 			catch (Exception ex) {
 				new UIAlertView("Error", ex.Message, null, "OK", null).Show();

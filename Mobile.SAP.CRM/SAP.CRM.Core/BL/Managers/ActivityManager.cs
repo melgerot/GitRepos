@@ -29,7 +29,7 @@ namespace SAP.CRM.Core.BL.Managers
         {
         }
 
-        public static void RefreshActivityListData(List<Activity> activityData, bool detail)
+        public static void RefreshActivityData(bool detail, List<Activity> activityData)
         {
             // TODO: Check that ActivityManager is not updating
 
@@ -86,7 +86,7 @@ namespace SAP.CRM.Core.BL.Managers
                 
 				try {
 					// Do service calls
-					helper.GetActivities(activityData, detail);
+					helper.GetActivities(detail, activityData);
 				} catch (Exception ex) {
 					// Service call could not be peformed due to unknown reason
 					// Propagate exeception to caller

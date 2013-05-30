@@ -146,6 +146,14 @@
       <DependentUpon>ActivitiesTableViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="ApplicationState.cs" />
+    <Compile Include="AddCustomersTableViewController.cs" />
+    <Compile Include="AddCustomersTableViewController.designer.cs">
+      <DependentUpon>AddCustomersTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomersTableViewController.cs" />
+    <Compile Include="CustomersTableViewController.designer.cs">
+      <DependentUpon>CustomersTableViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="MainStoryboard.storyboard" />

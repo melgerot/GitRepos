@@ -45,7 +45,7 @@ namespace SAP.CRM.Core.SAL
      
         public event GetDataCompleted OnGetCustomersCompleted;
 
-        public void GetCustomers(List<string> customerIdList, bool myCustomers, string searchCriteria )
+        public void GetCustomers(bool myCustomers, string searchCriteria )
         {
             // Get target system settings
             TargetService targetService = ApplicationRepository.GetActiveTargetService();
@@ -54,7 +54,7 @@ namespace SAP.CRM.Core.SAL
             // Prepare request
             GetCustomerInformationRequest request = new GetCustomerInformationRequest
             {
-                CustomerIds = customerIdList,
+                CustomerIds = new List<string>(),
                 MaxCustomerRecords = targetService.MaxRecord,
                 MyCustomers = myCustomers,
                 SearchCriteria = searchCriteria
@@ -69,13 +69,13 @@ namespace SAP.CRM.Core.SAL
             client.Headers[HttpRequestHeader.Accept] = "application/json";
 
             client.Encoding = System.Text.Encoding.UTF8;
-            client.DownloadStringCompleted += GetCustomers_Completed;
+            client.UploadStringCompleted += GetCustomers_Completed;
 
             //  Call the service    
             client.UploadStringAsync(uri, "PUT", payload); 
         }
 
-        private void GetCustomers_Completed(object sender, DownloadStringCompletedEventArgs e)
+        private void GetCustomers_Completed(object sender, UploadStringCompletedEventArgs e)
         {
             Console.WriteLine("GetCustomers_Completed");
             if (e.Error != null)
@@ -159,7 +159,7 @@ namespace SAP.CRM.Core.SAL
 
         public event GetDataCompleted OnGetActivitiesCompleted;
 
-        public void GetActivities(bool detail)
+        public void GetActivities(bool detail, List<Activity> activityData)
         {
             // Get target system settings
             TargetService targetService = ApplicationRepository.GetActiveTargetService();
@@ -170,11 +170,16 @@ namespace SAP.CRM.Core.SAL
             if (activitySearchSettings == null) throw new Exception("Activity search settings is missing");
 
             // Prepare request
-           GetSalesActivitiesRequest request = new GetSalesActivitiesRequest
+			List<string> customerSelection = new List<string> ();
+			foreach (var item in ApplicationRepository.GetCustomers()) {
+				customerSelection.Add (item.CustomerField);
+			}
+
+            GetSalesActivitiesRequest request = new GetSalesActivitiesRequest
             {
                 DaysBackward = activitySearchSettings.DaysBackward,
                 DaysForward = activitySearchSettings.DaysForward,
-                Customers = null,
+                Customers = customerSelection,
                 MyActivities = activitySearchSettings.MyActivities,
                 Detail = detail,
                 StatusSelection = new StatusMap
@@ -194,13 +199,13 @@ namespace SAP.CRM.Core.SAL
             client.Headers[HttpRequestHeader.Accept] = "application/json";
          
             client.Encoding = System.Text.Encoding.UTF8;
-            client.DownloadStringCompleted += GetActivities_Completed;
+            client.UploadStringCompleted += GetActivities_Completed;
 
             //  Call the service    
             client.UploadStringAsync(uri, "PUT", payload);    
         }
 
-        private void GetActivities_Completed(object sender, DownloadStringCompletedEventArgs e)
+		private void GetActivities_Completed(object sender, UploadStringCompletedEventArgs e)
         {
             Console.WriteLine ("GetActivities_Completed");
             if (e.Error != null)

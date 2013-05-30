@@ -24,6 +24,8 @@ namespace SAP.CRM.Core.BL.Managers
             set { _isUpdating = value; }
         }
 
+		private static bool _isMoreData = true;
+
         static CustomerManager()
         {
         }
@@ -73,20 +75,20 @@ namespace SAP.CRM.Core.BL.Managers
                         Debug.WriteLine("Update completed");
                     }
                     IsUpdating = false;
-                    UpdateFinished(entityCache, args);
+                    UpdateFinished(null, args);
                 };
 
                 // Prepare request params 
-                List<string> customerIdList = new List<string>();
-                foreach (var item in customerList)
-                {
-                    customerIdList.Add(item.CustomerField);
-                }
+//                List<string> customerIdList = new List<string>();
+//                foreach (var item in customerList)
+//                {
+//                    customerIdList.Add(item.CustomerField);
+//                }
 
                 try
                 {
                     // Do service calls
-                    helper.GetCustomers(customerIdList, myCustomers, searchCriteria);
+                    helper.GetCustomers(myCustomers, searchCriteria);
                 }
                 catch (Exception ex)
                 {
@@ -148,6 +150,11 @@ namespace SAP.CRM.Core.BL.Managers
         {
             entityCache = null;
         }
+
+		public static List<Customer> GetCustomerDataFromCache()
+		{
+			return entityCache.OfType<Customer>().ToList();
+		}
 
         public static List<IBusinessEntity> GetCustomerData()
         {
